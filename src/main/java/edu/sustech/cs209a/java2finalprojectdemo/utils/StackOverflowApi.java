@@ -1,4 +1,4 @@
-package edu.sustech.cs209a.java2finalprojectdemo;
+package edu.sustech.cs209a.java2finalprojectdemo.utils;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -14,8 +14,11 @@ public class StackOverflowApi {
 
     private static final String API_BASE_URL = "https://api.stackexchange.com/2.3";
     private static final String API_KEY = "W4sBb4xkACVJtdhHVniS3Q((";
+    private static final String CLIENT_ID = "27915";
 
-    public CompletableFuture<JsonObject> fetchData(String op, Map<String, String> params, int pageSize) {
+
+
+    public CompletableFuture<JsonObject> fetchData(String op, Map<String, String> params) {
         OkHttpClient client = new OkHttpClient();
         Gson gson = new Gson();
 
@@ -79,16 +82,12 @@ public class StackOverflowApi {
             // 在 StackOverflowApi 类中的 fetchData 方法中的 switch 语句中添加以下 case
             case "java_questions":
                 urlPath = "/questions";
-                params.put("tagged", "java");
-                params.put("pagesize", String.valueOf(pageSize));
                 url = HttpUrl.parse(API_BASE_URL + urlPath)
                         .newBuilder()
                         .addQueryParameter("site", "stackoverflow")
                         .addQueryParameter("key", API_KEY)
                         .build();
                 break;
-
-
 
             default:
                 throw new IllegalArgumentException("Invalid operation: " + op);
@@ -100,7 +99,6 @@ public class StackOverflowApi {
 
         // 创建请求
         Request request = new Request.Builder().url(url).build();
-
         // 发送请求并处理响应
         HttpUrl finalUrl = url;
 
@@ -129,13 +127,6 @@ public class StackOverflowApi {
         return future;
     }
 
-    // 在 StackOverflowApi 类中添加以下方法
-    public CompletableFuture<JsonObject> fetchJavaTaggedQuestions(int pageSize) {
-        Map<String, String> params = new HashMap<>();
-        params.put("tagged", "java");
-        params.put("pagesize", String.valueOf(pageSize));
-        return fetchData("questions", params, 1);
-    }
 
 }
 
