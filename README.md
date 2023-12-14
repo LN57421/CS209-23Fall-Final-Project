@@ -18,5 +18,13 @@ Controller + Repository + Service +  Model + Database       pom.xml 依赖项
 
 ## 测试  
 
+## 前端
+
+进入 front_end/user 目录， 命令行运行 npm install
+（每次拉下来项目的时候最好都npm install 一下）
+
+进入package.json, 点击  "scripts": { "serve": "vue-cli-service serve", 旁边的绿色箭头运行
+
+
 
 
