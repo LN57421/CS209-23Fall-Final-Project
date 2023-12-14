@@ -1,6 +1,7 @@
 package edu.sustech.cs209a.java2finalprojectdemo.utils;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import java.sql.Date;
 import java.sql.*;
@@ -73,6 +74,8 @@ public class FetchOtherData {
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
 
             String sql_insertQuestion = "INSERT INTO questions (question_id, is_answered, creation_date, score, view_count, tags) VALUES (?, ?, ?, ?, ?, ?)";
+            String sql_insertTags = "INSERT INTO tags (name, score, view_count, question_id) VALUES (?, ?, ?, ?)";
+
             // 将信息填入sql语句
             PreparedStatement pstmt_in_Ques = conn.prepareStatement(sql_insertQuestion);
             pstmt_in_Ques.setInt(1, jsonObject.get("question_id").getAsInt());
@@ -96,8 +99,20 @@ public class FetchOtherData {
 
             // 插tags
 
+            // Insert tags
+            PreparedStatement pstmt_in_Tags = conn.prepareStatement(sql_insertTags);
+            for (JsonElement tagElement : tags) {
+                String tagName = tagElement.getAsString();
+                //System.out.println(tagName);
 
+                pstmt_in_Tags.setString(1, tagName);
+                pstmt_in_Tags.setInt(2, jsonObject.get("score").getAsInt());
+                pstmt_in_Tags.setInt(3, jsonObject.get("view_count").getAsInt());
+                pstmt_in_Tags.setInt(4, jsonObject.get("question_id").getAsInt());
 
+                pstmt_in_Tags.executeUpdate();
+            }
+            System.out.println("Tags inserted successfully");
         } catch (SQLException e) {
             e.printStackTrace();
         }
