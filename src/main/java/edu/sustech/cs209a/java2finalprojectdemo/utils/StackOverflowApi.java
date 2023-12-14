@@ -44,30 +44,20 @@ public class StackOverflowApi {
                         .build();
                 break;
 
-            case "info":
-                url = HttpUrl.parse(API_BASE_URL + "/info")
-                        .newBuilder()
-                        .addQueryParameter("site", "stackoverflow")
-                        .addQueryParameter("key", API_KEY)
-                        .build();
-                break;
-
-            case "answers":
-                int answerId = Integer.parseInt(params.get("ids"));
-                params.remove("ids"); // 删除params中的ids参数
-                urlPath = String.format("/answers/%d", answerId); // 将answer_id插入到URL路径中
-                url = HttpUrl.parse(API_BASE_URL + urlPath)
-                        .newBuilder()
-                        .addQueryParameter("site", "stackoverflow")
-                        .addQueryParameter("key", API_KEY)
-                        .build();
-                break;
+//            case "info":
+//                url = HttpUrl.parse(API_BASE_URL + "/info")
+//                        .newBuilder()
+//                        .addQueryParameter("site", "stackoverflow")
+//                        .addQueryParameter("key", API_KEY)
+//                        .build();
+//                break;
 
             case "answer_question":
                 url = HttpUrl.parse(API_BASE_URL + "/questions/" + params.get("ids") + "/answers")
                         .newBuilder()
                         .addQueryParameter("site", "stackoverflow")
                         .addQueryParameter("key", API_KEY)
+                        .addQueryParameter("filter", "withbody")
                         .build();
                 break;
 
@@ -76,18 +66,18 @@ public class StackOverflowApi {
                         .newBuilder()
                         .addQueryParameter("site", "stackoverflow")
                         .addQueryParameter("key", API_KEY)
+                        .addQueryParameter("filter", "withbody")
                         .build();
                 break;
 
-            // 在 StackOverflowApi 类中的 fetchData 方法中的 switch 语句中添加以下 case
-            case "java_questions":
-                urlPath = "/questions";
-                url = HttpUrl.parse(API_BASE_URL + urlPath)
-                        .newBuilder()
-                        .addQueryParameter("site", "stackoverflow")
-                        .addQueryParameter("key", API_KEY)
-                        .build();
-                break;
+//            case "java_questions":
+//                urlPath = "/questions";
+//                url = HttpUrl.parse(API_BASE_URL + urlPath)
+//                        .newBuilder()
+//                        .addQueryParameter("site", "stackoverflow")
+//                        .addQueryParameter("key", API_KEY)
+//                        .build();
+//                break;
 
             default:
                 throw new IllegalArgumentException("Invalid operation: " + op);

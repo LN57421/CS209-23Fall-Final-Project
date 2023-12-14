@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "tags": [
+        "java",
+        "constructor"
+      ],
+      "owner": {
+        "account_id": 28653220,
+        "reputation": 1,
+        "user_id": 21939793,
+        "user_type": "registered",
+        "profile_image": "https://i.stack.imgur.com/i5VOe.jpg?s=256&g=1",
+        "display_name": "Kasun Jayasanka",
+        "link": "https://stackoverflow.com/users/21939793/kasun-jayasanka"
+      },
+      "is_answered": false,
+      "view_count": 16,
+      "answer_count": 1,
+      "score": -1,
+      "last_activity_date": 1702361583,
+      "creation_date": 1702360819,
+      "question_id": 77643973,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77643973/why-a-constructor-in-java-doesn-t-have-a-return-type",
+      "title": "Why a Constructor in Java doesn’t have a return type?"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "kotlin",
+        "spinner"
+      ],
+      "owner": {
+        "account_id": 28960416,
+        "reputation": 1,
+        "user_id": 22183010,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/8c14d210bb48ba0354d56c420df014ba?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "osj0524",
+        "link": "https://stackoverflow.com/users/22183010/osj0524"
+      },
+      "is_answered": true,
+      "view_count": 55,
+      "answer_count": 2,
+      "score": 0,
+      "last_activity_date": 1702361269,
+      "creation_date": 1702277789,
+      "last_edit_date": 1702360957,
+      "question_id": 77637904,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77637904/android-why-is-the-getview-of-the-custom-spinner-called-multiple-times",
+      "title": "Android: Why is the getView of the Custom spinner called multiple times"
+    }
+  ],
+  "has_more": true,
+  "quota_max": 10000,
+  "quota_remaining": 9987
+}
+

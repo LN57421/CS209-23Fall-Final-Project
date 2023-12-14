@@ -2,15 +2,17 @@ CREATE TABLE Answers (
                          id INT primary key AUTO_INCREMENT,
                          answer_id INT ,
                          question_id INT,
-                         body VARCHAR(255)
-); -- 每个question拿出最高赞的答案
+                         score INT,
+                         body TEXT
+); -- 每个question拿出20个答案
 
 CREATE TABLE Comments (
                           id INT primary key AUTO_INCREMENT,
                           comment_id INT ,
                           question_id INT,
-                          body VARCHAR(255)
-);  -- 每个question拿出最多100个comment
+                          score INT,
+                          body TEXT
+);  -- 每个question拿出最多20个comment
 
 CREATE TABLE Tags (
                       id INT primary key AUTO_INCREMENT,
