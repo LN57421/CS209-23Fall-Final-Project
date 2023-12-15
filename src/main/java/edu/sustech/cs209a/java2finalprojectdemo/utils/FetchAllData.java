@@ -8,14 +8,12 @@ import java.sql.*;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * @author ln
  */
 
-public class FetchOtherData {
+public class FetchAllData {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/cs209a";
     private static final String USER = "root";

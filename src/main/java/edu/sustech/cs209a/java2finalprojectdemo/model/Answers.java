@@ -7,8 +7,57 @@ import javax.persistence.Id;
 public class Answers {
 
     @Id
+    public Integer id;
     public Integer answer_id;
     public Integer question_id;
+    public Integer score;
     public String body;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Integer getAnswer_id() {
+        return answer_id;
+    }
+
+    public Integer getQuestion_id() {
+        return question_id;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setAnswer_id(Integer answer_id) {
+        this.answer_id = answer_id;
+    }
+
+    public void setQuestion_id(Integer question_id) {
+        this.question_id = question_id;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    @Override
+    public String toString() {
+        return "Answers{" +
+                "id=" + id +
+                ", answer_id=" + answer_id +
+                ", question_id=" + question_id +
+                ", score=" + score +
+                ", body='" + body + '\'' +
+                '}';
+    }
 }
 
