@@ -29,6 +29,6 @@ public interface AnswersMapper extends JpaRepository<Answers, String> {
     // 假设关键词信息存储在Questions表中
     @Select("SELECT a.* FROM answers a " +
             "JOIN questions q ON a.question_id = q.question_id " +
-            "WHERE q.tags LIKE CONCAT('%', #{keyword}, '%') AND a.score > 0")
-    List<Answers> findValuableAnswersByKeyword(String keyword);
+            "WHERE q.tags =  #{keyword} AND a.score > 0")
+    List<Answers> findValuableAnswersByTags(String keyword);
 }

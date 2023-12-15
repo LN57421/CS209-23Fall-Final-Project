@@ -31,8 +31,8 @@ public class TopicPopularityController {
         Map<String, Object> topicPopularityMap = new HashMap<>();
 
         for (String keyword : topics) {
-            List<Questions> questions = questionsMapper.findQuestionsByKeyword(keyword);
-            List<Answers> valuableAnswers = answersMapper.findValuableAnswersByKeyword(keyword);
+            List<Questions> questions = questionsMapper.findQuestionsByTags(keyword);
+            List<Answers> valuableAnswers = answersMapper.findValuableAnswersByTags(keyword);
 
             double avgViewCount = calculateAverageViewCount(questions);
             double avgScore = calculateAverageScore(questions);

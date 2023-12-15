@@ -29,6 +29,17 @@ public class QuestionController {
         return questionsMapper.findQuestionsValuable();
     }
 
-    // 添加其他根据需求的方法
+    @ApiOperation("获取包含Error的Question")
+    @GetMapping("/GetAllError")
+    public List<Questions> getErrorQuestion() {
+        return questionsMapper.findQuestionsByBody("Error");
+    }
 
+    @ApiOperation("获取包含Exception的Question")
+    @GetMapping("/GetAllException")
+    public List<Questions> getExceptionQuestion() {
+        return questionsMapper.findQuestionsByBody("Exception");
+    }
+
+    // 添加其他根据需求的方法
 }

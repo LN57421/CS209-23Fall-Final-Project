@@ -2,10 +2,8 @@ package edu.sustech.cs209a.java2finalprojectdemo.mapper;
 
 
 import edu.sustech.cs209a.java2finalprojectdemo.model.Questions;
-import edu.sustech.cs209a.java2finalprojectdemo.model.Tags;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
@@ -18,6 +16,9 @@ public interface QuestionsMapper {
     List<Questions> findQuestionsValuable();
 
 
-    @Select("SELECT * FROM questions WHERE tags LIKE CONCAT('%', #{keyword}, '%')")
-    List<Questions> findQuestionsByKeyword(String keyword);
+    @Select("SELECT * FROM questions WHERE tags = #{keyword}")
+    List<Questions> findQuestionsByTags(String keyword);
+
+    @Select("SELECT * FROM questions WHERE body LIKE CONCAT('%', #{keyword}, '%')")
+    List<Questions> findQuestionsByBody(String keyword);
 }
