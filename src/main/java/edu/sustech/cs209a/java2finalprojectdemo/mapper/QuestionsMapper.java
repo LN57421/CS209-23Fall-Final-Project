@@ -18,4 +18,6 @@ public interface QuestionsMapper {
     List<Questions> findQuestionsValuable();
 
 
+    @Select("SELECT * FROM questions WHERE tags LIKE CONCAT('%', #{keyword}, '%')")
+    List<Questions> findQuestionsByKeyword(String keyword);
 }

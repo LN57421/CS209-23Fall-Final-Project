@@ -13,6 +13,8 @@ import java.util.concurrent.ExecutionException;
  * @author ln
  */
 
+// https://api.stackexchange.com/2.3/questions/3757396?site=stackoverflow&filter=withbody
+
 public class FetchAllData {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/cs209a";
@@ -64,7 +66,7 @@ public class FetchAllData {
     private static void insertQuestionIntoDatabase(JsonObject jsonObject) {
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
 
-            String sql_insertQuestion = "INSERT INTO questions (question_id, is_answered, creation_date, score, view_count, tags) VALUES (?, ?, ?, ?, ?, ?)";
+            String sql_insertQuestion = "INSERT INTO questions (question_id, is_answered, creation_date, score, view_count, tags, title, body) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             String sql_insertTags = "INSERT INTO tags (name, score, view_count, question_id) VALUES (?, ?, ?, ?)";
 
             // 将信息填入sql语句

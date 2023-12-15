@@ -41,6 +41,7 @@ public class StackOverflowApi {
                         .newBuilder()
                         .addQueryParameter("site", "stackoverflow")
                         .addQueryParameter("key", API_KEY)
+                        .addQueryParameter("filter", "withbody")
                         .build();
                 break;
 

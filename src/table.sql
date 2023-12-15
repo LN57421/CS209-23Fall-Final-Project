@@ -24,14 +24,11 @@ CREATE TABLE Tags (
 
 CREATE TABLE Questions (
                            question_id INT PRIMARY KEY AUTO_INCREMENT,
-
                            is_answered INT,
-
                            creation_date datetime,
-
                            score INT,
-
                            view_count INT,
-
+                           title TEXT,
+                           body TEXT,
                            tags VARCHAR(255)
 );
