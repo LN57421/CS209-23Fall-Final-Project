@@ -1,0 +1,2776 @@
+{
+  "items": [
+    {
+      "tags": [
+        "java",
+        "http",
+        "cookies"
+      ],
+      "owner": {
+        "account_id": 23069558,
+        "reputation": 79,
+        "user_id": 17183543,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/AATXAJxTD5ZLc-8h0W9andvPYz2ZeQ4jnf8RcadgVSQn=k-s256",
+        "display_name": "ajs",
+        "link": "https://stackoverflow.com/users/17183543/ajs"
+      },
+      "is_answered": true,
+      "view_count": 26,
+      "accepted_answer_id": 77640187,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1702303952,
+      "creation_date": 1702292433,
+      "question_id": 77639084,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639084/java-11-httpcookie-parse-throws-illegalargumentexception-when-parsing-cookies-th",
+      "title": "Java 11 HttpCookie.parse throws IllegalArgumentException when parsing cookies that contain JSON"
+    },
+    {
+      "tags": [
+        "java",
+        "slf4j"
+      ],
+      "owner": {
+        "account_id": 8954819,
+        "reputation": 1401,
+        "user_id": 8005819,
+        "user_type": "registered",
+        "profile_image": "https://i.stack.imgur.com/HotHm.jpg?s=256&g=1",
+        "display_name": "Вячеслав Чернышов",
+        "link": "https://stackoverflow.com/users/8005819/%d0%92%d1%8f%d1%87%d0%b5%d1%81%d0%bb%d0%b0%d0%b2-%d0%a7%d0%b5%d1%80%d0%bd%d1%8b%d1%88%d0%be%d0%b2"
+      },
+      "is_answered": true,
+      "view_count": 171400,
+      "accepted_answer_id": 58152003,
+      "answer_count": 7,
+      "score": 38,
+      "last_activity_date": 1702303950,
+      "creation_date": 1549983260,
+      "last_edit_date": 1701087808,
+      "question_id": 54652836,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/54652836/found-slf4j-api-dependency-but-no-providers-were-found",
+      "title": "Found slf4j-api dependency but no providers were found"
+    },
+    {
+      "tags": [
+        "java",
+        "drools",
+        "rules",
+        "rule-engine"
+      ],
+      "owner": {
+        "account_id": 29345146,
+        "reputation": 11,
+        "user_id": 22483710,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/AAcHTtdIdXhM9lsA-yU1daYFXOvcYRWl0G8RE88OG7pyomnLhUs=k-s256",
+        "display_name": "Tamil Prabhu",
+        "link": "https://stackoverflow.com/users/22483710/tamil-prabhu"
+      },
+      "is_answered": false,
+      "view_count": 16,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702303905,
+      "creation_date": 1702303575,
+      "last_edit_date": 1702303905,
+      "question_id": 77640150,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77640150/rules-executing-multiple-times-unable-to-disable-the-rule",
+      "title": "Rules executing multiple times- unable to disable the rule"
+    },
+    {
+      "tags": [
+        "java",
+        "algorithm",
+        "swing",
+        "events",
+        "data-structures"
+      ],
+      "owner": {
+        "account_id": 7421543,
+        "reputation": 2874,
+        "user_id": 5645656,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://i.stack.imgur.com/hwzKc.png?s=256&g=1",
+        "display_name": "Cardinal System",
+        "link": "https://stackoverflow.com/users/5645656/cardinal-system"
+      },
+      "is_answered": false,
+      "view_count": 22,
+      "answer_count": 0,
+      "score": -1,
+      "last_activity_date": 1702303732,
+      "creation_date": 1702303732,
+      "question_id": 77640169,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77640169/is-there-benefit-to-using-eventlistenerlist-over-a-custom-list",
+      "title": "Is there benefit to using EventListenerList over a custom list?"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "build.gradle",
+        "youtube-data-api",
+        "android-youtube-api"
+      ],
+      "owner": {
+        "account_id": 30119001,
+        "reputation": 1,
+        "user_id": 23081577,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/c02960f9b83e5ef39b7b48f83797abb7?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "BigSmoke",
+        "link": "https://stackoverflow.com/users/23081577/bigsmoke"
+      },
+      "is_answered": false,
+      "view_count": 26,
+      "answer_count": 0,
+      "score": -3,
+      "last_activity_date": 1702303649,
+      "creation_date": 1702302332,
+      "last_edit_date": 1702303649,
+      "question_id": 77640031,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77640031/how-do-i-fix-youtube-api-implementation-causing-error-in-gradle-build",
+      "title": "how do I fix youtube-api implementation causing error in gradle build?"
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "opencsv"
+      ],
+      "owner": {
+        "account_id": 11451785,
+        "reputation": 35,
+        "user_id": 8393984,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/81cacd8cd577f658c67eee21f71aa18d?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Larry",
+        "link": "https://stackoverflow.com/users/8393984/larry"
+      },
+      "is_answered": false,
+      "view_count": 34,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702303579,
+      "creation_date": 1701983579,
+      "question_id": 77623097,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77623097/opencsv-not-converting-empty-string-to-null-pojo-field",
+      "title": "OpenCSV not converting empty string to null POJO field"
+    },
+    {
+      "tags": [
+        "java",
+        "jackson"
+      ],
+      "owner": {
+        "account_id": 1442071,
+        "reputation": 8707,
+        "user_id": 1361901,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/3ea140060e08a193f5814b0ebd2eb6ef?s=256&d=identicon&r=PG",
+        "display_name": "Joseph Larson",
+        "link": "https://stackoverflow.com/users/1361901/joseph-larson"
+      },
+      "is_answered": false,
+      "view_count": 30,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702303442,
+      "creation_date": 1702302847,
+      "question_id": 77640083,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77640083/convert-jsonarray-to-array-of-objects",
+      "title": "Convert JSONArray to array of objects"
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "open-telemetry",
+        "micrometer-tracing",
+        "observability"
+      ],
+      "owner": {
+        "account_id": 9525384,
+        "reputation": 512,
+        "user_id": 7078743,
+        "user_type": "registered",
+        "accept_rate": 43,
+        "profile_image": "https://i.stack.imgur.com/ClFrR.png?s=256&g=1",
+        "display_name": "kcsurapaneni",
+        "link": "https://stackoverflow.com/users/7078743/kcsurapaneni"
+      },
+      "is_answered": true,
+      "view_count": 232,
+      "answer_count": 1,
+      "score": 3,
+      "last_activity_date": 1702303255,
+      "creation_date": 1701016414,
+      "last_edit_date": 1701283551,
+      "question_id": 77552544,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77552544/exception-in-observability-stack-after-upgrading-spring-boot-from-3-1-3-to-3-2-0",
+      "title": "Exception in observability stack after upgrading Spring Boot from 3.1.3 to 3.2.0 using opentelemetry-java"
+    },
+    {
+      "tags": [
+        "java",
+        "android"
+      ],
+      "owner": {
+        "account_id": 4949533,
+        "reputation": 31,
+        "user_id": 3983967,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/100000212230888/picture?type=large",
+        "display_name": "Ken Dy",
+        "link": "https://stackoverflow.com/users/3983967/ken-dy"
+      },
+      "is_answered": false,
+      "view_count": 10937,
+      "answer_count": 1,
+      "score": 3,
+      "last_activity_date": 1702303255,
+      "creation_date": 1469833765,
+      "last_edit_date": 1469858785,
+      "question_id": 38668689,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://stackoverflow.com/questions/38668689/attempted-to-finish-an-input-event-but-the-input-event-receiver-has-already-been",
+      "title": "Attempted to finish an input event but the input event receiver has already been disposed error"
+    },
+    {
+      "tags": [
+        "java",
+        "selenium",
+        "testing",
+        "selenium-webdriver"
+      ],
+      "owner": {
+        "account_id": 7509387,
+        "reputation": 11,
+        "user_id": 5704886,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/73b32fc1c4a73aeb488023cef190d54d?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Greg Kowal",
+        "link": "https://stackoverflow.com/users/5704886/greg-kowal"
+      },
+      "is_answered": false,
+      "view_count": 10170,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702303255,
+      "creation_date": 1451149582,
+      "last_edit_date": 1451415032,
+      "question_id": 34473425,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://stackoverflow.com/questions/34473425/selenium-webdriver-how-to-insert-text-into-field",
+      "title": "Selenium WebDriver how to insert text into field"
+    },
+    {
+      "tags": [
+        "java",
+        "ehcache"
+      ],
+      "owner": {
+        "account_id": 14391755,
+        "reputation": 1,
+        "user_id": 10396187,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/1b2191c1f8a874e4175ccb6b4885caf7?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Vinod Devarakonda",
+        "link": "https://stackoverflow.com/users/10396187/vinod-devarakonda"
+      },
+      "is_answered": false,
+      "view_count": 10,
+      "closed_date": 1702302396,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702302462,
+      "creation_date": 1702301378,
+      "last_edit_date": 1702302462,
+      "question_id": 77639940,
+      "link": "https://stackoverflow.com/questions/77639940/constructor-threw-exception-nested-exception-is-java-lang-nosuchmethoderror-ne",
+      "closed_reason": "Duplicate",
+      "title": "Constructor threw exception; nested exception is java.lang.NoSuchMethodError: net.sf.ehcache.config.CacheConfiguration.&lt;init&gt;(Ljava/lang/String;I)V]"
+    },
+    {
+      "tags": [
+        "java",
+        "floating-point",
+        "double"
+      ],
+      "owner": {
+        "account_id": 29338503,
+        "reputation": 3,
+        "user_id": 23039293,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/AAcHTtdsMNsvepDwUNo4XzkPH4NBVzPklY5b0onPDIWUV2VY1Q=k-s256",
+        "display_name": "Bernardo Costa",
+        "link": "https://stackoverflow.com/users/23039293/bernardo-costa"
+      },
+      "is_answered": true,
+      "view_count": 62,
+      "accepted_answer_id": 77627002,
+      "answer_count": 3,
+      "score": 0,
+      "last_activity_date": 1702302036,
+      "creation_date": 1702030885,
+      "last_edit_date": 1702030944,
+      "question_id": 77625876,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77625876/cannot-convert-from-double-to-float-error",
+      "title": "Cannot convert from double to float Error"
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "classloader",
+        "classloading"
+      ],
+      "owner": {
+        "account_id": 7966627,
+        "reputation": 51,
+        "user_id": 6012670,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/eb26211767714eb2d3622c0d632b738f?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "flanders",
+        "link": "https://stackoverflow.com/users/6012670/flanders"
+      },
+      "is_answered": false,
+      "view_count": 716,
+      "answer_count": 1,
+      "score": 5,
+      "last_activity_date": 1702301929,
+      "creation_date": 1573120838,
+      "last_edit_date": 1592644375,
+      "question_id": 58746223,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/58746223/are-there-caveats-to-not-using-the-spring-boot-classloader-in-production",
+      "title": "Are there caveats to not using the spring-boot classloader in production?"
+    },
+    {
+      "tags": [
+        "java",
+        "hadoop",
+        "bigdata",
+        "kerberos",
+        "spring-security-kerberos"
+      ],
+      "owner": {
+        "account_id": 22287023,
+        "reputation": 1,
+        "user_id": 16514482,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/AATXAJzDWzAOG5kDdnod6_00jV5OlyyhAITqR9hM1KwV=k-s256",
+        "display_name": "Ethan Lee",
+        "link": "https://stackoverflow.com/users/16514482/ethan-lee"
+      },
+      "is_answered": false,
+      "view_count": 15,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702301272,
+      "creation_date": 1702301272,
+      "question_id": 77639924,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639924/i-encountered-an-issue-in-my-project-related-to-kerberos-authentication",
+      "title": "I encountered an issue in my project related to Kerberos authentication"
+    },
+    {
+      "tags": [
+        "java",
+        "kotlin",
+        "android-studio"
+      ],
+      "owner": {
+        "account_id": 30117375,
+        "reputation": 1,
+        "user_id": 23080291,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/ad4a63657d2b76c2f364ee864891ca72?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "shadowck",
+        "link": "https://stackoverflow.com/users/23080291/shadowck"
+      },
+      "is_answered": false,
+      "view_count": 21,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702300943,
+      "creation_date": 1702289085,
+      "question_id": 77638789,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638789/tablayout-tabs-text-not-displaying-kotlin",
+      "title": "TabLayout tabs text not displaying (Kotlin)"
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "spring-boot",
+        "java-21"
+      ],
+      "owner": {
+        "account_id": 3014557,
+        "reputation": 1292,
+        "user_id": 2557108,
+        "user_type": "registered",
+        "accept_rate": 50,
+        "profile_image": "https://i.stack.imgur.com/GR4og.png?s=256&g=1",
+        "display_name": "Yonoss",
+        "link": "https://stackoverflow.com/users/2557108/yonoss"
+      },
+      "is_answered": true,
+      "view_count": 82,
+      "answer_count": 2,
+      "score": 1,
+      "last_activity_date": 1702300840,
+      "creation_date": 1702233249,
+      "last_edit_date": 1702242868,
+      "question_id": 77635974,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77635974/error-name-for-argument-of-type-java-util-uuid-not-specified-and-parameter-n",
+      "title": "Error &quot;Name for argument of type [java.util.UUID] not specified, and parameter name information not found in class file either&quot;with spring 3.2 upgrade"
+    },
+    {
+      "tags": [
+        "java",
+        "mysql",
+        "spring-boot"
+      ],
+      "owner": {
+        "account_id": 20122385,
+        "reputation": 1,
+        "user_id": 14756628,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a-/AOh14GiyPt7WjCD1Qv9PciRM5WWVl04f913WAOLu7sV6=k-s256",
+        "display_name": "Teja sree",
+        "link": "https://stackoverflow.com/users/14756628/teja-sree"
+      },
+      "is_answered": false,
+      "view_count": 14,
+      "closed_date": 1702310650,
+      "answer_count": 0,
+      "score": -2,
+      "last_activity_date": 1702300825,
+      "creation_date": 1702300825,
+      "question_id": 77639889,
+      "link": "https://stackoverflow.com/questions/77639889/getting-issue-in-server-not-in-local",
+      "closed_reason": "Needs details or clarity",
+      "title": "getting issue in server not in local"
+    },
+    {
+      "tags": [
+        "java",
+        "intellij-idea",
+        "nullable",
+        "lombok"
+      ],
+      "owner": {
+        "account_id": 1734438,
+        "reputation": 36275,
+        "user_id": 1587329,
+        "user_type": "registered",
+        "accept_rate": 94,
+        "profile_image": "https://i.stack.imgur.com/UWmiP.png?s=256&g=1",
+        "display_name": "serv-inc",
+        "link": "https://stackoverflow.com/users/1587329/serv-inc"
+      },
+      "is_answered": true,
+      "view_count": 26,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1702300766,
+      "creation_date": 1702300133,
+      "question_id": 77639822,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639822/intellij-with-lombok-with-requiredargsconstructor-and-private-final-shows-a-un",
+      "title": "IntelliJ with Lombok with RequiredArgsConstructor and `private final` shows a unknown nullability warning"
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "spring-boot",
+        "spring-mvc",
+        "spring-cloud-gateway"
+      ],
+      "owner": {
+        "account_id": 4927745,
+        "reputation": 839,
+        "user_id": 3968538,
+        "user_type": "registered",
+        "accept_rate": 50,
+        "profile_image": "https://www.gravatar.com/avatar/7e435ebaee5367027585eb7cdf260c49?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Manoj Singh",
+        "link": "https://stackoverflow.com/users/3968538/manoj-singh"
+      },
+      "is_answered": false,
+      "view_count": 144,
+      "bounty_amount": 500,
+      "bounty_closes_date": 1702898403,
+      "answer_count": 2,
+      "score": 0,
+      "last_activity_date": 1702300690,
+      "creation_date": 1701870290,
+      "last_edit_date": 1702037059,
+      "question_id": 77613583,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77613583/spring-cloud-gateway-server-mvc-can-we-use-spring-mvc-with-spring-cloud-gateway",
+      "title": "Spring Cloud Gateway Server MVC- Can we use spring mvc with spring cloud gateway"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "parcelable"
+      ],
+      "owner": {
+        "account_id": 4118262,
+        "reputation": 697,
+        "user_id": 3379315,
+        "user_type": "registered",
+        "accept_rate": 25,
+        "profile_image": "https://i.stack.imgur.com/FZ6Vn.jpg?s=256&g=1",
+        "display_name": "Ankur",
+        "link": "https://stackoverflow.com/users/3379315/ankur"
+      },
+      "is_answered": false,
+      "view_count": 20,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702300469,
+      "creation_date": 1702300359,
+      "last_edit_date": 1702300469,
+      "question_id": 77639841,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639841/a-field-stability-is-added-in-my-parcelable-classes",
+      "title": "A field &#39;stability&#39; is added in my Parcelable classes"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "android-edittext"
+      ],
+      "owner": {
+        "account_id": 18489345,
+        "reputation": 1,
+        "user_id": 13469433,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/8ca66495bf4d61a9605889d9b81d953d?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "darknessww",
+        "link": "https://stackoverflow.com/users/13469433/darknessww"
+      },
+      "is_answered": false,
+      "view_count": 47,
+      "answer_count": 1,
+      "score": -3,
+      "last_activity_date": 1702300308,
+      "creation_date": 1702277823,
+      "last_edit_date": 1702278862,
+      "question_id": 77637907,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77637907/how-do-i-control-that-only-numbers-are-entered-from-a-text-type-edittext-on-andr",
+      "title": "How do I control that only numbers are entered from a text type edittext on Android Studio Java?"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "android-studio"
+      ],
+      "owner": {
+        "account_id": 3138207,
+        "reputation": 45,
+        "user_id": 2654260,
+        "user_type": "registered",
+        "accept_rate": 50,
+        "profile_image": "https://www.gravatar.com/avatar/c5dd9bef93f078e68edb7acaa7d96599?s=256&d=identicon&r=PG",
+        "display_name": "Nerd Furyz",
+        "link": "https://stackoverflow.com/users/2654260/nerd-furyz"
+      },
+      "is_answered": true,
+      "view_count": 2870,
+      "accepted_answer_id": 45558810,
+      "answer_count": 4,
+      "score": 4,
+      "last_activity_date": 1702300167,
+      "creation_date": 1502161236,
+      "last_edit_date": 1502162396,
+      "question_id": 45558596,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://stackoverflow.com/questions/45558596/git-push-through-android-studio-is-freezing",
+      "title": "Git push through Android studio is freezing"
+    },
+    {
+      "tags": [
+        "java",
+        "ssh",
+        "sftp",
+        "jsch"
+      ],
+      "owner": {
+        "account_id": 6140032,
+        "reputation": 33,
+        "user_id": 4787711,
+        "user_type": "registered",
+        "accept_rate": 25,
+        "profile_image": "https://www.gravatar.com/avatar/5994141b54b79a990a7d7aeafe14c6c7?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Techji",
+        "link": "https://stackoverflow.com/users/4787711/techji"
+      },
+      "is_answered": false,
+      "view_count": 9188,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1702299990,
+      "creation_date": 1479485643,
+      "last_edit_date": 1479495037,
+      "question_id": 40681593,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://stackoverflow.com/questions/40681593/not-able-to-connect-to-sftp-using-jcraft-jsch",
+      "title": "Not able to connect to SFTP using jcraft JSch"
+    },
+    {
+      "tags": [
+        "java",
+        "web-services",
+        "saaj"
+      ],
+      "owner": {
+        "account_id": 8118987,
+        "reputation": 11,
+        "user_id": 6116418,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/f8e755b95010e50b855e279625645507?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Priyanka Nayek",
+        "link": "https://stackoverflow.com/users/6116418/priyanka-nayek"
+      },
+      "is_answered": false,
+      "view_count": 8739,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1702299990,
+      "creation_date": 1468862176,
+      "last_edit_date": 1551284566,
+      "question_id": 38442507,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/38442507/java-client-using-saaj-error-severe-saaj0008-bad-response-unauthorized",
+      "title": "Java client using SAAJ error: SEVERE: SAAJ0008: Bad Response; Unauthorized"
+    },
+    {
+      "tags": [
+        "java",
+        "javascript",
+        "jquery"
+      ],
+      "owner": {
+        "account_id": 2020305,
+        "reputation": 293,
+        "user_id": 1806653,
+        "user_type": "registered",
+        "accept_rate": 45,
+        "profile_image": "https://www.gravatar.com/avatar/e06e385f381f69e5d5e11a1b2be7675c?s=256&d=identicon&r=PG",
+        "display_name": "b22",
+        "link": "https://stackoverflow.com/users/1806653/b22"
+      },
+      "is_answered": false,
+      "view_count": 26322,
+      "answer_count": 2,
+      "score": 2,
+      "last_activity_date": 1702299990,
+      "creation_date": 1393239758,
+      "last_edit_date": 1417715420,
+      "question_id": 21985856,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://stackoverflow.com/questions/21985856/how-to-send-file-using-javascript",
+      "title": "How to send file using javascript"
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "amazon-web-services",
+        "sdk"
+      ],
+      "owner": {
+        "account_id": 20087170,
+        "reputation": 1,
+        "user_id": 14728479,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a-/AOh14GgrCWNOAe7LcjTWMG6-UgX7SPcQRCo_QPHLHtvOkw=k-s256",
+        "display_name": "jmcunst",
+        "link": "https://stackoverflow.com/users/14728479/jmcunst"
+      },
+      "is_answered": false,
+      "view_count": 12,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702299423,
+      "creation_date": 1702276716,
+      "question_id": 77637837,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77637837/aws-api-create-instance-in-non-default-vpc-with-java-sdk",
+      "title": "AWS API Create instance in non default VPC with Java SDK"
+    },
+    {
+      "tags": [
+        "java",
+        "jdbc",
+        "h2"
+      ],
+      "owner": {
+        "account_id": 6539656,
+        "reputation": 11090,
+        "user_id": 5057736,
+        "user_type": "registered",
+        "accept_rate": 84,
+        "profile_image": "https://www.gravatar.com/avatar/ee43ba451b06e62437c0cda87d01fa66?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Pavel_K",
+        "link": "https://stackoverflow.com/users/5057736/pavel-k"
+      },
+      "is_answered": false,
+      "view_count": 47,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1702299325,
+      "creation_date": 1702242004,
+      "last_edit_date": 1702242914,
+      "question_id": 77636438,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77636438/how-to-get-url-parameters-from-h2-connection",
+      "title": "How to get URL parameters from H2 Connection?"
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "amazon-s3",
+        "aws-lambda",
+        "amazon-rekognition"
+      ],
+      "owner": {
+        "account_id": 29980703,
+        "reputation": 1,
+        "user_id": 22975777,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/dcaee8288e40b5aa214f1bcc5055944e?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Mahi",
+        "link": "https://stackoverflow.com/users/22975777/mahi"
+      },
+      "is_answered": false,
+      "view_count": 11,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702298805,
+      "creation_date": 1702298805,
+      "question_id": 77639705,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639705/aws-rekonition-custom-label",
+      "title": "Aws rekonition custom label"
+    },
+    {
+      "tags": [
+        "java",
+        "database"
+      ],
+      "owner": {
+        "account_id": 30118570,
+        "reputation": 1,
+        "user_id": 23081232,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/ba7be189f473abc9e9c88010da27dafe?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "C M VINAYKUMAR",
+        "link": "https://stackoverflow.com/users/23081232/c-m-vinaykumar"
+      },
+      "is_answered": false,
+      "view_count": 13,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702298655,
+      "creation_date": 1702298240,
+      "last_edit_date": 1702298655,
+      "question_id": 77639641,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639641/error-75144-nio-443-exec-7-o-s-boot-web-support-errorpagefilter",
+      "title": "ERROR 75144 [-nio-443-exec-7] o.s.boot.web.support.ErrorPageFilter"
+    },
+    {
+      "tags": [
+        "java",
+        "authentication",
+        "apache-camel",
+        "spring-camel"
+      ],
+      "owner": {
+        "account_id": 15340811,
+        "reputation": 383,
+        "user_id": 11067865,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/00b846969b2e5edb6c90d5bd93c022a7?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Jirmed",
+        "link": "https://stackoverflow.com/users/11067865/jirmed"
+      },
+      "is_answered": false,
+      "view_count": 29,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702298602,
+      "creation_date": 1701439294,
+      "question_id": 77585801,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77585801/calling-rest-api-secured-with-bearer-token-authentication-in-apache-camel-route",
+      "title": "Calling rest api secured with Bearer token authentication in Apache Camel route"
+    },
+    {
+      "tags": [
+        "java",
+        "gradle",
+        "dependencies"
+      ],
+      "owner": {
+        "account_id": 25256651,
+        "reputation": 1,
+        "user_id": 19088272,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a-/AOh14GifZqxybOnDbo9xUEW3XM4HWfYQSK8vB-I6J-Gk=k-s256",
+        "display_name": "LastCode",
+        "link": "https://stackoverflow.com/users/19088272/lastcode"
+      },
+      "is_answered": false,
+      "view_count": 16,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702298495,
+      "creation_date": 1702298495,
+      "question_id": 77639673,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639673/a-build-operation-failed-failed-to-notify-dependency-resolution-listener",
+      "title": "A build operation failed. Failed to notify dependency resolution listener"
+    },
+    {
+      "tags": [
+        "java",
+        "generics",
+        "jaxb",
+        "enumset"
+      ],
+      "owner": {
+        "account_id": 4307573,
+        "reputation": 1270,
+        "user_id": 3519572,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/77adafba20e14784b5813e62260a998b?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "tomorrow",
+        "link": "https://stackoverflow.com/users/3519572/tomorrow"
+      },
+      "is_answered": true,
+      "view_count": 21,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1702298459,
+      "creation_date": 1702296272,
+      "question_id": 77639433,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639433/enumset-and-jaxb",
+      "title": "EnumSet and JAXB"
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "application.properties"
+      ],
+      "owner": {
+        "account_id": 28377917,
+        "reputation": 23,
+        "user_id": 21705670,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/96672991d20dec4878f7a99b22b50c5b?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "tkz",
+        "link": "https://stackoverflow.com/users/21705670/tkz"
+      },
+      "is_answered": false,
+      "view_count": 16,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702298265,
+      "creation_date": 1702298265,
+      "question_id": 77639648,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639648/override-application-properties-data-through-a-rest-controller-end-point-in-spri",
+      "title": "Override application.properties data through a rest controller end point in Spring Boot 2"
+    },
+    {
+      "tags": [
+        "java",
+        "sql",
+        "regex",
+        "escaping",
+        "sql-injection"
+      ],
+      "owner": {
+        "account_id": 54883,
+        "reputation": 2900,
+        "user_id": 164283,
+        "user_type": "registered",
+        "accept_rate": 75,
+        "profile_image": "https://i.stack.imgur.com/xidnI.png?s=256&g=1",
+        "display_name": "Scott Bonner",
+        "link": "https://stackoverflow.com/users/164283/scott-bonner"
+      },
+      "is_answered": true,
+      "view_count": 323956,
+      "protected_date": 1614751312,
+      "accepted_answer_id": 1812920,
+      "answer_count": 16,
+      "score": 166,
+      "last_activity_date": 1702298254,
+      "creation_date": 1259424673,
+      "last_edit_date": 1259433951,
+      "question_id": 1812891,
+      "content_license": "CC BY-SA 2.5",
+      "link": "https://stackoverflow.com/questions/1812891/java-escape-string-to-prevent-sql-injection",
+      "title": "Java - escape string to prevent SQL injection"
+    },
+    {
+      "tags": [
+        "java",
+        "azure-active-directory",
+        "jwt",
+        "postman",
+        "sharepoint-online"
+      ],
+      "owner": {
+        "account_id": 17711022,
+        "reputation": 11,
+        "user_id": 12871449,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/3aa1960bffd4cd7fd104c642ad3821e4?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Carl",
+        "link": "https://stackoverflow.com/users/12871449/carl"
+      },
+      "is_answered": false,
+      "view_count": 29,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702298024,
+      "creation_date": 1702239643,
+      "last_edit_date": 1702298024,
+      "question_id": 77636296,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77636296/access-sharepoint-rest-api-with-certificate-based-client-credentials-replacing",
+      "title": "Access SharePoint REST API with certificate based client credentials (replacing deprecated ACS)"
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "spring-mvc",
+        "spring-boot",
+        "oauth-2.0"
+      ],
+      "owner": {
+        "account_id": 12187449,
+        "reputation": 81,
+        "user_id": 8896636,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/4311bb9e7f07600a7b236b3778dd5be9?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "devguy",
+        "link": "https://stackoverflow.com/users/8896636/devguy"
+      },
+      "is_answered": true,
+      "view_count": 10192,
+      "answer_count": 2,
+      "score": 1,
+      "last_activity_date": 1702297801,
+      "creation_date": 1517596977,
+      "last_edit_date": 1517630914,
+      "question_id": 48589012,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://stackoverflow.com/questions/48589012/how-to-do-oauth-2-api-call-and-get-the-response",
+      "title": "How to do OAuth 2 API call and get the response"
+    },
+    {
+      "tags": [
+        "java",
+        "geometry",
+        "intersection"
+      ],
+      "owner": {
+        "account_id": 21224895,
+        "reputation": 328,
+        "user_id": 15610766,
+        "user_type": "registered",
+        "profile_image": "https://i.stack.imgur.com/Y7E0M.jpg?s=256&g=1",
+        "display_name": "Dolfinwu",
+        "link": "https://stackoverflow.com/users/15610766/dolfinwu"
+      },
+      "is_answered": true,
+      "view_count": 49,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1702297415,
+      "creation_date": 1702262355,
+      "last_edit_date": 1702270326,
+      "question_id": 77637229,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77637229/incorrect-height-and-area-for-intersection-rectangle-in-java",
+      "title": "Incorrect height and area for intersection rectangle in Java"
+    },
+    {
+      "tags": [
+        "java"
+      ],
+      "owner": {
+        "account_id": 19720332,
+        "reputation": 1,
+        "user_id": 14438815,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a-/AOh14GiLzzXi908fDaFVw7TEpVmgRxrmi56t4mmjaQM8=k-s256",
+        "display_name": "Harshraj Singh",
+        "link": "https://stackoverflow.com/users/14438815/harshraj-singh"
+      },
+      "is_answered": false,
+      "view_count": 34,
+      "closed_date": 1702299820,
+      "answer_count": 0,
+      "score": -4,
+      "last_activity_date": 1702296992,
+      "creation_date": 1702296992,
+      "question_id": 77639511,
+      "link": "https://stackoverflow.com/questions/77639511/intellij-not-able-to-understand-class-and-intefraces",
+      "closed_reason": "Not suitable for this site",
+      "title": "Intellij not able to understand Class and intefraces"
+    },
+    {
+      "tags": [
+        "python",
+        "java",
+        "kivy",
+        "java-native-interface",
+        "pyjnius"
+      ],
+      "owner": {
+        "account_id": 27688296,
+        "reputation": 13,
+        "user_id": 21135581,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/0ffb392f44f02f1ba7d96e7036e8afdf?s=256&d=identicon&r=PG",
+        "display_name": "ohshit",
+        "link": "https://stackoverflow.com/users/21135581/ohshit"
+      },
+      "is_answered": false,
+      "view_count": 31,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702296858,
+      "creation_date": 1702293351,
+      "last_edit_date": 1702296854,
+      "question_id": 77639171,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639171/python-implementation-of-java-onsuccesslistener",
+      "title": "Python implementation of Java OnSuccessListener"
+    },
+    {
+      "tags": [
+        "java",
+        "pdfbox",
+        "pdfmerger"
+      ],
+      "owner": {
+        "account_id": 16757142,
+        "reputation": 3,
+        "user_id": 12112850,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a-/AAuE7mCrVb3QssIJulJ1jj9RUSZU5WhOkmre0xhOHfIu=k-s256",
+        "display_name": "Jonas Baur",
+        "link": "https://stackoverflow.com/users/12112850/jonas-baur"
+      },
+      "is_answered": false,
+      "view_count": 28,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702296689,
+      "creation_date": 1702286877,
+      "last_edit_date": 1702296689,
+      "question_id": 77638586,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638586/apache-pdfbox-merge-a-single-pdf-with-an-adobe-pdf-portfolio",
+      "title": "Apache PDFBox merge a single PDF with an Adobe PDF Portfolio"
+    },
+    {
+      "tags": [
+        "java",
+        "memory",
+        "garbage-collection"
+      ],
+      "owner": {
+        "account_id": 395885,
+        "reputation": 25508,
+        "user_id": 759076,
+        "user_type": "registered",
+        "accept_rate": 97,
+        "profile_image": "https://i.stack.imgur.com/u80ZJ.jpg?s=256&g=1",
+        "display_name": "Jackson Tale",
+        "link": "https://stackoverflow.com/users/759076/jackson-tale"
+      },
+      "is_answered": true,
+      "view_count": 14427,
+      "accepted_answer_id": 10587925,
+      "answer_count": 5,
+      "score": 25,
+      "last_activity_date": 1702296503,
+      "creation_date": 1337014926,
+      "last_edit_date": 1702296503,
+      "question_id": 10587868,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/10587868/how-can-the-java-garbage-collector-quickly-know-which-objects-do-not-have-refere",
+      "title": "How can the Java Garbage Collector quickly know which objects do not have references to them any more?"
+    },
+    {
+      "tags": [
+        "java",
+        "milton"
+      ],
+      "owner": {
+        "account_id": 143752,
+        "reputation": 5048,
+        "user_id": 352319,
+        "user_type": "registered",
+        "accept_rate": 84,
+        "profile_image": "https://i.stack.imgur.com/q5TK0.jpg?s=256&g=1",
+        "display_name": "kc2001",
+        "link": "https://stackoverflow.com/users/352319/kc2001"
+      },
+      "is_answered": false,
+      "view_count": 20,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702296281,
+      "creation_date": 1701964589,
+      "last_edit_date": 1702134786,
+      "question_id": 77621411,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77621411/how-do-i-get-milton-to-distinguish-between-child-files-and-child-folders",
+      "title": "How do I get Milton to distinguish between child files and child folders?"
+    },
+    {
+      "tags": [
+        "java",
+        "garbage-collection",
+        "heap-memory",
+        "stack-memory"
+      ],
+      "owner": {
+        "account_id": 8452691,
+        "reputation": 15,
+        "user_id": 6341041,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/8a87ebd9fa3904f56a0ee14012ad0fb9?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Vinay Sharma",
+        "link": "https://stackoverflow.com/users/6341041/vinay-sharma"
+      },
+      "is_answered": false,
+      "view_count": 33,
+      "closed_date": 1702296149,
+      "answer_count": 0,
+      "score": -3,
+      "last_activity_date": 1702295946,
+      "creation_date": 1702294951,
+      "last_edit_date": 1702295946,
+      "question_id": 77639316,
+      "link": "https://stackoverflow.com/questions/77639316/how-jvm-identify-the-unrefrenced-objects",
+      "closed_reason": "Duplicate",
+      "title": "How JVM identify the unrefrenced objects"
+    },
+    {
+      "tags": [
+        "java",
+        "arrays",
+        "sorting"
+      ],
+      "owner": {
+        "account_id": 24395089,
+        "reputation": 29,
+        "user_id": 18324544,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/1231e23246b6803d58916e93ab1d4767?s=256&d=identicon&r=PG",
+        "display_name": "Nuva_rad",
+        "link": "https://stackoverflow.com/users/18324544/nuva-rad"
+      },
+      "is_answered": true,
+      "view_count": 4823,
+      "accepted_answer_id": 72636237,
+      "answer_count": 9,
+      "score": 1,
+      "last_activity_date": 1702295586,
+      "creation_date": 1655316895,
+      "last_edit_date": 1655661199,
+      "question_id": 72636069,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/72636069/method-to-find-second-highest-number-in-an-array-in-java",
+      "title": "Method to find second highest number in an array in java"
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "maven"
+      ],
+      "owner": {
+        "account_id": 1461614,
+        "reputation": 465,
+        "user_id": 1375780,
+        "user_type": "registered",
+        "accept_rate": 61,
+        "profile_image": "https://lh5.googleusercontent.com/-ZaySVPzbyv0/AAAAAAAAAAI/AAAAAAAAAEE/U6JfJjWJ1gk/photo.jpg?sz=256",
+        "display_name": "tahasozgen",
+        "link": "https://stackoverflow.com/users/1375780/tahasozgen"
+      },
+      "is_answered": false,
+      "view_count": 36,
+      "answer_count": 0,
+      "score": -1,
+      "last_activity_date": 1702295461,
+      "creation_date": 1702035395,
+      "last_edit_date": 1702295461,
+      "question_id": 77626286,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77626286/websocket-connection-to-path-failed-error",
+      "title": "WebSocket Connection to &#39;path&#39; failed Error"
+    },
+    {
+      "tags": [
+        "java",
+        "intune",
+        "microsoft-graph-intune"
+      ],
+      "owner": {
+        "account_id": 29041765,
+        "reputation": 1,
+        "user_id": 22246487,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/AAcHTtd8FwS3c_E4mig_4zWyQmhagsKf0z3wVGDM6xVwS2GC=k-s256",
+        "display_name": "dog27",
+        "link": "https://stackoverflow.com/users/22246487/dog27"
+      },
+      "is_answered": false,
+      "view_count": 10,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702295307,
+      "creation_date": 1702295307,
+      "question_id": 77639355,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639355/intune-executeaction-customtextnotification-400-bad-request",
+      "title": "Intune executeAction customTextNotification 400 Bad Request"
+    },
+    {
+      "tags": [
+        "java",
+        "maven",
+        "intellij-idea"
+      ],
+      "owner": {
+        "account_id": 22769173,
+        "reputation": 73,
+        "user_id": 16926827,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/2268994803243706/picture?type=large",
+        "display_name": "Lara",
+        "link": "https://stackoverflow.com/users/16926827/lara"
+      },
+      "is_answered": false,
+      "view_count": 39,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702295307,
+      "creation_date": 1702290516,
+      "last_edit_date": 1702293789,
+      "question_id": 77638902,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638902/enums-from-imported-maven-libraries-result-in-a-compile-error",
+      "title": "Enums from imported maven libraries result in a compile error"
+    },
+    {
+      "tags": [
+        "java",
+        "spring-webflux",
+        "project-reactor"
+      ],
+      "owner": {
+        "account_id": 3149253,
+        "reputation": 1255,
+        "user_id": 2663029,
+        "user_type": "registered",
+        "accept_rate": 29,
+        "profile_image": "https://www.gravatar.com/avatar/13873d0bfc9fb7f814dcab4144d8d48f?s=256&d=identicon&r=PG",
+        "display_name": "bitdancer",
+        "link": "https://stackoverflow.com/users/2663029/bitdancer"
+      },
+      "is_answered": true,
+      "view_count": 33764,
+      "accepted_answer_id": 67421363,
+      "answer_count": 6,
+      "score": 27,
+      "last_activity_date": 1702295166,
+      "creation_date": 1533698070,
+      "question_id": 51738140,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/51738140/how-to-correctly-use-slf4j-mdc-in-spring-webflux-webfilter",
+      "title": "How to correctly use slf4j MDC in spring-webflux WebFilter"
+    },
+    {
+      "tags": [
+        "java",
+        "serialization",
+        "jackson",
+        "objectmapper"
+      ],
+      "owner": {
+        "account_id": 397984,
+        "reputation": 537,
+        "user_id": 762421,
+        "user_type": "registered",
+        "accept_rate": 36,
+        "profile_image": "https://www.gravatar.com/avatar/0d978a908583019d8d088d007b5125ba?s=256&d=identicon&r=PG",
+        "display_name": "user762421",
+        "link": "https://stackoverflow.com/users/762421/user762421"
+      },
+      "is_answered": true,
+      "view_count": 26,
+      "accepted_answer_id": 77639319,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702294978,
+      "creation_date": 1702250009,
+      "question_id": 77636785,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77636785/jackson-objectmapper-how-to-configure-to-not-use-a-custom-json-serializer",
+      "title": "Jackson ObjectMapper - How to configure to not use a custom Json Serializer"
+    },
+    {
+      "tags": [
+        "java",
+        "amazon-dynamodb",
+        "aws-sdk"
+      ],
+      "owner": {
+        "account_id": 15318924,
+        "reputation": 143,
+        "user_id": 11052037,
+        "user_type": "registered",
+        "profile_image": "https://i.stack.imgur.com/kwIgJ.jpg?s=256&g=1",
+        "display_name": "Schallabajzer",
+        "link": "https://stackoverflow.com/users/11052037/schallabajzer"
+      },
+      "is_answered": true,
+      "view_count": 53,
+      "accepted_answer_id": 77627303,
+      "answer_count": 1,
+      "score": -1,
+      "last_activity_date": 1702294920,
+      "creation_date": 1702044957,
+      "last_edit_date": 1702056496,
+      "question_id": 77627171,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77627171/retrieveing-maximum-capacity-units-for-a-provisioned-table-in-dynamodb-via-aws-s",
+      "title": "Retrieveing Maximum capacity units for a Provisioned table in DynamoDB via AWS SDK"
+    },
+    {
+      "tags": [
+        "java",
+        "maven",
+        "apache-spark",
+        "spark-excel"
+      ],
+      "owner": {
+        "account_id": 13526561,
+        "reputation": 1,
+        "user_id": 9758220,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/a024a4ea04b71c6fd0f974d3b4ddffb3?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Arman",
+        "link": "https://stackoverflow.com/users/9758220/arman"
+      },
+      "is_answered": false,
+      "view_count": 41,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702294414,
+      "creation_date": 1702148418,
+      "last_edit_date": 1702217007,
+      "question_id": 77632519,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77632519/data-source-not-found-failed-to-find-the-data-source-com-crealytics-spark-excel",
+      "title": "DATA_SOURCE_NOT_FOUND Failed to find the data source: com.crealytics.spark.excel"
+    },
+    {
+      "tags": [
+        "java",
+        "multithreading",
+        "countdown",
+        "countdownlatch"
+      ],
+      "owner": {
+        "account_id": 30106243,
+        "reputation": 1,
+        "user_id": 23072012,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/9e9d99e54bcd19d7bfa797f4a1876d41?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "priyanka",
+        "link": "https://stackoverflow.com/users/23072012/priyanka"
+      },
+      "is_answered": false,
+      "view_count": 43,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702294163,
+      "creation_date": 1702240941,
+      "last_edit_date": 1702288593,
+      "question_id": 77636372,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77636372/how-to-use-countdownlatch-in-creating-threads-so-that-they-add-messages-into-the",
+      "title": "How to use CountDownLatch in creating threads so that they add messages into the list the order I call?"
+    },
+    {
+      "tags": [
+        "java",
+        "thymeleaf"
+      ],
+      "owner": {
+        "account_id": 2714938,
+        "reputation": 6041,
+        "user_id": 2342529,
+        "user_type": "registered",
+        "accept_rate": 98,
+        "profile_image": "https://i.stack.imgur.com/SSkK4.jpg?s=256&g=1",
+        "display_name": "Alexandru Severin",
+        "link": "https://stackoverflow.com/users/2342529/alexandru-severin"
+      },
+      "is_answered": true,
+      "view_count": 84341,
+      "accepted_answer_id": 23294426,
+      "answer_count": 3,
+      "score": 98,
+      "last_activity_date": 1702294105,
+      "creation_date": 1397832763,
+      "last_edit_date": 1670524545,
+      "question_id": 23156585,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/23156585/process-thymeleaf-variable-as-html-code-and-not-text",
+      "title": "Process Thymeleaf variable as HTML code and not text"
+    },
+    {
+      "tags": [
+        "java",
+        "encode",
+        "resttemplate",
+        "urlencode",
+        "encodeuricomponent"
+      ],
+      "owner": {
+        "account_id": 13320510,
+        "reputation": 11,
+        "user_id": 9615431,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/1879837275369447/picture?type=large",
+        "display_name": "Bryan Bezter",
+        "link": "https://stackoverflow.com/users/9615431/bryan-bezter"
+      },
+      "is_answered": false,
+      "view_count": 43,
+      "answer_count": 2,
+      "score": 1,
+      "last_activity_date": 1702293673,
+      "creation_date": 1701848897,
+      "question_id": 77611321,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77611321/encoding-uri-query-parameter-with-slash-without-double-encoding-and-special-ch",
+      "title": "Encoding URI query parameter with slash (without double encoding) and special characters in Java"
+    },
+    {
+      "tags": [
+        "java",
+        "macos",
+        "selenium-webdriver",
+        "cron",
+        "safari"
+      ],
+      "owner": {
+        "account_id": 30117858,
+        "reputation": 1,
+        "user_id": 23080671,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/fa3eb39fb10d1d24bdb041b75ea540c0?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "gauravdot311",
+        "link": "https://stackoverflow.com/users/23080671/gauravdot311"
+      },
+      "is_answered": false,
+      "view_count": 12,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702293110,
+      "creation_date": 1702293110,
+      "question_id": 77639145,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639145/crontab-scheduler-not-able-to-run-safari-using-selenium",
+      "title": "Crontab scheduler not able to run safari using selenium"
+    },
+    {
+      "tags": [
+        "java",
+        "token",
+        "tokenize",
+        "langchain",
+        "large-language-model"
+      ],
+      "owner": {
+        "account_id": 7235159,
+        "reputation": 299,
+        "user_id": 5520689,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/a02a8c5d573d234d179f8b8c60e07463?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Sachu",
+        "link": "https://stackoverflow.com/users/5520689/sachu"
+      },
+      "is_answered": false,
+      "view_count": 8,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702292785,
+      "creation_date": 1702292785,
+      "question_id": 77639117,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639117/what-is-the-best-practice-for-passing-a-tokenizer-in-langchain4j-for-azureopenai",
+      "title": "What is the best practice for passing a tokenizer in Langchain4j for AzureOpenAI/Vertex?"
+    },
+    {
+      "tags": [
+        "java",
+        "selenium-webdriver",
+        "chrome-devtools-protocol"
+      ],
+      "owner": {
+        "account_id": 3855110,
+        "reputation": 39,
+        "user_id": 3194257,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/663255469539d42c692dfb08fe4a60d1?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "user3194257",
+        "link": "https://stackoverflow.com/users/3194257/user3194257"
+      },
+      "is_answered": false,
+      "view_count": 32,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702292563,
+      "creation_date": 1702276842,
+      "last_edit_date": 1702281984,
+      "question_id": 77637844,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77637844/how-to-get-the-all-the-name-url-and-status-code-from-console-of-a-web-page-usin",
+      "title": "How to get the all the name, URL and status code from console of a web page using devtools in selenium java"
+    },
+    {
+      "tags": [
+        "java",
+        "selenium-webdriver"
+      ],
+      "owner": {
+        "account_id": 30089798,
+        "reputation": 1,
+        "user_id": 23059504,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocLkDNBIS4Rz7eQvJBzV25-9KX96rv8W03ynkzyEHJNNJw=k-s256",
+        "display_name": "Manohar Darshanapu",
+        "link": "https://stackoverflow.com/users/23059504/manohar-darshanapu"
+      },
+      "is_answered": false,
+      "view_count": 14,
+      "closed_date": 1702299431,
+      "answer_count": 0,
+      "score": -3,
+      "last_activity_date": 1702292525,
+      "creation_date": 1702291465,
+      "last_edit_date": 1702292525,
+      "question_id": 77638984,
+      "link": "https://stackoverflow.com/questions/77638984/cannot-instantiate-class-while-run-testng-xml-in-windows",
+      "closed_reason": "Needs details or clarity",
+      "title": "Cannot instantiate class while run testng.xml in windows"
+    },
+    {
+      "tags": [
+        "java"
+      ],
+      "owner": {
+        "account_id": 26844433,
+        "reputation": 1,
+        "user_id": 20430414,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/ALm5wu2P2NTiuaczTfQvkR8YXL0xDeje20OhSs-UG63N=k-s256",
+        "display_name": "zeeshan nafees",
+        "link": "https://stackoverflow.com/users/20430414/zeeshan-nafees"
+      },
+      "is_answered": true,
+      "view_count": 1253,
+      "answer_count": 5,
+      "score": -2,
+      "last_activity_date": 1702292469,
+      "creation_date": 1667716701,
+      "last_edit_date": 1667719974,
+      "question_id": 74333767,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/74333767/take-integer-inputs-till-the-user-enters-0-and-print-the-sum-of-all-numbers-hin",
+      "title": "Take integer inputs till the user enters 0 and print the sum of all numbers (HINT: while loop) (coding language:- JAVA)"
+    },
+    {
+      "tags": [
+        "java",
+        "unit-testing",
+        "intellij-idea",
+        "junit"
+      ],
+      "owner": {
+        "account_id": 133473,
+        "reputation": 5725,
+        "user_id": 334862,
+        "user_type": "registered",
+        "accept_rate": 71,
+        "profile_image": "https://i.stack.imgur.com/VRXoi.png?s=256&g=1",
+        "display_name": "Christian Neverdal",
+        "link": "https://stackoverflow.com/users/334862/christian-neverdal"
+      },
+      "is_answered": true,
+      "view_count": 14016,
+      "accepted_answer_id": 26178545,
+      "answer_count": 5,
+      "score": 7,
+      "last_activity_date": 1702292343,
+      "creation_date": 1412333676,
+      "last_edit_date": 1495540742,
+      "question_id": 26177689,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://stackoverflow.com/questions/26177689/intellij-tests-not-started",
+      "title": "IntelliJ: Tests not started"
+    },
+    {
+      "tags": [
+        "java",
+        "artificial-intelligence",
+        "deeplearning4j",
+        "nd4j"
+      ],
+      "owner": {
+        "account_id": 22139103,
+        "reputation": 1,
+        "user_id": 16389371,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a-/AOh14Gg_iHcvWgwMdZ0nh96zXCK_8bPcFjKTv9irEhm7YA=k-s256",
+        "display_name": "Boub Leon",
+        "link": "https://stackoverflow.com/users/16389371/boub-leon"
+      },
+      "is_answered": false,
+      "view_count": 10,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702292262,
+      "creation_date": 1702292262,
+      "question_id": 77639066,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77639066/org-nd4j-linalg-factory-nd4j-randomfactory-is-null-in-deeplearning4j",
+      "title": "&quot;org.nd4j.linalg.factory.Nd4j.randomFactory&quot; is null in Deeplearning4j"
+    },
+    {
+      "tags": [
+        "java",
+        "discord",
+        "bots",
+        "discord-jda"
+      ],
+      "owner": {
+        "account_id": 30117817,
+        "reputation": 1,
+        "user_id": 23080641,
+        "user_type": "registered",
+        "profile_image": "https://i.stack.imgur.com/lcHgT.jpg?s=256&g=1",
+        "display_name": "Jango",
+        "link": "https://stackoverflow.com/users/23080641/jango"
+      },
+      "is_answered": false,
+      "view_count": 30,
+      "closed_date": 1702332246,
+      "answer_count": 0,
+      "score": -1,
+      "last_activity_date": 1702291597,
+      "creation_date": 1702291597,
+      "question_id": 77639004,
+      "link": "https://stackoverflow.com/questions/77639004/making-a-discord-bot-with-jda-in-java",
+      "closed_reason": "Not suitable for this site",
+      "title": "Making a discord bot with JDA in java"
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "spring-boot",
+        "bean-validation",
+        "spring-restcontroller"
+      ],
+      "owner": {
+        "account_id": 14266486,
+        "reputation": 4054,
+        "user_id": 10305444,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/cdffaf7c0a3d7d398e9b004acd125cd6?s=256&d=identicon&r=PG",
+        "display_name": "Maifee Ul Asad",
+        "link": "https://stackoverflow.com/users/10305444/maifee-ul-asad"
+      },
+      "is_answered": true,
+      "view_count": 43633,
+      "accepted_answer_id": 57950415,
+      "answer_count": 5,
+      "score": 33,
+      "last_activity_date": 1702291453,
+      "creation_date": 1568608059,
+      "question_id": 57950383,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/57950383/spring-boot-cant-autowire-configurationproperties",
+      "title": "Spring Boot can&#39;t autowire @ConfigurationProperties"
+    },
+    {
+      "tags": [
+        "java",
+        "unit-testing",
+        "quarkus",
+        "quarkus-panache"
+      ],
+      "owner": {
+        "account_id": 9303498,
+        "reputation": 351,
+        "user_id": 15123161,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/9118023ba7766c881cb9441eb2e2e226?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Marco",
+        "link": "https://stackoverflow.com/users/15123161/marco"
+      },
+      "is_answered": false,
+      "view_count": 20,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702291196,
+      "creation_date": 1702290737,
+      "last_edit_date": 1702291196,
+      "question_id": 77638930,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638930/quarkus-panachemock-is-mocking-builder-pattern",
+      "title": "Quarkus: PanacheMock is mocking Builder pattern"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "unity-game-engine",
+        "embed"
+      ],
+      "owner": {
+        "account_id": 30040095,
+        "reputation": 1,
+        "user_id": 23021158,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocLlIIdJ1boVdDqGJlIV7z6JqOvkOaFa_mXEEKPqAqhv=k-s256",
+        "display_name": "Playfuldev",
+        "link": "https://stackoverflow.com/users/23021158/playfuldev"
+      },
+      "is_answered": false,
+      "view_count": 18,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702290659,
+      "creation_date": 1702290659,
+      "question_id": 77638920,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638920/android-logcat-says-unable-to-start-activity-componentinfo",
+      "title": "Android Logcat says &quot;Unable to start activity Componentinfo"
+    },
+    {
+      "tags": [
+        "java",
+        "templates",
+        "intellij-idea"
+      ],
+      "owner": {
+        "account_id": 30117112,
+        "reputation": 1,
+        "user_id": 23080075,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/cf306a22794b32949cd940f1d5c25579?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "gamer5971",
+        "link": "https://stackoverflow.com/users/23080075/gamer5971"
+      },
+      "is_answered": false,
+      "view_count": 20,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702290613,
+      "creation_date": 1702289997,
+      "last_edit_date": 1702290613,
+      "question_id": 77638859,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638859/what-are-the-results-of-change-and-options-in-live-templates-in-ideas-settings",
+      "title": "What are the results of change and options in Live Templates in idea&#39;s settings?"
+    },
+    {
+      "tags": [
+        "java",
+        "maven",
+        "ssl"
+      ],
+      "owner": {
+        "account_id": 10359304,
+        "reputation": 43,
+        "user_id": 7640245,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/e6bc7cf284997a8720c954b6ff03750c?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Forfaro",
+        "link": "https://stackoverflow.com/users/7640245/forfaro"
+      },
+      "is_answered": false,
+      "view_count": 18,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702290366,
+      "creation_date": 1702290366,
+      "question_id": 77638891,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638891/java-maven-project-with-certificate-problem-on-command-line",
+      "title": "Java Maven Project with certificate problem on command line"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "wifi"
+      ],
+      "owner": {
+        "account_id": 5332702,
+        "reputation": 2200,
+        "user_id": 4628115,
+        "user_type": "registered",
+        "accept_rate": 60,
+        "profile_image": "https://www.gravatar.com/avatar/b3a6c65cdd121a35b1dcf348c6b0c9b6?s=256&d=identicon&r=PG",
+        "display_name": "CybeX",
+        "link": "https://stackoverflow.com/users/4628115/cybex"
+      },
+      "is_answered": false,
+      "view_count": 430,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702290212,
+      "creation_date": 1465865828,
+      "last_edit_date": 1702290212,
+      "question_id": 37801357,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/37801357/wifi-scan-no-such-instance-field-channelwidth",
+      "title": "WiFi Scan No Such Instance field &#39;ChannelWidth&#39;"
+    },
+    {
+      "tags": [
+        "java",
+        "properties-file",
+        "quarkus",
+        "microprofile"
+      ],
+      "owner": {
+        "account_id": 5666480,
+        "reputation": 2525,
+        "user_id": 4482535,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://i.stack.imgur.com/ycBDr.png?s=256&g=1",
+        "display_name": "mika",
+        "link": "https://stackoverflow.com/users/4482535/mika"
+      },
+      "is_answered": true,
+      "view_count": 6820,
+      "answer_count": 4,
+      "score": 4,
+      "last_activity_date": 1702290152,
+      "creation_date": 1589815225,
+      "question_id": 61872993,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/61872993/how-to-use-configuration-maps-for-custom-quarkus-configproperties",
+      "title": "How to use configuration maps for custom Quarkus ConfigProperties"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "android-studio"
+      ],
+      "owner": {
+        "account_id": 14945764,
+        "reputation": 1019,
+        "user_id": 10791086,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/26a32aa72ab9ab374c55e7ed26def84c?s=256&d=identicon&r=PG",
+        "display_name": "Mahesh Gv",
+        "link": "https://stackoverflow.com/users/10791086/mahesh-gv"
+      },
+      "is_answered": true,
+      "view_count": 7703,
+      "answer_count": 2,
+      "score": 3,
+      "last_activity_date": 1702289827,
+      "creation_date": 1663232353,
+      "last_edit_date": 1663301531,
+      "question_id": 73728313,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/73728313/read-external-storage-permission-not-asking-in-android-13",
+      "title": "READ_EXTERNAL_STORAGE permission Not asking in Android 13"
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "java-17",
+        "spring-4",
+        "spring2.x"
+      ],
+      "owner": {
+        "account_id": 20683611,
+        "reputation": 1177,
+        "user_id": 15186569,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/86f746c13abc3343961b9f97572487ef?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "ThrowsError",
+        "link": "https://stackoverflow.com/users/15186569/throwserror"
+      },
+      "is_answered": false,
+      "view_count": 49,
+      "bounty_amount": 50,
+      "bounty_closes_date": 1702888352,
+      "answer_count": 1,
+      "score": -1,
+      "last_activity_date": 1702289481,
+      "creation_date": 1702044559,
+      "question_id": 77627131,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77627131/migration-spring-v2-to-spring-v4-for-org-springframework-cloud-stream-annotation",
+      "title": "Migration Spring v2 to Spring v4 for org.springframework.cloud.stream.annotation"
+    },
+    {
+      "tags": [
+        "java",
+        "maven"
+      ],
+      "owner": {
+        "account_id": 193497,
+        "reputation": 5376,
+        "user_id": 435267,
+        "user_type": "registered",
+        "accept_rate": 83,
+        "profile_image": "https://www.gravatar.com/avatar/9f42c85eba2be535e0c405b52faa25f4?s=256&d=identicon&r=PG",
+        "display_name": "Roland",
+        "link": "https://stackoverflow.com/users/435267/roland"
+      },
+      "is_answered": false,
+      "view_count": 42,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702289088,
+      "creation_date": 1702286115,
+      "last_edit_date": 1702289088,
+      "question_id": 77638516,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638516/set-parent-version-to-exact-version",
+      "title": "Set parent version to exact version"
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "liquibase",
+        "flyway"
+      ],
+      "owner": {
+        "account_id": 22248202,
+        "reputation": 33,
+        "user_id": 16481564,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/AATXAJzdDdv69amAHgHz9aC95k8do5dSuOi9A4tfqCiK=k-s256",
+        "display_name": "Morris Birkholz",
+        "link": "https://stackoverflow.com/users/16481564/morris-birkholz"
+      },
+      "is_answered": false,
+      "view_count": 31,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1702288658,
+      "creation_date": 1702288658,
+      "question_id": 77638743,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638743/does-liquibase-have-a-similar-option-to-flyways-clean-on-validation-error",
+      "title": "Does Liquibase have a similar option to Flyway`s clean-on-validation-error"
+    },
+    {
+      "tags": [
+        "java",
+        "elasticsearch",
+        "lucene",
+        "elastic-stack",
+        "spring-data-elasticsearch"
+      ],
+      "owner": {
+        "account_id": 14546187,
+        "reputation": 970,
+        "user_id": 10506380,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/32a1bb0bd26cb4e7f260ba0a0aa09f2a?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Aditya",
+        "link": "https://stackoverflow.com/users/10506380/aditya"
+      },
+      "is_answered": false,
+      "view_count": 16,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702288596,
+      "creation_date": 1702275074,
+      "question_id": 77637740,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77637740/identify-partition-key-of-a-elastic-search-index",
+      "title": "Identify partition key of a Elastic Search Index"
+    },
+    {
+      "tags": [
+        "java",
+        "swing"
+      ],
+      "owner": {
+        "account_id": 21584629,
+        "reputation": 11,
+        "user_id": 15915311,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/e685f762911345f1bb77d30f54883cb9?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Michael",
+        "link": "https://stackoverflow.com/users/15915311/michael"
+      },
+      "is_answered": false,
+      "view_count": 191,
+      "answer_count": 0,
+      "score": -2,
+      "last_activity_date": 1702288444,
+      "creation_date": 1701090551,
+      "last_edit_date": 1702288444,
+      "question_id": 77557150,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77557150/the-swing-window-stops-updating-on-linux-when-there-is-no-user-action-in-gui",
+      "title": "The Swing window stops updating on Linux when there is no user action in GUI"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "android-studio",
+        "mqtt",
+        "paho"
+      ],
+      "owner": {
+        "account_id": 24047851,
+        "reputation": 1,
+        "user_id": 18026683,
+        "user_type": "registered",
+        "profile_image": "https://i.stack.imgur.com/2FYM2.jpg?s=256&g=1",
+        "display_name": "Aema",
+        "link": "https://stackoverflow.com/users/18026683/aema"
+      },
+      "is_answered": false,
+      "view_count": 40,
+      "closed_date": 1702228577,
+      "answer_count": 0,
+      "score": -3,
+      "last_activity_date": 1702288162,
+      "creation_date": 1702198248,
+      "last_edit_date": 1702288162,
+      "question_id": 77634197,
+      "link": "https://stackoverflow.com/questions/77634197/how-to-solve-paho-android-service-problem",
+      "closed_reason": "Not suitable for this site",
+      "title": "How to solve Paho Android Service problem"
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "google-cloud-spanner",
+        "low-latency"
+      ],
+      "owner": {
+        "account_id": 8563694,
+        "reputation": 125,
+        "user_id": 6416920,
+        "user_type": "registered",
+        "accept_rate": 25,
+        "profile_image": "https://www.gravatar.com/avatar/a8bf1ab53c96359d80e0c29ebc21ce96?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Wenaro",
+        "link": "https://stackoverflow.com/users/6416920/wenaro"
+      },
+      "is_answered": false,
+      "view_count": 39,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702288065,
+      "creation_date": 1702287212,
+      "question_id": 77638611,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638611/spring-boot-spanner-latency-problems",
+      "title": "Spring Boot spanner latency problems"
+    },
+    {
+      "tags": [
+        "java",
+        "nested",
+        "parameter-passing",
+        "junit5"
+      ],
+      "owner": {
+        "account_id": 8202858,
+        "reputation": 801,
+        "user_id": 6173626,
+        "user_type": "registered",
+        "accept_rate": 88,
+        "profile_image": "https://www.gravatar.com/avatar/160d160ccf021d5151ff15b9f5c167d7?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "SoCal",
+        "link": "https://stackoverflow.com/users/6173626/socal"
+      },
+      "is_answered": true,
+      "view_count": 6805,
+      "answer_count": 2,
+      "score": 7,
+      "last_activity_date": 1702287804,
+      "creation_date": 1542315291,
+      "last_edit_date": 1702287804,
+      "question_id": 53327761,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/53327761/is-it-possible-to-nest-junit-5-parameterized-tests",
+      "title": "Is it possible to nest JUnit 5 parameterized tests?"
+    },
+    {
+      "tags": [
+        "java",
+        "eclipse",
+        "command-line-arguments",
+        "intellij-17",
+        "java-process-runtime"
+      ],
+      "owner": {
+        "account_id": 23042361,
+        "reputation": 23,
+        "user_id": 17160365,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2c162c9a894722f37a6265814e939119?s=256&d=identicon&r=PG",
+        "display_name": "lakshman Kommula",
+        "link": "https://stackoverflow.com/users/17160365/lakshman-kommula"
+      },
+      "is_answered": false,
+      "view_count": 57,
+      "closed_date": 1702289312,
+      "answer_count": 0,
+      "score": -3,
+      "last_activity_date": 1702287787,
+      "creation_date": 1702279951,
+      "last_edit_date": 1702287787,
+      "question_id": 77638029,
+      "link": "https://stackoverflow.com/questions/77638029/cannot-run-program-java-in-directory-file-name-or-extension-is-too-long",
+      "closed_reason": "Needs details or clarity",
+      "title": "Cannot run program (java) in (directory &quot;.&quot;); file name or extension is too long"
+    },
+    {
+      "tags": [
+        "java",
+        "javadoc",
+        "project-management"
+      ],
+      "owner": {
+        "account_id": 84527,
+        "reputation": 2001,
+        "user_id": 236223,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://www.gravatar.com/avatar/21d609da70e64ee9efef10a38872eac1?s=256&d=identicon&r=PG",
+        "display_name": "wj.",
+        "link": "https://stackoverflow.com/users/236223/wj"
+      },
+      "is_answered": true,
+      "view_count": 58706,
+      "closed_date": 1437080106,
+      "accepted_answer_id": 1989205,
+      "answer_count": 13,
+      "score": 26,
+      "last_activity_date": 1702287747,
+      "creation_date": 1262369064,
+      "last_edit_date": 1437446355,
+      "question_id": 1989177,
+      "link": "https://stackoverflow.com/questions/1989177/how-to-manage-todo-programming-stuff",
+      "closed_reason": "Opinion-based",
+      "title": "How to manage @todo programming stuff?"
+    },
+    {
+      "tags": [
+        "java"
+      ],
+      "owner": {
+        "account_id": 1666859,
+        "reputation": 2605,
+        "user_id": 1534084,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://www.gravatar.com/avatar/ef28a37ab34404c23fb91ca55a09ba8a?s=256&d=identicon&r=PG",
+        "display_name": "Martin Mucha",
+        "link": "https://stackoverflow.com/users/1534084/martin-mucha"
+      },
+      "is_answered": false,
+      "view_count": 73,
+      "closed_date": 1702290344,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702287603,
+      "creation_date": 1702287603,
+      "question_id": 77638647,
+      "link": "https://stackoverflow.com/questions/77638647/what-makes-this-variable-accessible-outside-of-block",
+      "closed_reason": "Duplicate",
+      "title": "What makes this variable accessible outside of block?"
+    },
+    {
+      "tags": [
+        "java",
+        "lombok",
+        "checkstyle"
+      ],
+      "owner": {
+        "account_id": 21375952,
+        "reputation": 593,
+        "user_id": 15742673,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/159b584b55f93cdf63249abcabb3acb0?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "meldevep",
+        "link": "https://stackoverflow.com/users/15742673/meldevep"
+      },
+      "is_answered": false,
+      "view_count": 50,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702287595,
+      "creation_date": 1701170235,
+      "last_edit_date": 1702287595,
+      "question_id": 77563442,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77563442/suppress-checkstyle-for-lomboks-val-using-suppressionxpathfilter",
+      "title": "Suppress checkstyle for lombok&#39;s val using SuppressionXpathFilter"
+    },
+    {
+      "tags": [
+        "java",
+        "maven",
+        "azure-active-directory",
+        "microsoft-graph-api",
+        "microsoft-graph-sdks"
+      ],
+      "owner": {
+        "account_id": 30104116,
+        "reputation": 1,
+        "user_id": 23070428,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/d79d9bf903b875abd51ef2401daca30a?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "An Nguyen",
+        "link": "https://stackoverflow.com/users/23070428/an-nguyen"
+      },
+      "is_answered": false,
+      "view_count": 25,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702287480,
+      "creation_date": 1702287439,
+      "last_edit_date": 1702287480,
+      "question_id": 77638635,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638635/why-does-graphserviceclient-say-im-using-okhttp3-request-eventhough-i-dont-eve",
+      "title": "Why does GraphServiceClient say I&#39;m using okhttp3.Request eventhough I don&#39;t even import it?"
+    },
+    {
+      "tags": [
+        "java",
+        "postgresql",
+        "spring-boot"
+      ],
+      "owner": {
+        "account_id": 29359479,
+        "reputation": 1,
+        "user_id": 22494606,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/dc5bb636865455f9dae203cfe8819d25?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "spjvn",
+        "link": "https://stackoverflow.com/users/22494606/spjvn"
+      },
+      "is_answered": false,
+      "view_count": 30,
+      "answer_count": 1,
+      "score": -1,
+      "last_activity_date": 1702287290,
+      "creation_date": 1702254936,
+      "question_id": 77636974,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77636974/one-to-many-attribute-value-type-should-not-be-book",
+      "title": "&#39;One To Many&#39; attribute value type should not be &#39;Book&#39;"
+    },
+    {
+      "tags": [
+        "java",
+        "jboss",
+        "jbossfuse",
+        "jboss-eap-7"
+      ],
+      "owner": {
+        "account_id": 30035843,
+        "reputation": 23,
+        "user_id": 23017833,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJI6JKCAT0aqs6KICdyhbirdH91Vc4UYmZDZ5ujAGQA=k-s256",
+        "display_name": "JackLkn",
+        "link": "https://stackoverflow.com/users/23017833/jacklkn"
+      },
+      "is_answered": true,
+      "view_count": 34,
+      "accepted_answer_id": 77638617,
+      "answer_count": 1,
+      "score": 2,
+      "last_activity_date": 1702287241,
+      "creation_date": 1702282485,
+      "last_edit_date": 1702283416,
+      "question_id": 77638215,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638215/error-did-not-find-the-extensions-element-error-on-installing-fuse-in-jbossea",
+      "title": "Error: Did not find the &lt;extensions&gt; element Error on Installing FUSE in JBossEAP 7.2"
+    },
+    {
+      "tags": [
+        "java",
+        "oracle",
+        "jdbc"
+      ],
+      "owner": {
+        "account_id": 28557179,
+        "reputation": 23,
+        "user_id": 21861223,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/8cdddaa105221466cd95c6343e8f9d5e?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Amir",
+        "link": "https://stackoverflow.com/users/21861223/amir"
+      },
+      "is_answered": false,
+      "view_count": 45,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702287241,
+      "creation_date": 1702274581,
+      "last_edit_date": 1702287241,
+      "question_id": 77637721,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77637721/how-does-closing-jdbc-sqlconnection-work",
+      "title": "How does closing jdbc sqlconnection work?"
+    },
+    {
+      "tags": [
+        "java",
+        "encryption"
+      ],
+      "owner": {
+        "account_id": 8654215,
+        "reputation": 1,
+        "user_id": 6479003,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/374684252b654853cebcee444cfb33c9?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "sandeep kumar yadav",
+        "link": "https://stackoverflow.com/users/6479003/sandeep-kumar-yadav"
+      },
+      "is_answered": false,
+      "view_count": 80,
+      "closed_date": 1702290519,
+      "answer_count": 2,
+      "score": -2,
+      "last_activity_date": 1702286418,
+      "creation_date": 1702283651,
+      "last_edit_date": 1702283848,
+      "question_id": 77638305,
+      "link": "https://stackoverflow.com/questions/77638305/encryption-algorithm-in-which-length-and-format-of-the-cipher-text-should-be-sam",
+      "closed_reason": "Not suitable for this site",
+      "title": "Encryption algorithm in which length and format of the cipher text should be same and length of plain text"
+    },
+    {
+      "tags": [
+        "java",
+        "azure"
+      ],
+      "owner": {
+        "account_id": 20837216,
+        "reputation": 11,
+        "user_id": 19849947,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/8576cfdd30dcd50b2d2451c7cade51d5?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Mahajan",
+        "link": "https://stackoverflow.com/users/19849947/mahajan"
+      },
+      "is_answered": false,
+      "view_count": 86,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702286039,
+      "creation_date": 1702014564,
+      "question_id": 77624576,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77624576/core-java-implementation-for-authorization-code-flow-using-azure-ad",
+      "title": "Core Java implementation for authorization code flow using Azure AD"
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "websocket",
+        "stomp"
+      ],
+      "owner": {
+        "account_id": 14659007,
+        "reputation": 121,
+        "user_id": 10586805,
+        "user_type": "registered",
+        "profile_image": "https://lh5.googleusercontent.com/-WV3dlKiKK48/AAAAAAAAAAI/AAAAAAAACEw/rzYYrRpLIFY/photo.jpg?sz=256",
+        "display_name": "Akshay Som",
+        "link": "https://stackoverflow.com/users/10586805/akshay-som"
+      },
+      "is_answered": false,
+      "view_count": 46,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702285936,
+      "creation_date": 1702021623,
+      "last_edit_date": 1702285936,
+      "question_id": 77625059,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77625059/java-stomp-message-not-received",
+      "title": "Java STOMP message not received"
+    },
+    {
+      "tags": [
+        "java",
+        "docker",
+        "apache-flink",
+        "flink-checkpoint"
+      ],
+      "owner": {
+        "account_id": 13253330,
+        "reputation": 151,
+        "user_id": 9570228,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/5cd6788effc39d7ba29d23ef66284948?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "NoOne",
+        "link": "https://stackoverflow.com/users/9570228/noone"
+      },
+      "is_answered": false,
+      "view_count": 32,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1702285909,
+      "creation_date": 1701758425,
+      "last_edit_date": 1701929868,
+      "question_id": 77604252,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77604252/flink-checkpoints-retained",
+      "title": "Flink checkpoints retained"
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "accessible"
+      ],
+      "owner": {
+        "account_id": 5534467,
+        "reputation": 1,
+        "user_id": 4393289,
+        "user_type": "registered",
+        "profile_image": "https://i.stack.imgur.com/mKgj5.jpg?s=256&g=1",
+        "display_name": "Mohsin Shabbir",
+        "link": "https://stackoverflow.com/users/4393289/mohsin-shabbir"
+      },
+      "is_answered": false,
+      "view_count": 29,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702285897,
+      "creation_date": 1702285897,
+      "question_id": 77638495,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638495/spring-boot-application-not-accessible-on-remote-devicesame-network-after-upgr",
+      "title": "Spring boot application not accessible on remote device(same network) after upgrade to Open JDK17"
+    },
+    {
+      "tags": [
+        "java",
+        "javafx",
+        "zxing",
+        "jlink",
+        "module-info"
+      ],
+      "owner": {
+        "account_id": 28985227,
+        "reputation": 149,
+        "user_id": 22202172,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/AAcHTtdw-h5lIWejT5EiTHEkkbOvUbYhhmmiBkZpNNXYW2gPvyg=k-s256",
+        "display_name": "Dharun",
+        "link": "https://stackoverflow.com/users/22202172/dharun"
+      },
+      "is_answered": true,
+      "view_count": 80,
+      "answer_count": 1,
+      "score": 2,
+      "last_activity_date": 1702285547,
+      "creation_date": 1702211998,
+      "last_edit_date": 1702217298,
+      "question_id": 77634820,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77634820/how-to-create-a-module-info-class-file-and-add-it-to-the-jar",
+      "title": "How to create a module-info class file and add it to the jar?"
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot"
+      ],
+      "owner": {
+        "account_id": 992738,
+        "reputation": 408,
+        "user_id": 1009540,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/cbf3266ba81e08853466f78bb92221e7?s=256&d=identicon&r=PG",
+        "display_name": "BarbetNL",
+        "link": "https://stackoverflow.com/users/1009540/barbetnl"
+      },
+      "is_answered": true,
+      "view_count": 1135,
+      "accepted_answer_id": 69652708,
+      "answer_count": 2,
+      "score": 1,
+      "last_activity_date": 1702285431,
+      "creation_date": 1633450636,
+      "question_id": 69454007,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/69454007/mocking-with-contentcachingresponsewrapper-to-test-filter",
+      "title": "Mocking with ContentCachingResponseWrapper to test Filter"
+    },
+    {
+      "tags": [
+        "java",
+        "angular",
+        "spring-boot",
+        "microservices",
+        "api-gateway"
+      ],
+      "owner": {
+        "account_id": 24528328,
+        "reputation": 14,
+        "user_id": 18440505,
+        "user_type": "registered",
+        "profile_image": "https://i.stack.imgur.com/gf5hD.jpg?s=256&g=1",
+        "display_name": "Khalil Hermassi",
+        "link": "https://stackoverflow.com/users/18440505/khalil-hermassi"
+      },
+      "is_answered": true,
+      "view_count": 54,
+      "accepted_answer_id": 77638448,
+      "answer_count": 2,
+      "score": -2,
+      "last_activity_date": 1702285243,
+      "creation_date": 1702228637,
+      "question_id": 77635699,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77635699/cors-problem-in-api-gateway-using-springboot-consumed-by-angular",
+      "title": "CORS problem in API Gateway using Springboot consumed by Angular"
+    },
+    {
+      "tags": [
+        "java"
+      ],
+      "owner": {
+        "account_id": 30116553,
+        "reputation": 1,
+        "user_id": 23079657,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocLxW9mAIGTfwmUEBYW9vErzNTlYjEe1qeP0suIDD_l6=k-s256",
+        "display_name": "Siddharth Jadhav",
+        "link": "https://stackoverflow.com/users/23079657/siddharth-jadhav"
+      },
+      "is_answered": false,
+      "view_count": 15,
+      "closed_date": 1702280824,
+      "answer_count": 0,
+      "score": -4,
+      "last_activity_date": 1702285214,
+      "creation_date": 1702279767,
+      "last_edit_date": 1702285214,
+      "question_id": 77638019,
+      "link": "https://stackoverflow.com/questions/77638019/ambiguous-handler-methods-mapped-for-api-user-2-posts",
+      "closed_reason": "Needs details or clarity",
+      "title": "Ambiguous handler methods mapped for &#39;/api/user/2/posts&#39;"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "firebase",
+        "google-analytics"
+      ],
+      "owner": {
+        "account_id": 26849029,
+        "reputation": 1,
+        "user_id": 20434301,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/ALm5wu3oKRTuMPwn_ZWefn8hGEOhLpsRq8n32q4OnMT5og=k-s256",
+        "display_name": "Jon",
+        "link": "https://stackoverflow.com/users/20434301/jon"
+      },
+      "is_answered": false,
+      "view_count": 20,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1702285137,
+      "creation_date": 1702285137,
+      "question_id": 77638438,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638438/google-analytics-considers-app-updates-as-new-installations",
+      "title": "Google Analytics considers app updates as new installations"
+    },
+    {
+      "tags": [
+        "java",
+        "protocol-buffers",
+        "outputstream"
+      ],
+      "owner": {
+        "account_id": 20714990,
+        "reputation": 11,
+        "user_id": 15210678,
+        "user_type": "registered",
+        "profile_image": "https://lh4.googleusercontent.com/-IjrQdWaKnIM/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucm3fh4FhKaaOZDdhQ043K-g3_Xawg/s96-c/photo.jpg?sz=256",
+        "display_name": "Seunghyun Lee",
+        "link": "https://stackoverflow.com/users/15210678/seunghyun-lee"
+      },
+      "is_answered": false,
+      "view_count": 47,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1702284955,
+      "creation_date": 1702283556,
+      "last_edit_date": 1702284400,
+      "question_id": 77638298,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638298/problem-with-tcp-socket-write-not-working",
+      "title": "Problem with tcp socket write not working"
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "inputstream"
+      ],
+      "owner": {
+        "account_id": 30116839,
+        "reputation": 1,
+        "user_id": 23079862,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/b82e09c02b98d051048b9a8dd335cd9a?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Treelet",
+        "link": "https://stackoverflow.com/users/23079862/treelet"
+      },
+      "is_answered": false,
+      "view_count": 25,
+      "answer_count": 0,
+      "score": -1,
+      "last_activity_date": 1702284800,
+      "creation_date": 1702283182,
+      "last_edit_date": 1702284800,
+      "question_id": 77638272,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/77638272/what-causes-it-bt-socket-closed-read-return-1",
+      "title": "What causes it bt socket closed, read return: -1"
+    },
+    {
+      "tags": [
+        "javascript",
+        "java",
+        "spring-boot"
+      ],
+      "owner": {
+        "account_id": 4355646,
+        "reputation": 1785,
+        "user_id": 4900074,
+        "user_type": "registered",
+        "accept_rate": 83,
+        "profile_image": "https://www.gravatar.com/avatar/a6bcff74a28cc5c11fd6c4c80b595448?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "user4900074",
+        "link": "https://stackoverflow.com/users/4900074/user4900074"
+      },
+      "is_answered": true,
+      "view_count": 3865,
+      "answer_count": 4,
+      "score": 1,
+      "last_activity_date": 1702284589,
+      "creation_date": 1499272608,
+      "last_edit_date": 1499272772,
+      "question_id": 44931701,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://stackoverflow.com/questions/44931701/springboot-requestbody-pojo-not-mapping-to-my-json",
+      "title": "SpringBoot @RequestBody pojo not mapping to my json"
+    },
+    {
+      "tags": [
+        "java",
+        "android"
+      ],
+      "owner": {
+        "account_id": 5006679,
+        "reputation": 73,
+        "user_id": 4024141,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=256",
+        "display_name": "Salvador Figueroa",
+        "link": "https://stackoverflow.com/users/4024141/salvador-figueroa"
+      },
+      "is_answered": true,
+      "view_count": 1153,
+      "accepted_answer_id": 27490297,
+      "answer_count": 5,
+      "score": 6,
+      "last_activity_date": 1702284529,
+      "creation_date": 1418659207,
+      "last_edit_date": 1450458141,
+      "question_id": 27488094,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://stackoverflow.com/questions/27488094/how-combine-two-strings-with-random-position-android",
+      "title": "How combine two strings with random position android"
+    }
+  ],
+  "has_more": true,
+  "quota_max": 10000,
+  "quota_remaining": 9985
+}
