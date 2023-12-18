@@ -14,6 +14,7 @@ import java.util.List;
 @RequestMapping("/api/questions")
 public class QuestionController {
 
+
     @Autowired
     private QuestionsMapper questionsMapper;
 

@@ -7,15 +7,12 @@ import javax.persistence.Id;
 public class Comments {
 
     @Id
-    public Integer id;
     public Integer comment_id;
+
     public Integer question_id;
     public Integer score;
     public String body;
 
-    public Integer getId() {
-        return id;
-    }
 
     public Integer getComment_id() {
         return comment_id;
@@ -52,7 +49,6 @@ public class Comments {
     @Override
     public String toString() {
         return "Comments{" +
-                "id=" + id +
                 ", comment_id=" + comment_id +
                 ", question_id=" + question_id +
                 ", score=" + score +

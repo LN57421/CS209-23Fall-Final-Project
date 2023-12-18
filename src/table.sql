@@ -1,14 +1,12 @@
 CREATE TABLE Answers (
-                         id INT primary key AUTO_INCREMENT,
-                         answer_id INT ,
+                         answer_id INT primary key,
                          question_id INT,
                          score INT,
                          body TEXT
 ); -- 每个question拿出20个答案
 
 CREATE TABLE Comments (
-                          id INT primary key AUTO_INCREMENT,
-                          comment_id INT ,
+                          comment_id INT primary key,
                           question_id INT,
                           score INT,
                           body TEXT
@@ -23,12 +21,29 @@ CREATE TABLE Tags (
 );  -- Tags 自增   但是score和view_count不一样  加入对应的question_id
 
 CREATE TABLE Questions (
-                           question_id INT PRIMARY KEY AUTO_INCREMENT,
+                           question_id INT PRIMARY KEY,
                            is_answered INT,
                            creation_date datetime,
                            score INT,
                            view_count INT,
                            title TEXT,
-                           body TEXT,
-                           tags VARCHAR(255)
+                           body TEXT
+);
+
+CREATE TABLE SyntaxErrors(
+                       id INT primary key AUTO_INCREMENT,
+                       name VARCHAR(255),
+                       question_id  INT
+);
+
+CREATE TABLE FatalErrors(
+                       id INT primary key AUTO_INCREMENT,
+                       name VARCHAR(255),
+                       question_id  INT
+);
+
+CREATE TABLE Exceptions(
+                       id INT primary key AUTO_INCREMENT,
+                       name VARCHAR(255),
+                       question_id  INT
 );

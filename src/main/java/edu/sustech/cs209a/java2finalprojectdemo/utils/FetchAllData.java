@@ -23,9 +23,9 @@ public class FetchAllData {
 
     public static void main(String[] args) throws SQLException {
         // 控制爬取数量 Question表插入Question
-        for (int i = 1; i <= 5; i++) {
-            addQuestion(i);
-        }
+//        for (int i = 1; i <= 10; i++) {
+//            addQuestion(i);
+//        }
 
          // 更新questions表 comments表
          addBodies();
@@ -66,7 +66,7 @@ public class FetchAllData {
     private static void insertQuestionIntoDatabase(JsonObject jsonObject) {
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
 
-            String sql_insertQuestion = "INSERT INTO questions (question_id, is_answered, creation_date, score, view_count, tags, title, body) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql_insertQuestion = "INSERT INTO questions (question_id, is_answered, creation_date, score, view_count, title, body) VALUES (?, ?, ?, ?, ?, ?, ?)";
             String sql_insertTags = "INSERT INTO tags (name, score, view_count, question_id) VALUES (?, ?, ?, ?)";
 
             // 将信息填入sql语句
@@ -83,9 +83,15 @@ public class FetchAllData {
 
             // 获取问题的标签
             JsonArray tags = jsonObject.get("tags").getAsJsonArray();
-            // 将标签转换为字符串
-            String tagsString = tags.toString();
-            pstmt_in_Ques.setString(6, tagsString);
+
+
+            // 获取问题的标题
+            String title = jsonObject.get("title").getAsString();
+            pstmt_in_Ques.setString(6, title);
+
+            // 获取问题的body
+            String body = jsonObject.get("body").getAsString();
+            pstmt_in_Ques.setString(7, body);
 
             pstmt_in_Ques.executeUpdate();
             System.out.println("Question record inserted successfully");
@@ -94,6 +100,7 @@ public class FetchAllData {
 
             // Insert tags
             PreparedStatement pstmt_in_Tags = conn.prepareStatement(sql_insertTags);
+            System.out.println(tags.asList().size());
             for (JsonElement tagElement : tags) {
                 String tagName = tagElement.getAsString();
                 //System.out.println(tagName);
@@ -134,7 +141,7 @@ public class FetchAllData {
 
                 Map<String, String> params = new HashMap<>();
                 params.put("ids", questionId.toString());
-                params.put("pagesize", "2");
+                params.put("pagesize", "1");
                 CompletableFuture<JsonObject> future = api.fetchData("answer_question", params);
 
                 JsonObject response = future.get(); // Blocking call to get the result
@@ -164,7 +171,7 @@ public class FetchAllData {
 
                 Map<String, String> params = new HashMap<>();
                 params.put("ids", questionId.toString());
-                params.put("pagesize", "2");
+                params.put("pagesize", "1");
                 CompletableFuture<JsonObject> future = api.fetchData("comment_question", params);
 
                 JsonObject response = future.get(); // Blocking call to get the result

@@ -14,7 +14,6 @@ import javax.persistence.Id;
 public class Questions {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int question_id;
 
     public Integer answer_count;
@@ -27,7 +26,17 @@ public class Questions {
 
     public int view_count;
 
-    public String tags;
+    public String title;
+
+    public String body;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getBody() {
+        return body;
+    }
 
     public int getQuestion_id() {
         return question_id;
@@ -53,9 +62,6 @@ public class Questions {
         return view_count;
     }
 
-    public String getTags() {
-        return tags;
-    }
 
     public void setAnswer_count(Integer answer_count) {
         this.answer_count = answer_count;
@@ -77,20 +83,5 @@ public class Questions {
         this.view_count = view_count;
     }
 
-    public void setTags(String tags) {
-        this.tags = tags;
-    }
 
-    @Override
-    public String toString() {
-        return "Questions{" +
-                "question_id=" + question_id +
-                ", answer_count=" + answer_count +
-                ", is_answered=" + is_answered +
-                ", creation_date=" + creation_date +
-                ", score=" + score +
-                ", view_count=" + view_count +
-                ", tags='" + tags + '\'' +
-                '}';
-    }
 }

@@ -7,15 +7,11 @@ import javax.persistence.Id;
 public class Answers {
 
     @Id
-    public Integer id;
     public Integer answer_id;
+
     public Integer question_id;
     public Integer score;
     public String body;
-
-    public Integer getId() {
-        return id;
-    }
 
     public Integer getAnswer_id() {
         return answer_id;
@@ -52,7 +48,6 @@ public class Answers {
     @Override
     public String toString() {
         return "Answers{" +
-                "id=" + id +
                 ", answer_id=" + answer_id +
                 ", question_id=" + question_id +
                 ", score=" + score +
