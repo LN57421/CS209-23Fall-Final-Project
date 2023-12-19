@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 @Mapper
-public interface TagsMapper extends JpaRepository<Tags, String> {
+public interface TagsMapper{
 
     @Select("Select * from tags")
     List<Tags> findAllTags();
