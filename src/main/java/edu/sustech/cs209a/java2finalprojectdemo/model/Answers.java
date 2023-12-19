@@ -6,7 +6,6 @@ import javax.persistence.Id;
 @Entity
 public class Answers {
 
-
     public Integer answer_id;
     public Integer question_id;
     public Integer score;
@@ -17,6 +16,9 @@ public class Answers {
         this.question_id = question_id;
         this.score = score;
         this.body = body;
+    }
+
+    public Answers() {
     }
 
     public Integer getAnswer_id() {

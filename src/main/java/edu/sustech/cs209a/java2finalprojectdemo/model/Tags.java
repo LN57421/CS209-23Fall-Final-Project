@@ -1,29 +1,28 @@
 package edu.sustech.cs209a.java2finalprojectdemo.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Tags {
 
-    public Tags(Integer id, String name, int score, int view_count, int count) {
-        this.id = id;
-        this.name = name;
-        this.score = score;
-        this.view_count = view_count;
-        this.count = count;
-    }
-
-    @Id
     public Integer id;
 
     public String name;
     public int score;
     public int view_count;
-    public int count;
+    public int question_id;
 
+    public Tags(Integer id, String name, int score, int view_count, int question_id) {
+        this.id = id;
+        this.name = name;
+        this.score = score;
+        this.view_count = view_count;
+        this.question_id = question_id;
+    }
+
+    public Tags() {
+    }
     public Integer getId() {
         return id;
     }
@@ -40,8 +39,8 @@ public class Tags {
         return view_count;
     }
 
-    public int getCount() {
-        return count;
+    public int getQuestion_id() {
+        return question_id;
     }
 
     public void setName(String name) {
@@ -56,8 +55,8 @@ public class Tags {
         this.view_count = view_count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setQuestion_id(int question_id) {
+        this.question_id = question_id;
     }
 
     @Override
@@ -67,7 +66,7 @@ public class Tags {
                 ", name='" + name + '\'' +
                 ", score=" + score +
                 ", view_count=" + view_count +
-                ", count=" + count +
+                ", question_id=" + question_id +
                 '}';
     }
 }

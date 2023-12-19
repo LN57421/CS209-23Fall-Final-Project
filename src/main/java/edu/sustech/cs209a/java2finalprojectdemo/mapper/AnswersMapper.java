@@ -26,7 +26,7 @@ public interface AnswersMapper {
     List<Answers> findAnswersValuable();
 
 
-    // 假设关键词信息存储在Questions表中
+    // 信息存储在tags表中
     @Select("SELECT a.* FROM tags a " +
             "JOIN answers q ON a.question_id = q.question_id " +
             "WHERE a.name =  #{keyword} AND q.score > 0")

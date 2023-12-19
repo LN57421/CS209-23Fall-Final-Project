@@ -6,7 +6,6 @@ import javax.persistence.Id;
 @Entity
 public class Comments {
 
-    @Id
     public Integer comment_id;
 
     public Integer question_id;
@@ -18,6 +17,9 @@ public class Comments {
         this.question_id = question_id;
         this.score = score;
         this.body = body;
+    }
+
+    public Comments() {
     }
 
     public Integer getComment_id() {
