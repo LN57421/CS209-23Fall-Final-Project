@@ -79,15 +79,12 @@ public class TopicPopularityController {
 
     private double calculateAverageValuableAnswerScore(List<Answers> valuableAnswers) {
         if (valuableAnswers.isEmpty()) {
-            System.out.println("empty");
             return 0.0;
         }
 
         int totalScore = 0;
         for (Answers answer : valuableAnswers) {
             totalScore += answer.getScore();
-            System.out.println("1");
-            System.out.println(answer.toString());
         }
 
         return (double) totalScore / valuableAnswers.size();
