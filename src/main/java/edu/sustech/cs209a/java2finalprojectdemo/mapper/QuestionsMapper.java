@@ -16,7 +16,8 @@ public interface QuestionsMapper {
     List<Questions> findQuestionsValuable();
 
 
-    @Select("SELECT * FROM questions WHERE tags = #{keyword}")
+    @Select("SELECT q.* FROM tags a " +
+            "JOIN questions q ON a.question_id = q.question_id " + "WHERE a.name = #{keyword}")
     List<Questions> findQuestionsByTags(String keyword);
 
     @Select("SELECT * FROM questions WHERE body LIKE CONCAT('%', #{keyword}, '%')")
