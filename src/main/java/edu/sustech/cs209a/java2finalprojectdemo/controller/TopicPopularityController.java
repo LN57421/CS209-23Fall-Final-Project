@@ -6,10 +6,7 @@ import edu.sustech.cs209a.java2finalprojectdemo.model.Questions;
 import edu.sustech.cs209a.java2finalprojectdemo.model.Answers;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,6 +15,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/")
+@CrossOrigin(origins = "http://localhost:8080")
 public class TopicPopularityController {
 
     @Autowired

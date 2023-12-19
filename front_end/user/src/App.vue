@@ -1,17 +1,13 @@
 <template>
-  <div>
-    hello
-    <TopicPopularity></TopicPopularity>
-  </div>
+  <router-view/>
 </template>
 
 <script>
-import TopicPopularity from "@/components/TopicPopularity.vue";
 
 export default {
   name: 'App',
   components: {
-    TopicPopularity,
+
   }
 }
 </script>
