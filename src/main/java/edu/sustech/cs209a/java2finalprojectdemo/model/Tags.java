@@ -8,6 +8,14 @@ import javax.persistence.Id;
 @Entity
 public class Tags {
 
+    public Tags(Integer id, String name, int score, int view_count, int count) {
+        this.id = id;
+        this.name = name;
+        this.score = score;
+        this.view_count = view_count;
+        this.count = count;
+    }
+
     @Id
     public Integer id;
 

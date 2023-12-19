@@ -13,6 +13,12 @@ public class Comments {
     public Integer score;
     public String body;
 
+    public Comments(Integer comment_id, Integer question_id, Integer score, String body) {
+        this.comment_id = comment_id;
+        this.question_id = question_id;
+        this.score = score;
+        this.body = body;
+    }
 
     public Integer getComment_id() {
         return comment_id;

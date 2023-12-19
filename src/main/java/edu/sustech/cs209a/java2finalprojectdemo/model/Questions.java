@@ -62,6 +62,16 @@ public class Questions {
         return view_count;
     }
 
+    public Questions(int question_id, Integer answer_count, int is_answered, int creation_date, int score, int view_count, String title, String body) {
+        this.question_id = question_id;
+        this.answer_count = answer_count;
+        this.is_answered = is_answered;
+        this.creation_date = creation_date;
+        this.score = score;
+        this.view_count = view_count;
+        this.title = title;
+        this.body = body;
+    }
 
     public void setAnswer_count(Integer answer_count) {
         this.answer_count = answer_count;
