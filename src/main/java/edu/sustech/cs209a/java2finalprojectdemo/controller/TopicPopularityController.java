@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,9 +28,10 @@ public class TopicPopularityController {
 
     @ApiOperation("获取主题热度")
     @GetMapping("/topic-popularity/{topics}")
-    public Map<String, Object> getTopicPopularity(@PathVariable List<String> topics) {
-        Map<String, Object> topicPopularityMap = new HashMap<>();
+    public Map<String, List<Object>> getTopicPopularity(@PathVariable List<String> topics) {
+        Map<String, List<Object>> resultMap = new HashMap<>();
 
+        List<Object> result = new ArrayList<>();
         for (String keyword : topics) {
             List<Questions> questions = questionsMapper.findQuestionsByTags(keyword);
             List<Answers> valuableAnswers = answersMapper.findValuableAnswersByTags(keyword);
@@ -38,8 +40,8 @@ public class TopicPopularityController {
             double avgScore = calculateAverageScore(questions);
             double avgValuableAnswerScore = calculateAverageValuableAnswerScore(valuableAnswers);
 
-            // 存储结果到Map
-            topicPopularityMap.put(keyword, Map.of(
+            // 直接构造 JSON 对象
+            result.add(Map.of(
                     "keyword", keyword,
                     "averageViewCount", avgViewCount,
                     "averageScore", avgScore,
@@ -47,8 +49,11 @@ public class TopicPopularityController {
             ));
         }
 
-        // 返回整体的Map
-        return topicPopularityMap;
+        // 封装到最外层的 Map
+        resultMap.put("topics", result);
+
+        // 返回整体的 Map
+        return resultMap;
     }
 
     private double calculateAverageViewCount(List<Questions> questions) {
