@@ -36,13 +36,13 @@ public interface QuestionsMapper {
             "JOIN FatalErrors fe ON q.question_id = fe.question_id ")
     List<Questions> findQuestionsWithFatalError();
 
-    // 类内部对比
     @Select("SELECT q.*, ex.name" +
             "FROM Questions q " +
             "JOIN Exceptions ex ON q.question_id = ex.question_id ")
     List<Questions> findQuestionsWithException();
 
 
+    // 类内部对比
     @Select("SELECT q.*, se.name " +
             "FROM Questions q " +
             "JOIN SyntaxErrors se ON q.question_id = se.question_id " +

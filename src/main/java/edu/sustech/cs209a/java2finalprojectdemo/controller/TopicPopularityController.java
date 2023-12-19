@@ -8,10 +8,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/")
@@ -46,6 +43,8 @@ public class TopicPopularityController {
                     "averageValuableAnswerScore", avgValuableAnswerScore
             ));
         }
+        // 按 averageViewCount 从小到大排序
+        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
 
         // 封装到最外层的 Map
         resultMap.put("topics", result);
