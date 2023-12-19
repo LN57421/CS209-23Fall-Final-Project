@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 @Mapper
-public interface CommentsMapper extends JpaRepository<Comments, String> {
+public interface CommentsMapper {
     @Select("Select * from comments")
     List<Comments> findAllComments();
 

@@ -4,12 +4,12 @@ package edu.sustech.cs209a.java2finalprojectdemo.mapper;
 import edu.sustech.cs209a.java2finalprojectdemo.model.Answers;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.data.jpa.repository.JpaRepository;
+
 
 import java.util.List;
 
 @Mapper
-public interface AnswersMapper extends JpaRepository<Answers, String> {
+public interface AnswersMapper {
 
     @Select("select * from answers")
     List<Answers> findAllAnswers();
