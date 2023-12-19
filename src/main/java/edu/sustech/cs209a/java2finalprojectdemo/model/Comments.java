@@ -1,11 +1,12 @@
 package edu.sustech.cs209a.java2finalprojectdemo.model;
 
+import jakarta.persistence.Id;
+
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 @Entity
 public class Comments {
-
+    @Id
     public Integer comment_id;
 
     public Integer question_id;
@@ -18,9 +19,9 @@ public class Comments {
         this.score = score;
         this.body = body;
     }
-
-    public Comments() {
-    }
+//
+//    public Comments() {
+//    }
 
     public Integer getComment_id() {
         return comment_id;

@@ -1,11 +1,12 @@
 package edu.sustech.cs209a.java2finalprojectdemo.model;
 
+import jakarta.persistence.Id;
+
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 @Entity
 public class Answers {
-
+    @Id
     public Integer answer_id;
     public Integer question_id;
     public Integer score;
@@ -17,9 +18,9 @@ public class Answers {
         this.score = score;
         this.body = body;
     }
-
-    public Answers() {
-    }
+//
+//    public Answers() {
+//    }
 
     public Integer getAnswer_id() {
         return answer_id;

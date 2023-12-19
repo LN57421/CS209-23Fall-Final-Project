@@ -5,7 +5,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Tags {
-
+    @Id
     public Integer id;
 
     public String name;
@@ -20,9 +20,9 @@ public class Tags {
         this.view_count = view_count;
         this.question_id = question_id;
     }
-
-    public Tags() {
-    }
+//
+//    public Tags() {
+//    }
     public Integer getId() {
         return id;
     }
