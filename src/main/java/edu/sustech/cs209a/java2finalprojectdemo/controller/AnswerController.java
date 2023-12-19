@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/answers") // 修正路径
-@CrossOrigin(origins = "http//localhost:8080")
+@RequestMapping("/api/answers")
+//@CrossOrigin(origins = "http//localhost:8080")  // 修正路径
 public class AnswerController {
 
     @Autowired
