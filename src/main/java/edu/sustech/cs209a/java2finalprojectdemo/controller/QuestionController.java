@@ -4,6 +4,7 @@ import edu.sustech.cs209a.java2finalprojectdemo.model.Questions;
 import edu.sustech.cs209a.java2finalprojectdemo.mapper.QuestionsMapper;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/questions")
+@CrossOrigin(origins = "http://localhost:8080")
 public class QuestionController {
 
 

@@ -20,7 +20,7 @@ public class FetchAllData {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/cs209a";
     private static final String USER = "root";
-    private static final String PASS = "NIANljb123";
+    private static final String PASS = "223844";
 
     public static void main(String[] args) throws SQLException {
 //        // 控制爬取数量 Question表插入Question
@@ -269,7 +269,7 @@ public class FetchAllData {
 
     private static List<JsonObject> getAllTags() {
         List<JsonObject> dataList = new ArrayList<>();
-        String sql = "SELECT tags, score, view_count FROM questions";
+        String sql = "SELECT tags, score, view_count FROM quesgittions";
 
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
              PreparedStatement stmt = conn.prepareStatement(sql);
