@@ -16,7 +16,7 @@ const routes = [
     },
     {
         path: '/visualization',
-        redirect: '/visualization/home',
+        redirect: '/visualization/TopicPopularity',
         children: [
             {path: '/visualization/TopicPopularity', name: 'TopicPopularity',component: TopicPopularity},
             {path: '/visualization/BugPopularity', name: 'BugPopularity', component: BugPopularity},
