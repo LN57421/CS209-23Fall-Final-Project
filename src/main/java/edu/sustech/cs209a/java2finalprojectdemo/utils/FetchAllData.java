@@ -15,6 +15,7 @@ import java.util.concurrent.ExecutionException;
 
 // https://api.stackexchange.com/2.3/questions/3757396?site=stackoverflow&filter=withbody
 
+// https://api.stackexchange.com/2.3/questions?page=1&pagesize=1&fromdate=1672531200&todate=1701388800&order=desc&sort=activity&tagged=java&site=stackoverflow&filter=!9MyMg2q4M.IhkHGnmFKa3xqNMdX)5ZKbrlzn8GdMwwBDKb6BWXZRlcH
 public class FetchAllData {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/cs209a";
@@ -22,14 +23,25 @@ public class FetchAllData {
     private static final String PASS = "NIANljb123";
 
     public static void main(String[] args) throws SQLException {
-        // 控制爬取数量 Question表插入Question
-//        for (int i = 1; i <= 10; i++) {
+//        // 控制爬取数量 Question表插入Question
+//        for (int i = 1; i <= 5; i++) {
 //            addQuestion(i);
 //        }
 
          // 更新questions表 comments表
          addBodies();
     }
+    /**
+     *   重写filter查询
+     *
+     *
+     */
+    static void add(){
+        // 通过filter，向API发送请求
+
+
+    }
+
 
     /**
      *   查询Question
