@@ -262,166 +262,166 @@ public class FetchAllData {
 
 
 
-    // ---------------------------------------------------------------
-    // ----------------------------------------------------------------
-    // ---------------- 下方代码不一定对
-
-
-    private static List<JsonObject> getAllTags() {
-        List<JsonObject> dataList = new ArrayList<>();
-        String sql = "SELECT tags, score, view_count FROM questions";
-
-        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
-             PreparedStatement stmt = conn.prepareStatement(sql);
-             ResultSet rs = stmt.executeQuery()) {
-
-            while (rs.next()) {
-                JsonObject jsonObject = new JsonObject();
-                // 获取每一行的数据
-                jsonObject.addProperty("tags", rs.getString("tags"));
-                jsonObject.addProperty("score", rs.getString("score"));
-                jsonObject.addProperty("view_count", rs.getString("view_count"));
-                dataList.add(jsonObject);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return dataList;
-    }
-
-    private static List<JsonObject> getTagsForJavaRelated() {
-        List<JsonObject> tags = new ArrayList<>();
-
-        String sql = "SELECT name, count FROM tags;";
-        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            ResultSet rs = pstmt.executeQuery();
-
-            while (rs.next()) {
-                JsonObject jsonObject = new JsonObject();
-                jsonObject.addProperty("name", rs.getString("name"));
-                jsonObject.addProperty("count", rs.getString("count"));
-                tags.add(jsonObject);
-            }
-
-            return tags;
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-
-    static void updateDataInDatabase(JsonObject data) {
-        String sql = "UPDATE questions SET accepted_answer_id = ?, accepted_date = ?, not_public_will = ? WHERE question_id = ?";
-
-        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-
-            // 根据你的表结构，设置预处理语句中的参数值
-            stmt.setInt(1, data.get("accepted_answer_id").getAsInt());
-            stmt.setTimestamp(2, new Timestamp(data.get("accepted_date").getAsLong()));
-            stmt.setBoolean(3, data.get("not_public_will").getAsBoolean());
-            stmt.setInt(4, data.get("question_id").getAsInt());
-            stmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
-
-    static JsonObject queryQuestionByAnswer(int answer_id, StackOverflowApi api) {
-        Map<String, String> params = new HashMap<>(1);
-        params.put("ids", String.valueOf(answer_id));
-        CompletableFuture<JsonObject> future = api.fetchData("answers", params);
-
-        try {
-            JsonObject jsonObject = future.get();
-            JsonArray items = jsonObject.getAsJsonArray("items");
-            return items.get(0).getAsJsonObject();
-        } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    static JsonObject queryQuestion(int question_id) throws SQLException {
-        String sql = "SELECT * FROM questions WHERE question_id = ?";
-
-        Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setInt(1, question_id);
-
-            try (ResultSet resultSet = statement.executeQuery()) {
-                if (resultSet.next()) {
-                    // 构建JsonObject
-                    JsonObject jsonObject = new JsonObject();
-                    jsonObject.addProperty("score", resultSet.getInt("score"));
-                    jsonObject.addProperty("view_count", resultSet.getInt("view_count"));
-                    jsonObject.addProperty("tags", resultSet.getString("tags"));
-
-                    return jsonObject;
-                } else {
-                    System.out.println("Question not found: " + question_id);
-                    return null;
-                }
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    static JsonObject queryTopAnswer(int question_id, StackOverflowApi api) {
-        try {
-            Map<String, String> params = new HashMap<>(1);
-            params.put("ids", String.valueOf(question_id));
-            params.put("sort", "votes");
-            params.put("order", "desc");
-            params.put("pagesize", "1");
-            CompletableFuture<JsonObject> future = api.fetchData("answer_question", params);
-
-            JsonArray items = future.get().getAsJsonArray("items");
-            return items.get(0).getAsJsonObject();
-
-        } catch (ExecutionException | InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    private static JsonArray queryQuestionAnswers(int questionId, StackOverflowApi api) {
-        Map<String, String> params = new HashMap<>(1);
-        params.put("ids", String.valueOf(questionId));
-        params.put("pagesize", "100");
-        CompletableFuture<JsonObject> future = api.fetchData("answer_question", params);
-        try {
-            JsonObject jsonObject = future.get();
-            return jsonObject.getAsJsonArray("items");
-        } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    private static JsonArray queryQuestionComments(int questionId, StackOverflowApi api) {
-        Map<String, String> params = new HashMap<>(1);
-        params.put("ids", String.valueOf(questionId));
-        params.put("pagesize", "100");
-        CompletableFuture<JsonObject> future = api.fetchData("comment_question", params);
-        try {
-            JsonObject jsonObject = future.get();
-            return jsonObject.getAsJsonArray("items");
-        } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
+//    // ---------------------------------------------------------------
+//    // ----------------------------------------------------------------
+//    // ---------------- 下方代码不一定对
+//
+//
+//    private static List<JsonObject> getAllTags() {
+//        List<JsonObject> dataList = new ArrayList<>();
+//        String sql = "SELECT tags, score, view_count FROM questions";
+//
+//        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+//             PreparedStatement stmt = conn.prepareStatement(sql);
+//             ResultSet rs = stmt.executeQuery()) {
+//
+//            while (rs.next()) {
+//                JsonObject jsonObject = new JsonObject();
+//                // 获取每一行的数据
+//                jsonObject.addProperty("tags", rs.getString("tags"));
+//                jsonObject.addProperty("score", rs.getString("score"));
+//                jsonObject.addProperty("view_count", rs.getString("view_count"));
+//                dataList.add(jsonObject);
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//
+//        return dataList;
+//    }
+//
+//    private static List<JsonObject> getTagsForJavaRelated() {
+//        List<JsonObject> tags = new ArrayList<>();
+//
+//        String sql = "SELECT name, count FROM tags;";
+//        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+//             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+//
+//            ResultSet rs = pstmt.executeQuery();
+//
+//            while (rs.next()) {
+//                JsonObject jsonObject = new JsonObject();
+//                jsonObject.addProperty("name", rs.getString("name"));
+//                jsonObject.addProperty("count", rs.getString("count"));
+//                tags.add(jsonObject);
+//            }
+//
+//            return tags;
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//            return null;
+//        }
+//    }
+//
+//
+//    static void updateDataInDatabase(JsonObject data) {
+//        String sql = "UPDATE questions SET accepted_answer_id = ?, accepted_date = ?, not_public_will = ? WHERE question_id = ?";
+//
+//        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+//             PreparedStatement stmt = conn.prepareStatement(sql)) {
+//
+//            // 根据你的表结构，设置预处理语句中的参数值
+//            stmt.setInt(1, data.get("accepted_answer_id").getAsInt());
+//            stmt.setTimestamp(2, new Timestamp(data.get("accepted_date").getAsLong()));
+//            stmt.setBoolean(3, data.get("not_public_will").getAsBoolean());
+//            stmt.setInt(4, data.get("question_id").getAsInt());
+//            stmt.executeUpdate();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//
+//
+//
+//    static JsonObject queryQuestionByAnswer(int answer_id, StackOverflowApi api) {
+//        Map<String, String> params = new HashMap<>(1);
+//        params.put("ids", String.valueOf(answer_id));
+//        CompletableFuture<JsonObject> future = api.fetchData("answers", params);
+//
+//        try {
+//            JsonObject jsonObject = future.get();
+//            JsonArray items = jsonObject.getAsJsonArray("items");
+//            return items.get(0).getAsJsonObject();
+//        } catch (InterruptedException | ExecutionException e) {
+//            e.printStackTrace();
+//            return null;
+//        }
+//    }
+//
+//    static JsonObject queryQuestion(int question_id) throws SQLException {
+//        String sql = "SELECT * FROM questions WHERE question_id = ?";
+//
+//        Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
+//        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+//            statement.setInt(1, question_id);
+//
+//            try (ResultSet resultSet = statement.executeQuery()) {
+//                if (resultSet.next()) {
+//                    // 构建JsonObject
+//                    JsonObject jsonObject = new JsonObject();
+//                    jsonObject.addProperty("score", resultSet.getInt("score"));
+//                    jsonObject.addProperty("view_count", resultSet.getInt("view_count"));
+//                    jsonObject.addProperty("tags", resultSet.getString("tags"));
+//
+//                    return jsonObject;
+//                } else {
+//                    System.out.println("Question not found: " + question_id);
+//                    return null;
+//                }
+//            }
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//            return null;
+//        }
+//    }
+//
+//    static JsonObject queryTopAnswer(int question_id, StackOverflowApi api) {
+//        try {
+//            Map<String, String> params = new HashMap<>(1);
+//            params.put("ids", String.valueOf(question_id));
+//            params.put("sort", "votes");
+//            params.put("order", "desc");
+//            params.put("pagesize", "1");
+//            CompletableFuture<JsonObject> future = api.fetchData("answer_question", params);
+//
+//            JsonArray items = future.get().getAsJsonArray("items");
+//            return items.get(0).getAsJsonObject();
+//
+//        } catch (ExecutionException | InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+//
+//    private static JsonArray queryQuestionAnswers(int questionId, StackOverflowApi api) {
+//        Map<String, String> params = new HashMap<>(1);
+//        params.put("ids", String.valueOf(questionId));
+//        params.put("pagesize", "100");
+//        CompletableFuture<JsonObject> future = api.fetchData("answer_question", params);
+//        try {
+//            JsonObject jsonObject = future.get();
+//            return jsonObject.getAsJsonArray("items");
+//        } catch (InterruptedException | ExecutionException e) {
+//            e.printStackTrace();
+//            return null;
+//        }
+//    }
+//
+//    private static JsonArray queryQuestionComments(int questionId, StackOverflowApi api) {
+//        Map<String, String> params = new HashMap<>(1);
+//        params.put("ids", String.valueOf(questionId));
+//        params.put("pagesize", "100");
+//        CompletableFuture<JsonObject> future = api.fetchData("comment_question", params);
+//        try {
+//            JsonObject jsonObject = future.get();
+//            return jsonObject.getAsJsonArray("items");
+//        } catch (InterruptedException | ExecutionException e) {
+//            e.printStackTrace();
+//            return null;
+//        }
+//    }
 
 }
 
