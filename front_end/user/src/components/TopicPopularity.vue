@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="topic">
     <div class="scoreBarChart">
       <div>
-        <el-select v-model="scoreValue" placeholder="please select the order" @change="handleSelection">
+        <el-select v-model="scoreValue" placeholder="please select the order" @change="handleScoreOrderSelection">
           <el-option
               v-for="item in scoreOptions"
               :key="item.value"
@@ -16,7 +16,12 @@
       </div>
     </div>
     <div class="viewBarChart">
-      <div ref="viewBarChartContainer">
+      <div>
+      </div>
+
+      <div>
+        <div ref="viewBarChartContainer">
+        </div>
       </div>
 
     </div>
@@ -26,6 +31,8 @@
 <script>
 import axios from "axios";
 import * as d3 from "d3";
+import tippy from "tippy.js";
+// import * as zoom from "d3-zoom"
 
 export default {
   name: "topicPopularity",
@@ -44,15 +51,20 @@ export default {
         {value: "3", label: "Descending by AverageScore"},
         {value: "4", label: "Ascending by AverageValuableAnswerScore"},
         {value: "5", label: "Descending by AverageValuableAnswerScore"},
+        {value: "6", label: "Ascending by AverageViewCount"},
+        {value: "7", label: "Descending by AverageViewCount"},
       ],
-      scoreBarChart: '',
-      viewValue: '',
-      viewOption: [],
+      scoreBarchart: '',
       viewBarChart: '',
+      durationTime: 1000,
     }
   },
   methods: {
-    drawscoreBarChart() {
+    drawScoreBarChart() {
+      if (this.scoreBarchart) {
+        this.scoreBarchart.destroy();
+      }
+
       const width = 640;
       const height = 700;
       const marginTop = 20;
@@ -68,7 +80,7 @@ export default {
 
       // Declare th;ppe y (vertical position) scale.
       const y = d3.scaleBand()
-          .domain(data.map(d => d.keyword))
+          .domain(data.map(d => d.keyword).reverse())
           .range([height - marginBottom, marginTop])
           .padding(0.1);
 
@@ -105,8 +117,27 @@ export default {
           .attr("height", y.bandwidth())
           .attr("width", d => x(0) - x(-d.averageValuableAnswerScore));
 
+      averageScoreBar
+          .on('mouseenter', function(event, d) {
+            tippy(this, {
+              content: `Keyword: ${d.keyword}<br>Average Score: ${d.averageScore}`,
+              allowHTML: true,
+            }).show();
+          })
+          .on('mouseleave', function() {
+            tippy(this).hide();
+          });
 
-
+      averageValuableAnswerScoreBar
+          .on('mouseenter', function(event, d) {
+            tippy(this, {
+              content: `Keyword: ${d.keyword}<br>Average Valuable Answer Score: ${d.averageValuableAnswerScore}`,
+              allowHTML: true,
+            }).show();
+          })
+          .on('mouseleave', function() {
+            tippy(this).hide();
+          });
       // Create the axes.
       svg.append("g")
           .attr("transform", `translate(0,${marginTop})`)
@@ -120,7 +151,7 @@ export default {
         update(order) {
           console.log(data)
           console.log(data.sort(order).map(d => d.keyword))
-          y.domain(data.sort(order).map(d => d.keyword));
+          y.domain(data.sort(order).map(d => d.keyword).reverse());
 
           const t = svg.transition()
               .duration(750);
@@ -145,17 +176,104 @@ export default {
       });
 
     },
-    setToolTips() {
 
-    },
     drawViewBarChart() {
+      if (this.viewBarChart) {
+        this.viewBarChart.destroy();
+      }
+      const width = 640;
+      const height = 700;
+      const marginTop = 20;
+      const marginRight = 0;
+      const marginBottom = 30;
+      const marginLeft = 40;
+      const data = this.topicsData;
+      // Create the horizontal scale and its axis generator.
+      const x = d3.scaleBand()
+          .domain(data.map(d => d.keyword))
+          .range([marginLeft, width - marginRight])
+          .padding(0.1);
+
+      const xAxis = d3.axisBottom(x).tickSizeOuter(0);
+
+      // Create the vertical scale.
+      const y = d3.scaleLinear()
+          .domain([0, d3.max(data, d => d.averageViewCount)]).nice()
+          .range([height - marginBottom, marginTop]);
+
+
+      // Create the SVG container and call the zoom behavior.
+      const svg = d3.select(this.$refs.viewBarChartContainer)
+          .append("svg")
+          .attr("viewBox", [0, 0, width, height])
+          .attr("width", width)
+          .attr("height", height)
+          .attr("style", "max-width: 100%; height: auto;");
+          // .call(zoom);
+
+      // Append the bars.
+      const bars = svg.append("g")
+          .attr("class", "bars")
+          .attr("fill", "lightgreen")
+          .selectAll("rect")
+          .data(data)
+          .join("rect")
+          .attr("x", d => x(d.keyword))
+          .attr("y", d => y(d.averageViewCount))
+          .attr("height", d => y(0) - y(d.averageViewCount))
+          .attr("width", x.bandwidth());
+
+      bars
+          .on('mouseenter', function(event, d) {
+            tippy(this, {
+              content: `Keyword: ${d.keyword}<br>Average View Count: ${d.averageViewCount}`,
+              allowHTML: true,
+            }).show();
+          })
+          .on('mouseleave', function() {
+            tippy(this).hide();
+          });
+
+      // Append the axes.
+      const gx = svg.append("g")
+          .attr("class", "x-axis")
+          .attr("transform", `translate(0,${height - marginBottom})`)
+          .call(xAxis);
+
+      svg.append("g")
+          .attr("class", "y-axis")
+          .attr("transform", `translate(${marginLeft},0)`)
+          .call(d3.axisLeft(y))
+          .call(g => g.select(".domain").remove());
+
+      return Object.assign(svg.node(), {
+        update(order) {
+          console.log(data)
+          console.log(data.sort(order).map(d => d.keyword))
+          x.domain(data.sort(order).map(d => d.keyword));
+
+          const t = svg.transition()
+              .duration(750);
+
+          bars.data(data, d => d.keyword)
+              .order()
+              .transition(t)
+              .delay((d, i) => i * 20)
+              .attr("x", d => x(d.keyword));
+
+          gx.transition(t)
+              .call(xAxis)
+              .selectAll(".tick")
+              .delay((d, i) => i * 20);
+        }
+      });
 
     },
-    handleSelection() {
+    handleScoreOrderSelection() {
       let order = ''
       switch (this.scoreValue) {
         case "-1":
-          order = (a, b) => -a.keyword.localeCompare(b.keyword);
+          order = (a, b) => a.keyword.localeCompare(b.keyword);
           break;
         case "0":
           order = (a, b) => (a.averageScore + a.averageValuableAnswerScore - b.averageScore - b.averageValuableAnswerScore);
@@ -175,10 +293,17 @@ export default {
         case "5":
           order = (a, b) => -(a.averageValuableAnswerScore - b.averageValuableAnswerScore);
           break;
+        case "6":
+          order = (a, b) => a.averageViewCount - b.averageViewCount;
+          break;
+        case "7":
+          order = (a, b) => -(a.averageViewCount - b.averageViewCount);
+          break;
         default:
           break;
       }
-      this.scoreBarChart.update(order);
+      this.scoreBarchart.update(order);
+      this.viewBarChart.update(order)
     },
     fetchTopicPopularityData() {
       const topics = ["android", "hibernate", "jpa", "junit", "lombok", "maven", "spring", "spring-boot", "sql", "oracle"]
@@ -186,8 +311,8 @@ export default {
           .then(response => {
             console.log(response.data)
             this.topicsData = response.data.topics;
-            this.scoreBarChart = this.drawscoreBarChart();
-
+            this.scoreBarchart = this.drawScoreBarChart();
+            this.viewBarChart = this.drawViewBarChart();
           })
           .catch(error => {
             console.log(error)
@@ -199,7 +324,17 @@ export default {
 </script>
 
 <style scoped>
+.topic {
+  display: flex;
+}
 
+.scoreBarChart {
+  width: 50%;
+}
+
+.viewBarChart {
+  width: 50%;
+}
 
 
 </style>
