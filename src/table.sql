@@ -32,18 +32,21 @@ CREATE TABLE Questions (
 
 CREATE TABLE SyntaxErrors(
                        id INT primary key AUTO_INCREMENT,
-                       name VARCHAR(255),
-                       question_id  INT
+                       body TEXT,
+                       question_id  INT,
+                       name VARCHAR(255)
 );
 
 CREATE TABLE FatalErrors(
                        id INT primary key AUTO_INCREMENT,
-                       name VARCHAR(255),
-                       question_id  INT
+                       body TEXT,
+                       question_id  INT,
+                       name VARCHAR(255)
 );
 
 CREATE TABLE Exceptions(
                        id INT primary key AUTO_INCREMENT,
-                       name VARCHAR(255),
-                       question_id  INT
+                       body TEXT,
+                       question_id  INT,
+                       name VARCHAR(255)
 );
