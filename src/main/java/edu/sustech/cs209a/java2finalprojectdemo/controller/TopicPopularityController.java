@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
-@RequestMapping("/")
 @CrossOrigin(origins = "http://localhost:8080")
 public class TopicPopularityController {
 
