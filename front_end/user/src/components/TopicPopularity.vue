@@ -1,18 +1,24 @@
 <template>
   <div>
-    hello
-<!--    <div>-->
-<!--      <el-select v-model="value" placeholder="请选择">-->
-<!--        <el-option-->
-<!--            v-for="item in options"-->
-<!--            :key="item.value"-->
-<!--            :label="item.label"-->
-<!--            :value="item.value">-->
-<!--        </el-option>-->
-<!--      </el-select>-->
-<!--    </div>-->
-    <div>
-      <div ref="chartContainer"></div>
+    <div class="scoreBarChart">
+      <div>
+        <el-select v-model="scoreValue" placeholder="please select the order" @change="handleSelection">
+          <el-option
+              v-for="item in scoreOptions"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value">
+          </el-option>
+        </el-select>
+      </div>
+      <div>
+        <div ref="scoreBarChartContainer"></div>
+      </div>
+    </div>
+    <div class="viewBarChart">
+      <div ref="viewBarChartContainer">
+      </div>
+
     </div>
   </div>
 </template>
@@ -29,86 +35,150 @@ export default {
   data() {
     return {
       topicsData: [],
-      value: '',
-      options: [{value: "kk", label: "ll"}]
+      scoreValue: '',
+      scoreOptions: [
+        {value: "-1", label: "Alphabetical order of keyword"},
+        {value: "0", label: "Ascending by TotalScore"},
+        {value: "1", label: "Descending by TotalScore"},
+        {value: "2", label: "Ascending by AverageScore"},
+        {value: "3", label: "Descending by AverageScore"},
+        {value: "4", label: "Ascending by AverageValuableAnswerScore"},
+        {value: "5", label: "Descending by AverageValuableAnswerScore"},
+      ],
+      scoreBarChart: '',
+      viewValue: '',
+      viewOption: [],
+      viewBarChart: '',
     }
   },
   methods: {
-    drawCharts() {
+    drawscoreBarChart() {
       const width = 640;
-      const height = 400;
+      const height = 700;
       const marginTop = 20;
       const marginRight = 0;
       const marginBottom = 30;
       const marginLeft = 40;
-
-
+      const data = this.topicsData;
 
       // Declare the x (horizontal position) scale and the corresponding axis generator.
-      const x = d3.scaleBand()
-          .domain(this.topicsData.map(d => d.keyword))
-          .range([marginLeft, width - marginRight])
-          .padding(0.1);
-
-      const xAxis = d3.axisBottom(x).tickSizeOuter(0);
+      const x = d3.scaleLinear()
+          .domain([-d3.max(data, d => d.averageValuableAnswerScore), d3.max(data, d => d.averageScore)]).nice()
+          .range([marginLeft, width - marginRight]);
 
       // Declare th;ppe y (vertical position) scale.
-      const y = d3.scaleLinear()
-          .domain([0, d3.max(this.topicsData, d => d.averageScore)]).nice()
-          .range([height - marginBottom, marginTop]);
+      const y = d3.scaleBand()
+          .domain(data.map(d => d.keyword))
+          .range([height - marginBottom, marginTop])
+          .padding(0.1);
+
+      const xAxis = d3.axisTop(x).tickSizeOuter(0);
+      const yAxis = d3.axisLeft(y).tickSizeOuter(0);
 
       // Create the SVG container.
-      const svg = d3.select(this.$refs.chartContainer)
+      const svg = d3.select(this.$refs.scoreBarChartContainer)
           .append("svg")
           .attr("viewBox", [0, 0, width, height])
           .attr("style", `max-width: ${width}px; height: auto; font: 10px sans-serif; overflow: visible;`);
 
-      // Create a bar for each letter.
-      const bar = svg.append("g")
+      const skyBlue = d3.rgb(135, 206, 250);
+      const averageScoreBar = svg.append("g")
+          .attr("fill", skyBlue)
+          .selectAll("rect")
+          .data(data)
+          .join("rect")
+          .style("mix-blend-mode", "multiply")
+          .attr("x", x(0))
+          .attr("y", d => y(d.keyword))
+          .attr("height", y.bandwidth())
+          .attr("width", d => x(d.averageScore) - x(0));
+
+
+      const averageValuableAnswerScoreBar = svg.append("g")
           .attr("fill", "steelblue")
           .selectAll("rect")
-          .data(this.topicsData)
+          .data(data)
           .join("rect")
-          .style("mix-blend-mode", "multiply") // Darker color when bars overlap during the transition.
-          .attr("x", d => x(d.keyword))
-          .attr("y", d => y(d.averageScore))
-          .attr("height", d => y(0) - y(d.averageScore))
-          .attr("width", x.bandwidth());
+          .style("mix-blend-mode", "multiply")
+          .attr("x", d => x(-d.averageValuableAnswerScore))
+          .attr("y", d => y(d.keyword))
+          .attr("height", y.bandwidth())
+          .attr("width", d => x(0) - x(-d.averageValuableAnswerScore));
+
+
 
       // Create the axes.
-      const gx = svg.append("g")
-          .attr("transform", `translate(0,${height - marginBottom})`)
+      svg.append("g")
+          .attr("transform", `translate(0,${marginTop})`)
           .call(xAxis);
 
-      svg.append("g")
+      const gy = svg.append("g")
           .attr("transform", `translate(${marginLeft},0)`)
-          .call(d3.axisLeft(y).tickFormat((y) => (y * 100).toFixed()))
-          .call(g => g.select(".domain").remove());
+          .call(yAxis);
 
-      // Return the chart, with an update function that takes as input a domain
-      // comparator and transitions the x-axis and bar positions accordingly.
       return Object.assign(svg.node(), {
         update(order) {
-          x.domain(this.topicsData.sort(order).map(d => d.keyword));
+          console.log(data)
+          console.log(data.sort(order).map(d => d.keyword))
+          y.domain(data.sort(order).map(d => d.keyword));
 
           const t = svg.transition()
               .duration(750);
 
-          bar.data(this.topicsData, d => d.keyword)
+          averageScoreBar.data(data, d => d.keyword)
               .order()
               .transition(t)
               .delay((d, i) => i * 20)
-              .attr("x", d => x(d.keyword));
+              .attr("y", d => y(d.keyword));
 
-          gx.transition(t)
-              .call(xAxis)
+          averageValuableAnswerScoreBar.data(data, d => d.keyword)
+              .order()
+              .transition(t)
+              .delay((d, i) => i * 20)
+              .attr("y", d => y(d.keyword));
+
+          gy.transition(t)
+              .call(yAxis)
               .selectAll(".tick")
               .delay((d, i) => i * 20);
         }
       });
+
+    },
+    setToolTips() {
+
+    },
+    drawViewBarChart() {
+
     },
     handleSelection() {
-      console.log(this.value)
+      let order = ''
+      switch (this.scoreValue) {
+        case "-1":
+          order = (a, b) => -a.keyword.localeCompare(b.keyword);
+          break;
+        case "0":
+          order = (a, b) => (a.averageScore + a.averageValuableAnswerScore - b.averageScore - b.averageValuableAnswerScore);
+          break;
+        case "1":
+          order = (a, b) => -(a.averageScore + a.averageValuableAnswerScore - b.averageScore - b.averageValuableAnswerScore);
+          break;
+        case "2":
+          order = (a, b) => (a.averageScore - b.averageScore);
+          break;
+        case "3":
+          order = (a, b) => -(a.averageScore - b.averageScore);
+          break;
+        case "4":
+          order = (a, b) => (a.averageValuableAnswerScore - b.averageValuableAnswerScore);
+          break;
+        case "5":
+          order = (a, b) => -(a.averageValuableAnswerScore - b.averageValuableAnswerScore);
+          break;
+        default:
+          break;
+      }
+      this.scoreBarChart.update(order);
     },
     fetchTopicPopularityData() {
       const topics = ["android", "hibernate", "jpa", "junit", "lombok", "maven", "spring", "spring-boot", "sql", "oracle"]
@@ -116,7 +186,8 @@ export default {
           .then(response => {
             console.log(response.data)
             this.topicsData = response.data.topics;
-            this.drawCharts();
+            this.scoreBarChart = this.drawscoreBarChart();
+
           })
           .catch(error => {
             console.log(error)
@@ -128,6 +199,7 @@ export default {
 </script>
 
 <style scoped>
+
 
 
 </style>
