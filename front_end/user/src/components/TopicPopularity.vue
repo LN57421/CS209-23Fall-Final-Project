@@ -1,6 +1,18 @@
 <template>
   <div class="topic">
-    <div class="scoreBarChart">
+    <div class="head">
+      <h2>
+        The visualization of topic popularity
+      </h2>
+      <p>
+        <i>
+          -the metrics are
+          <strong data-tippy-content="AverageScore is AverageScore" class="tooltip-trigger">AverageScore</strong>,
+          <strong data-tippy-content="AverageValuableAnswerScore is AverageValuableAnswerScore" class="tooltip-trigger">AverageValuableAnswerScore</strong>,
+          <strong data-tippy-content="AverageViewCount is AverageViewCount"
+                  class="tooltip-trigger">AverageViewCount</strong>
+        </i>
+      </p>
       <div>
         <el-select v-model="scoreValue" placeholder="please select the order" @change="handleScoreOrderSelection">
           <el-option
@@ -11,19 +23,21 @@
           </el-option>
         </el-select>
       </div>
-      <div>
-        <div ref="scoreBarChartContainer"></div>
-      </div>
     </div>
-    <div class="viewBarChart">
-      <div>
-      </div>
-
-      <div>
-        <div ref="viewBarChartContainer">
+    <div class="chart">
+      <div class="scoreBarChart">
+        <div>
+          <div ref="scoreBarChartContainer"></div>
         </div>
       </div>
 
+      <div class="viewBarChart">
+        <div>
+          <div ref="viewBarChartContainer">
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </template>
@@ -38,6 +52,7 @@ export default {
   name: "topicPopularity",
   mounted() {
     this.fetchTopicPopularityData();
+    this.addIntroToolTipTrigger();
   },
   data() {
     return {
@@ -57,6 +72,11 @@ export default {
       scoreBarchart: '',
       viewBarChart: '',
       durationTime: 1000,
+      introductionOfMetric: {
+        AverageScore: "AverageScore is AverageScore",
+        AverageValuableAnswerScore: "AverageValuableAnswerScore is AverageValuableAnswerScore",
+        AverageViewCount: "AverageViewCount is AverageViewCount",
+      }
     }
   },
   methods: {
@@ -66,7 +86,7 @@ export default {
       }
 
       const width = 640;
-      const height = 700;
+      const height = 550;
       const marginTop = 20;
       const marginRight = 0;
       const marginBottom = 30;
@@ -93,6 +113,14 @@ export default {
           .attr("viewBox", [0, 0, width, height])
           .attr("style", `max-width: ${width}px; height: auto; font: 10px sans-serif; overflow: visible;`);
 
+      svg.append("text")
+          .attr("x", 340) // 调整名称的水平位置
+          .attr("y", 540)  // 调整名称的垂直位置
+          .attr("text-anchor", "middle") // 文本锚点居中对齐
+          .text("The averageScore and averageValuableAnswerScore of topics") // 添加名称文本
+          .style("font-size", "15px")
+          .style("font-style", "Times New Roman");
+
       const skyBlue = d3.rgb(135, 206, 250);
       const averageScoreBar = svg.append("g")
           .attr("fill", skyBlue)
@@ -118,24 +146,24 @@ export default {
           .attr("width", d => x(0) - x(-d.averageValuableAnswerScore));
 
       averageScoreBar
-          .on('mouseenter', function(event, d) {
+          .on('mouseenter', function (event, d) {
             tippy(this, {
               content: `Keyword: ${d.keyword}<br>Average Score: ${d.averageScore}`,
               allowHTML: true,
             }).show();
           })
-          .on('mouseleave', function() {
+          .on('mouseleave', function () {
             tippy(this).hide();
           });
 
       averageValuableAnswerScoreBar
-          .on('mouseenter', function(event, d) {
+          .on('mouseenter', function (event, d) {
             tippy(this, {
               content: `Keyword: ${d.keyword}<br>Average Valuable Answer Score: ${d.averageValuableAnswerScore}`,
               allowHTML: true,
             }).show();
           })
-          .on('mouseleave', function() {
+          .on('mouseleave', function () {
             tippy(this).hide();
           });
       // Create the axes.
@@ -176,13 +204,12 @@ export default {
       });
 
     },
-
     drawViewBarChart() {
       if (this.viewBarChart) {
         this.viewBarChart.destroy();
       }
       const width = 640;
-      const height = 700;
+      const height = 550;
       const marginTop = 20;
       const marginRight = 0;
       const marginBottom = 30;
@@ -209,7 +236,15 @@ export default {
           .attr("width", width)
           .attr("height", height)
           .attr("style", "max-width: 100%; height: auto;");
-          // .call(zoom);
+      // .call(zoom);
+
+      svg.append("text")
+          .attr("x", 340) // 调整名称的水平位置
+          .attr("y", 20)  // 调整名称的垂直位置
+          .attr("text-anchor", "middle") // 文本锚点居中对齐
+          .text("The averageViewCount of topics") // 添加名称文本
+          .style("font-size", "15px")
+          .style("font-style", "Times New Roman");
 
       // Append the bars.
       const bars = svg.append("g")
@@ -224,13 +259,13 @@ export default {
           .attr("width", x.bandwidth());
 
       bars
-          .on('mouseenter', function(event, d) {
+          .on('mouseenter', function (event, d) {
             tippy(this, {
               content: `Keyword: ${d.keyword}<br>Average View Count: ${d.averageViewCount}`,
               allowHTML: true,
             }).show();
           })
-          .on('mouseleave', function() {
+          .on('mouseleave', function () {
             tippy(this).hide();
           });
 
@@ -317,7 +352,17 @@ export default {
           .catch(error => {
             console.log(error)
           })
+    },
+    addIntroToolTipTrigger() {
+      const tooltipTriggers = this.$el.querySelectorAll('.tooltip-trigger');
+      tooltipTriggers.forEach(element => {
+        tippy(element, {
+          content: element.getAttribute('data-tippy-content'),
+          arrow: true,
+        });
+      });
     }
+
   },
 }
 
@@ -325,15 +370,35 @@ export default {
 
 <style scoped>
 .topic {
+  display: block;
+}
+
+.head {
+  display: grid;
+  place-items: center;
+  height: 200px;
+}
+
+.chart {
   display: flex;
+  gap: 10px;
 }
 
 .scoreBarChart {
   width: 50%;
+  border-radius: 4px;
+  border: 1px solid #919292;
 }
 
 .viewBarChart {
   width: 50%;
+  border-radius: 4px;
+  border: 1px solid #919292;
+}
+
+strong:hover {
+  color: #7f9dff;
+  cursor: pointer;
 }
 
 
