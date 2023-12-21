@@ -12,6 +12,7 @@ public class Answers {
     public Integer score;
     public String body;
 
+
     public Answers(Integer answer_id, Integer question_id, Integer score, String body) {
         this.answer_id = answer_id;
         this.question_id = question_id;
