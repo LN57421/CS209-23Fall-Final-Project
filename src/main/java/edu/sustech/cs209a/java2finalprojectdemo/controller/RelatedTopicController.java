@@ -47,7 +47,7 @@ public class RelatedTopicController {
 
         // 然后对于每个Question对应的所有标签进行梳理
         for (Integer id : finalQuestions) {
-            List<Tags> tags = tagsMapper.findTagsByQuestionId(id);
+            List<Tags> tags = tagsMapper.findTagsByQuestionIdNoJava(id);
             // 注意排除掉用户输入的
             for (String phase : phases) {
                 tags.removeIf(f -> f.name.equals(phase));
@@ -63,9 +63,6 @@ public class RelatedTopicController {
             String tagName = entry.getKey();
             Integer tagCount = entry.getValue();
             double averageRelatedCount = (double) tagCount / finalQuestions.size();
-
-            if (tagName.equals("java")) continue;
-
 
             // 构造 JSON 对象
             result.add(Map.of(

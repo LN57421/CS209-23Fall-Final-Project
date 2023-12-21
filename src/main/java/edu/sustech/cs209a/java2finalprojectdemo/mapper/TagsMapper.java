@@ -14,6 +14,10 @@ public interface TagsMapper{
     @Select("Select * from tags")
     List<Tags> findAllTags();
 
+    @Select("Select * from tags where question_id = #{question_id} and tags.name != \"java\"")
+    List<Tags> findTagsByQuestionIdNoJava(Integer question_id);
+
+
     @Select("Select * from tags where question_id = #{question_id}")
     List<Tags> findTagsByQuestionId(Integer question_id);
 
