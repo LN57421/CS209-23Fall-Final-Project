@@ -64,6 +64,8 @@ public class RelatedTopicController {
             Integer tagCount = entry.getValue();
             double averageRelatedCount = (double) tagCount / finalQuestions.size();
 
+            if (tagName.equals("java")) continue;
+
             // 构造 JSON 对象
             result.add(Map.of(
                     "tagName", tagName,
