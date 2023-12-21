@@ -1,3 +1,4 @@
+use cs209a;
 CREATE TABLE Answers (
                          answer_id INT primary key,
                          question_id INT,

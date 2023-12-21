@@ -7,9 +7,10 @@
       <p>
         <i>
           -the metrics are
-          <strong data-tippy-content="AverageScore is AverageScore" class="tooltip-trigger">AverageScore</strong>,
-          <strong data-tippy-content="AverageValuableAnswerScore is AverageValuableAnswerScore" class="tooltip-trigger">AverageValuableAnswerScore</strong>,
-          <strong data-tippy-content="AverageViewCount is AverageViewCount"
+          <strong data-tippy-content="Average Score per Question (Sum of scores divided by the number of questions)" class="tooltip-trigger">AverageScore</strong>,
+          <strong data-tippy-content="Average Upvotes for Valuable Answered Questions (Sum of scores for valuable answers divided by the number of answers)
+" class="tooltip-trigger">AverageValuableAnswerScore</strong>,
+          <strong data-tippy-content="Average View Count per Question (Sum of view_count divided by the number of questions)"
                   class="tooltip-trigger">AverageViewCount</strong>
         </i>
       </p>
@@ -341,7 +342,7 @@ export default {
       this.viewBarChart.update(order)
     },
     fetchTopicPopularityData() {
-      const topics = ["android", "hibernate", "jpa", "junit", "lombok", "maven", "spring", "spring-boot", "sql", "oracle"]
+      const topics = ["android", "hibernate", "jpa", "junit", "gradle", "maven", "spring", "spring-boot", "javafx", "spring-data-jpa"]
       axios.get(`http://localhost:8090/topic-popularity/${topics}`)
           .then(response => {
             console.log(response.data)

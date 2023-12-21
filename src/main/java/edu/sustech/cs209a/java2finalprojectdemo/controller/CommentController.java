@@ -4,15 +4,13 @@ import edu.sustech.cs209a.java2finalprojectdemo.model.Comments;
 import edu.sustech.cs209a.java2finalprojectdemo.mapper.CommentsMapper;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/comments")
+@CrossOrigin(origins = "http://localhost:8080")
 public class CommentController {
 
     @Autowired
