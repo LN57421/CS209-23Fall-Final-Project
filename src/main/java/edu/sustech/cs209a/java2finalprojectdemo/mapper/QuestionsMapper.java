@@ -22,6 +22,15 @@ public interface QuestionsMapper {
             "JOIN questions q ON a.question_id = q.question_id " + "WHERE a.name = #{keyword}")
     List<Questions> findQuestionsByTags(String keyword);
 
+
+    @Select("SELECT q.*\n" +
+            "FROM tags t\n" +
+            "         JOIN questions q ON t.`question_id` = q.question_id\n" +
+            "         JOIN answers a ON q.question_id = a.question_id\n" +
+            "         JOIN cs209a.comments c on a.question_id = c.question_id\n" +
+            "WHERE (t.name = #{keyword} or q.body LIKE CONCAT('%', #{keyword}, '%') or a.body LIKE CONCAT('%', #{keyword}, '%') or c.body LIKE CONCAT('%', #{keyword}, '%'));\n")
+    List<Questions> findRelatedQuestions(String keyword);
+
     @Select("SELECT * FROM questions WHERE body LIKE CONCAT('%', #{keyword}, '%')")
     List<Questions> findQuestionsByBody(String keyword);
 
@@ -61,4 +70,7 @@ public interface QuestionsMapper {
             "JOIN Exceptions ex ON q.question_id = ex.question_id " +
             "WHERE ex.name = #{name}")
     List<QuestionsWithError> findQuestionsWithExceptionByName(String name);
+
+
+
 }
