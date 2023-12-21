@@ -75,7 +75,7 @@ public class RelatedTopicController {
         result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageRelatedCount")));
 
         // 封装到最外层的 Map
-        resultMap.put("related-popularity", result);
+        resultMap.put("relatedPopularity", result);
 
         // 返回整体的 Map
         return resultMap;
