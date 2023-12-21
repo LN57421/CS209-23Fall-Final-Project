@@ -37,6 +37,10 @@ public class RelatedTopicController {
                 finalQuestions.add(q.question_id);
             }
         }
+        List<Questions> questionsList = questionsMapper.findRelatedQuestions(inputPhase);
+        for (Questions q: questionsList) {
+            finalQuestions.add(q.question_id);
+        }
 
         // 计算每个标签出现的次数
         Map<String, Integer> tagCountMap = new HashMap<>();
