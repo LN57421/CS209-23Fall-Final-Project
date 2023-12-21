@@ -31,7 +31,7 @@ export default {
       scaleMobile: 1.00,
       color: 0x0,
       size: 0.6,
-      backgroundColor: 0xffffff
+      backgroundColor: 0xffffff,
     })
   },
   beforeDestroy() {
