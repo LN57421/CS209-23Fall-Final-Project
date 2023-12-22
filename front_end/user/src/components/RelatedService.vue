@@ -20,8 +20,17 @@
     </div>
 
     <div class="chart">
-      <div ref="allBarChartContainer">
+      <div class="allBarChart">
+        <div ref="allBarChartContainer">
+        </div>
       </div>
+
+      <div class="wordCloud">
+        <div ref="wordCloud">
+        </div>
+      </div>
+
+
     </div>
   </div>
 </template>
@@ -30,6 +39,7 @@
 <script>
 import axios from "axios";
 import * as d3 from "d3"
+import * as cloud from "d3-cloud"
 
 export default {
   name: "RelatedService",
@@ -52,7 +62,7 @@ export default {
   methods: {
     drawAllBarChart() {
       d3.select(this.$refs.allBarChartContainer).html('');
-      const width = 1000;
+      const width = 700;
       const height = 500;
       const marginTop = 20;
       const marginRight = 0;
@@ -121,7 +131,7 @@ export default {
           .call(d3.axisLeft(y))
           .call(g => g.select(".domain").remove());
 
-      // const initialTransform = d3.zoomIdentity.scale(12); // 这里的 12 是初始缩放的倍数，可以根据需求调整
+      // const initialTransform = d3.zoomIdentity.scale(6); // 这里的 12 是初始缩放的倍数，可以根据需求调整
       //
       // // 调用缩放，并设置初始变换
       // svg.call(
@@ -142,7 +152,8 @@ export default {
       //
       //           svg.select(".x-axis").call(d3.axisBottom(x));
       //         })
-      // ).call((zoom) => zoom.transform, initialTransform);
+      //         .transform, initialTransform);
+
 
       svg.call((svg) => {
         svg.call(
@@ -168,12 +179,45 @@ export default {
 
       });
     },
+    drawWordCloud() {
+      d3.select(this.$refs.wordCloud).html('');
+      const data = this.relatedData
+      var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+      var layout = cloud()
+          .size([600, 500])
+          .words(data)
+          .rotate(0)
+          .fontSize(function(d) { return d.averageRelatedCount*100; })
+          .on("end", (words=>{
+            d3.select(this.$refs.wordCloud).append("svg")
+                .attr("width", layout.size()[0])//宽度
+                .attr("height", layout.size()[1])//高度
+                .attr("viewBox","0 0 700 500")//可见区域
+                .attr("style", "border: 1px  black")//区域样式
+                .attr("preserveAspectRatio","xMaxYMax meet")
+                .attr("class", "wordcloud")
+                .append("g")
+                .attr("transform", "translate(350,250)")
+                .selectAll("text")
+                .data(words)
+                .enter().append("text")
+                .style("font-size", function(d) { return d.averageRelatedCount*200 + "px"; })
+                .style("fill", function(d, i) { return color(i); })//颜色
+                .attr("transform", function(d) {//每个词条的偏移量
+                  return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                })
+                .text(function(d) { return d.tagName; });//内容
+        }));
+      layout.start();
+    },
     fetchRelatedData() {
       if (this.phase === '') return;
       axios.get(`http://localhost:8090/related-topic/${this.phase}`)
           .then(response => {
             this.relatedData = response.data.relatedPopularity;
             this.drawAllBarChart()
+            this.drawWordCloud()
             console.log(response.data.relatedPopularity)
           })
           .catch(error => {
@@ -194,5 +238,22 @@ export default {
   display: grid;
   place-items: center;
   height: 200px;
+}
+
+.chart {
+  display: flex;
+  gap: 10px;
+}
+
+.allBarChart {
+  width: 50%;
+  border-radius: 4px;
+  border: 1px solid #919292;
+}
+
+.wordCloud {
+  width: 50%;
+  border-radius: 4px;
+  border: 1px solid #919292;
 }
 </style>

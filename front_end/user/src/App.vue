@@ -29,7 +29,7 @@ export default {
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: 0x0,
+      color: 0xffffff,
       size: 0.6,
       backgroundColor: 0xffffff,
     })
