@@ -7,6 +7,8 @@ import edu.sustech.cs209a.java2finalprojectdemo.model.Answers;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
@@ -19,6 +21,8 @@ public class TopicPopularityController {
 
     @Autowired
     private AnswersMapper answersMapper;
+
+    private static final Logger logger = LoggerFactory.getLogger(TopicPopularityController.class);
 
     @ApiOperation("获取主题热度")
     @GetMapping("/topic-popularity/{topics}")
@@ -41,6 +45,8 @@ public class TopicPopularityController {
                     "averageScore", avgScore,
                     "averageValuableAnswerScore", avgValuableAnswerScore
             ));
+
+            logger.info("Successfully get topic popularity: " + keyword);
         }
         // 按 averageViewCount 从小到大排序
         result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));

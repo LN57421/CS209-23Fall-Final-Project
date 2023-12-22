@@ -9,6 +9,8 @@ import edu.sustech.cs209a.java2finalprojectdemo.model.Exceptions;
 import edu.sustech.cs209a.java2finalprojectdemo.model.FatalErrors;
 import edu.sustech.cs209a.java2finalprojectdemo.model.SyntaxErrors;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,6 +31,8 @@ public class BugPopularityController {
 
     @Autowired
     private FatalErrorsMapper fatalErrorsMapper;
+
+    private static final Logger logger = LoggerFactory.getLogger(BugPopularityController.class);
 
     @ApiOperation("获取三个bug大类对应的热度")
     @GetMapping("/bug-show/all")
@@ -87,6 +91,8 @@ public class BugPopularityController {
                 "averageViewCountSum", avgViewCount
         ));
 
+        logger.info("Successfully get three bug popularity: all exceptions, syntax errors, fatal errors");
+
         // 按 averageViewCount 从小到大排序
         result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
 
@@ -117,6 +123,8 @@ public class BugPopularityController {
                     "exceptionName", exceptionName,
                     "averageViewCount", avgViewCount
             ));
+
+            logger.info("Successfully get bug popularity: all exceptions");
         }
         // 按 averageViewCount 从小到大排序
         result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
@@ -144,6 +152,8 @@ public class BugPopularityController {
                     "exceptionName", exceptionName,
                     "averageViewCount", avgViewCount
             ));
+
+            logger.info("Successfully get exception bug popularity: " + exceptionName);
         }
         // 按 averageViewCount 从小到大排序
         result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
@@ -176,6 +186,9 @@ public class BugPopularityController {
                     "averageViewCount", avgViewCount
             ));
         }
+
+        logger.info("Successfully get bug popularity: all syntax errors");
+
         // 按 averageViewCount 从小到大排序
         result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
 
@@ -200,6 +213,8 @@ public class BugPopularityController {
                     "exceptionName", syntaxError,
                     "averageViewCount", avgViewCount
             ));
+
+            logger.info("Successfully get syntaxError bug popularity: " + syntaxError);
         }
         // 按 averageViewCount 从小到大排序
         result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
@@ -234,6 +249,8 @@ public class BugPopularityController {
                     "averageViewCount", avgViewCount
             ));
         }
+        logger.info("Successfully get bug popularity: all fatal errors");
+
         // 按 averageViewCount 从小到大排序
         result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
 
@@ -258,6 +275,7 @@ public class BugPopularityController {
                     "exceptionName", fatalError,
                     "averageViewCount", avgViewCount
             ));
+            logger.info("Successfully get fatalError bug popularity: " + fatalError);
         }
         // 按 averageViewCount 从小到大排序
         result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
