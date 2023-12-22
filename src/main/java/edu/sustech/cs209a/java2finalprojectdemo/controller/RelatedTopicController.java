@@ -5,6 +5,8 @@ import edu.sustech.cs209a.java2finalprojectdemo.mapper.TagsMapper;
 import edu.sustech.cs209a.java2finalprojectdemo.model.Questions;
 import edu.sustech.cs209a.java2finalprojectdemo.model.Tags;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +21,9 @@ public class RelatedTopicController {
 
     @Autowired
     private TagsMapper tagsMapper;
+
+    private static final Logger logger = LoggerFactory.getLogger(RelatedTopicController.class);
+
 
     @ApiOperation("获取某个phase对应的热度")
     @GetMapping("/related-topic/{inputPhase}")
@@ -70,6 +75,8 @@ public class RelatedTopicController {
                     "averageRelatedCount", averageRelatedCount
             ));
         }
+
+        logger.info("Successfully get phase related topic popularity: " + inputPhase);
 
         // 按 averageRelatedCount 从小到大排序
         result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageRelatedCount")));

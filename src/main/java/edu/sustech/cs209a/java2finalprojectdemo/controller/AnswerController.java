@@ -13,6 +13,7 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:8080")
 public class AnswerController {
 
+
     @Autowired
     private AnswersMapper answersMapper;
 
