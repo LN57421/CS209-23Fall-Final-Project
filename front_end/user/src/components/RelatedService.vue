@@ -188,7 +188,7 @@ export default {
           .size([600, 500])
           .words(data)
           .rotate(0)
-          .fontSize(function(d) { return d.averageRelatedCount*100; })
+          .fontSize(function(d) { return d.averageRelatedCount*1000; })
           .on("end", (words=>{
             d3.select(this.$refs.wordCloud).append("svg")
                 .attr("width", layout.size()[0])//宽度
