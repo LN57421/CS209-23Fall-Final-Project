@@ -58,7 +58,7 @@ public class ExceptionMatcher {
                         if (body.toLowerCase().contains("outofmemory") || body.toLowerCase().contains("fatal error") ||
                                 body.toLowerCase().contains("runtime error") || body.toLowerCase().contains("unrecoverable error") ||
                                 body.toLowerCase().contains("unexpected error") || body.toLowerCase().contains("critical error") ||
-                                body.toLowerCase().contains("severe error") || body.toLowerCase().contains("fatal exception") ||
+                                body.toLowerCase().contains("severe error") ||
                                 body.toLowerCase().contains("system crash") || body.toLowerCase().contains("catastrophic error") ||
                                 body.toLowerCase().contains("fatal mistake") || body.toLowerCase().contains("serious error") ||
                                 body.toLowerCase().contains("critical mistake") || body.toLowerCase().contains("unrecoverable mistake") ||
@@ -76,7 +76,7 @@ public class ExceptionMatcher {
                         // 匹配异常
                         if (body.toLowerCase().contains("nullpointerexception") || body.toLowerCase().contains("arrayindexoutofboundsexception") ||
                                 body.toLowerCase().contains("arithmeticexception") || body.toLowerCase().contains("illegalargumentexception") ||
-                                body.toLowerCase().contains("illegalstateexception") || body.toLowerCase().contains("indexoutofboundsexception") ||
+                                body.toLowerCase().contains("illegalstateexception") || body.toLowerCase().contains("indexoutofboundsexception") || body.toLowerCase().contains("fatal exception") ||
                                 body.toLowerCase().contains("classcastexception") || body.toLowerCase().contains("numberformatexception") ||
                                 body.toLowerCase().contains("unsupportedoperationexception") || body.toLowerCase().contains("ioexception") ||
                                 body.toLowerCase().contains("sqlexception") || body.toLowerCase().contains("filenotfoundexception")) {
@@ -148,9 +148,7 @@ public class ExceptionMatcher {
             return "critical error";
         } else if (body.toLowerCase().contains("severe error")) {
             return "severe error";
-        } else if (body.toLowerCase().contains("fatal exception")) {
-            return "fatal exception";
-        } else if (body.toLowerCase().contains("system crash")) {
+        }else if (body.toLowerCase().contains("system crash")) {
             return "system crash";
         } else if (body.toLowerCase().contains("catastrophic error")) {
             return "catastrophic error";
@@ -206,6 +204,8 @@ public class ExceptionMatcher {
             return "sqlexception";
         } else if (body.toLowerCase().contains("filenotfoundexception")) {
             return "filenotfoundexception";
+        }  else if (body.toLowerCase().contains("fatal exception")) {
+            return "fatal exception";
         } else {
             return "uncategorized";
         }

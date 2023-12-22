@@ -206,9 +206,6 @@ export default {
 
     },
     drawViewBarChart() {
-      if (this.viewBarChart) {
-        this.viewBarChart.destroy();
-      }
       const width = 640;
       const height = 550;
       const marginTop = 20;
