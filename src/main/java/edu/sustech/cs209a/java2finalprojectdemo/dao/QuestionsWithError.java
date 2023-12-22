@@ -34,4 +34,18 @@ public class QuestionsWithError {
     }
 
     // Add other necessary methods or properties
+
+    @Override
+    public String toString() {
+        return "QuestionsWithError{" +
+                "question_id=" + question_id +
+                ", is_answered=" + is_answered +
+                ", creation_date=" + creation_date +
+                ", score=" + score +
+                ", view_count=" + view_count +
+                ", title='" + title + '\'' +
+                ", body='" + body + '\'' +
+                ", errorName='" + errorName + '\'' +
+                '}';
+    }
 }

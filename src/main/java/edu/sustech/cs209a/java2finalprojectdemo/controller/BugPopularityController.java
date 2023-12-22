@@ -71,9 +71,10 @@ public class BugPopularityController {
         for (String syntaxError: syntaxErrors) {
             List<QuestionsWithError> questionsWithErrorList = questionsMapper.findQuestionsWithSyntaxErrorByName(syntaxError);
             avgViewCount += getViewCountFrequency(questionsWithErrorList);
+            System.out.println(syntaxError);
         }
         result.add(Map.of(
-                "className", "exceptionClass",
+                "className", "syntaxErrorsClass",
                 "averageViewCountSum", avgViewCount
         ));
 
@@ -83,12 +84,12 @@ public class BugPopularityController {
             avgViewCount = getViewCountFrequency(questionsWithErrorList);
         }
         result.add(Map.of(
-                "className", "exceptionClass",
+                "className", "fatalErrorsClass",
                 "averageViewCountSum", avgViewCount
         ));
 
         // 按 averageViewCount 从小到大排序
-        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
+        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCountSum")));
 
         // 封装到最外层的 Map
         resultMap.put("ThreeClassFrequencySum", result);
@@ -272,6 +273,7 @@ public class BugPopularityController {
     private double getViewCountFrequency(List<QuestionsWithError> questionsWithErrorList) {
         double count = 0;
         for (QuestionsWithError question: questionsWithErrorList) {
+            System.out.println(question);
             count += question.view_count;
         }
         return count / questionsMapper.findAllQuestions().size();

@@ -6,13 +6,22 @@
         The visualization of bug/exception popularity
       </h2>
     </div>
+
+    <div class="chart">
+      <div ref="icicleChartContainer"></div>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-
+// import * as d3 from  "d3";
 export default {
+  data() {
+    return {
+      bugsData: '',
+    }
+  },
   mounted() {
     this.fetchAllExceptionPopularity();
   },
@@ -21,7 +30,8 @@ export default {
     fetchAllExceptionPopularity() {
       axios.get('http://localhost:8090/bug-show/exception/all')
           .then(reponse => {
-            console.log(reponse.data)
+            this.bugsData = reponse.data;
+            console.log(this.bugsData)
           })
           .catch(error => {
             console.log(error)
