@@ -29,12 +29,6 @@
           RelatedService
         </vs-sidebar-item>
 
-        <vs-sidebar-item id="return" @click.native="handleLink('building')">
-          <template #icon>
-            <i class='bi-journal'></i>
-          </template>
-          Log
-        </vs-sidebar-item>
       </vs-sidebar>
     </div>
   </div>

@@ -132,6 +132,11 @@ export default {
           .attr("x", x(0))
           .attr("y", d => y(d.keyword))
           .attr("height", y.bandwidth())
+          .attr("width", 0);
+
+      averageScoreBar.transition()
+          .duration(1000)
+          .attr("x",x(0))
           .attr("width", d => x(d.averageScore) - x(0));
 
 
@@ -141,9 +146,14 @@ export default {
           .data(data)
           .join("rect")
           .style("mix-blend-mode", "multiply")
-          .attr("x", d => x(-d.averageValuableAnswerScore))
+          .attr("x", x(0))
           .attr("y", d => y(d.keyword))
           .attr("height", y.bandwidth())
+          .attr("width", 0);
+
+      averageValuableAnswerScoreBar.transition()
+          .duration(1000)
+          .attr("x", d => x(-d.averageValuableAnswerScore))
           .attr("width", d => x(0) - x(-d.averageValuableAnswerScore));
 
       averageScoreBar
@@ -244,6 +254,9 @@ export default {
           .style("font-size", "15px")
           .style("font-style", "Times New Roman");
 
+      const colorScale = d3.scaleLinear()
+          .domain([0, d3.max(data, d => d.averageViewCount)])
+          .range(["#f4facf", "#71f605"]);
       // Append the bars.
       const bars = svg.append("g")
           .attr("class", "bars")
@@ -251,10 +264,17 @@ export default {
           .selectAll("rect")
           .data(data)
           .join("rect")
+          .style("fill", d => colorScale(d.averageViewCount))
           .attr("x", d => x(d.keyword))
-          .attr("y", d => y(d.averageViewCount))
-          .attr("height", d => y(0) - y(d.averageViewCount))
+          .attr("y", y(0))
+          .attr("height", 0)
           .attr("width", x.bandwidth());
+
+      bars
+          .transition() // 添加过渡效果
+          .duration(1000) // 过渡时间
+          .attr("y", d => y(d.averageViewCount)) // 最终高度
+          .attr("height", d => y(0) - y(d.averageViewCount));
 
       bars
           .on('mouseenter', function (event, d) {
@@ -267,6 +287,7 @@ export default {
             tippy(this).hide();
           });
 
+
       // Append the axes.
       const gx = svg.append("g")
           .attr("class", "x-axis")
@@ -278,6 +299,8 @@ export default {
           .attr("transform", `translate(${marginLeft},0)`)
           .call(d3.axisLeft(y))
           .call(g => g.select(".domain").remove());
+
+
 
       return Object.assign(svg.node(), {
         update(order) {
@@ -360,7 +383,6 @@ export default {
         });
       });
     }
-
   },
 }
 

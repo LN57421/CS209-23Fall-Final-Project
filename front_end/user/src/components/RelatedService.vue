@@ -114,10 +114,15 @@ export default {
           .data(data)
           .join("rect")
           .attr("x", d => x(d.tagName))
-          .attr("y", d => y(d.averageRelatedCount))
-          .attr("height", d => y(0) - y(d.averageRelatedCount))
+          .attr("y", y(0)) // 初始位置设置在底部
+          .attr("height", 0) // 初始高度为 0
           .attr("width", x.bandwidth())
-          .style("fill", d => colorScale(d.averageRelatedCount));
+          .style("fill", d => colorScale(d.averageRelatedCount))
+          .transition() // 添加过渡效果
+          .duration(2000) // 过渡时间
+          .attr("y", d => y(d.averageRelatedCount)) // 最终位置
+          .attr("height", d => y(0) - y(d.averageRelatedCount)); // 最终高度
+
 
       // Append the axes.
       svg.append("g")
@@ -130,30 +135,6 @@ export default {
           .attr("transform", `translate(${marginLeft},0)`)
           .call(d3.axisLeft(y))
           .call(g => g.select(".domain").remove());
-
-      // const initialTransform = d3.zoomIdentity.scale(6); // 这里的 12 是初始缩放的倍数，可以根据需求调整
-      //
-      // // 调用缩放，并设置初始变换
-      // svg.call(
-      //     d3.zoom()
-      //         .scaleExtent([1, 32])
-      //         .translateExtent(extent)
-      //         .extent(extent)
-      //         .on("zoom", (event) => {
-      //           const x = d3.scaleBand()
-      //               .domain(d3.sort(data, d => -d.averageRelatedCount).map(d => d.tagName))
-      //               .range([marginLeft, width - marginRight].map(d => event.transform.applyX(d)))
-      //               .padding(0.05);
-      //
-      //           svg.select(".bars")
-      //               .selectAll("rect")
-      //               .attr("x", d => x(d.tagName))
-      //               .attr("width", x.bandwidth());
-      //
-      //           svg.select(".x-axis").call(d3.axisBottom(x));
-      //         })
-      //         .transform, initialTransform);
-
 
       svg.call((svg) => {
         svg.call(
@@ -181,36 +162,56 @@ export default {
     },
     drawWordCloud() {
       d3.select(this.$refs.wordCloud).html('');
-      const data = this.relatedData
+      const data = this.relatedData;
       var color = d3.scaleOrdinal(d3.schemeCategory10);
 
+      // 创建缩放行为
+      const zoom = d3.zoom()
+          .scaleExtent([1, 10]); // 设置缩放范围
+
+      // 创建词云
       var layout = cloud()
-          .size([600, 500])
+          .size([700, 500])
           .words(data)
           .rotate(0)
-          .fontSize(function(d) { return d.averageRelatedCount*1000; })
-          .on("end", (words=>{
-            d3.select(this.$refs.wordCloud).append("svg")
+          .fontSize(function(d) { return d.averageRelatedCount * 1000; })
+          .on("end", (words => {
+            const svg = d3.select(this.$refs.wordCloud).append("svg")
                 .attr("width", layout.size()[0])//宽度
                 .attr("height", layout.size()[1])//高度
-                .attr("viewBox","0 0 700 500")//可见区域
+                .attr("viewBox", "0 0 700 500")//可见区域
                 .attr("style", "border: 1px  black")//区域样式
-                .attr("preserveAspectRatio","xMaxYMax meet")
+                .attr("preserveAspectRatio", "xMaxYMax meet")
                 .attr("class", "wordcloud")
-                .append("g")
-                .attr("transform", "translate(350,250)")
-                .selectAll("text")
+                .call(zoom); // 将缩放行为应用到 SVG
+
+            const g = svg.append("g")
+                .attr("transform", "translate(350,250)");
+
+            g.selectAll("text")
                 .data(words)
                 .enter().append("text")
-                .style("font-size", function(d) { return d.averageRelatedCount*200 + "px"; })
+                .style("font-size", function(d) { return d.averageRelatedCount * 400 + "px"; })
                 .style("fill", function(d, i) { return color(i); })//颜色
-                .attr("transform", function(d) {//每个词条的偏移量
+                .attr("transform", function(d) {//每个词条的初始偏移量在外面
+                  return "translate(" + [d.x, -layout.size()[1]] + ")rotate(" + d.rotate + ")";
+                })
+                .text(function(d) { return d.tagName; })
+                .transition()
+                .duration(2000) // 设置过渡时间
+                .attr("transform", function(d) {
                   return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
                 })
-                .text(function(d) { return d.tagName; });//内容
-        }));
+                .style("opacity", 1); // 逐渐显示文本;//内容
+            zoom.on("zoom", (event)=>{
+              g.attr("transform", event.transform);
+            });
+          }));
       layout.start();
+
+      // 缩放回调函数
     },
+
     fetchRelatedData() {
       if (this.phase === '') return;
       axios.get(`http://localhost:8090/related-topic/${this.phase}`)
