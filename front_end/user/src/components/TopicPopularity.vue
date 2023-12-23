@@ -58,7 +58,7 @@ export default {
   data() {
     return {
       topicsData: [],
-      scoreValue: '',
+      scoreValue: '6',
       scoreOptions: [
         {value: "-1", label: "Alphabetical order of keyword"},
         {value: "0", label: "Ascending by TotalScore"},
@@ -82,10 +82,6 @@ export default {
   },
   methods: {
     drawScoreBarChart() {
-      if (this.scoreBarchart) {
-        this.scoreBarchart.destroy();
-      }
-
       const width = 640;
       const height = 550;
       const marginTop = 20;
