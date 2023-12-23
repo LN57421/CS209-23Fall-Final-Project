@@ -85,6 +85,7 @@ export default {
       // return svg.attr("viewBox", autoBox).node();
     },
     fetchAllExceptionPopularity() {
+      // 获取所有exception对应的热度
       axios.get('http://localhost:8090/bug-show/exception/all')
           .then(reponse => {
             this.bugsData = reponse.data;
@@ -94,7 +95,72 @@ export default {
             console.log(error)
           })
     },
+    fetchAllBugsPopularity() {
+    //   获取三个bug大类对应的热度
+      axios.get('http://localhost:8090/bug-show/all')
+          .then(response => {
+            console.log(response.data);
+          })
+          .catch(error => {
+            console.log(error)
+          })
 
+    },
+
+    fetchAllSyntaxErrorsPopularity() {
+      // 获取所有syntaxErrors对应的热度
+      axios.get('http://localhost:8090/bug-show/syntax/all')
+          .then(response => {
+            console.log(response.data);
+          })
+          .catch(error => {
+            console.log(error)
+          })
+    },
+
+    fetchAllFatalErrorsPopularity() {
+      // 获取所有fatalErrors对应的热度
+      axios.get('http://localhost:8090/bug-show/fatal/all')
+          .then(response => {
+            console.log(response.data);
+          })
+          .catch(error => {
+            console.log(error)
+          })
+    },
+
+    fetchSingleExceptionPopularity() {
+      // 获取某个exceptionName对应的热度
+      axios.get('http://localhost:8090/bug-show/exception/"kkk"')
+          .then(response => {
+            console.log(response.data);
+          })
+          .catch(error => {
+            console.log(error)
+          })
+    },
+
+    fetchSingleSyntaxErrorPopularity() {
+      // 获取某个syntaxError对应的热度
+      axios.get('http://localhost:8090/bug-show/syntax/"kkk"')
+          .then(response => {
+            console.log(response.data);
+          })
+          .catch(error => {
+            console.log(error)
+          })
+    },
+
+    fetchFatalSyntaxErrorPopularity() {
+      // 获取某个fatalError对应的热度
+      axios.get('http://localhost:8090/bug-show/fatal/"kkk"')
+          .then(response => {
+            console.log(response.data);
+          })
+          .catch(error => {
+            console.log(error)
+          })
+    },
   }
 }
 </script>

@@ -200,7 +200,7 @@ public class BugPopularityController {
         return resultMap;
     }
 
-    @ApiOperation("获取所有syntaxErrors对应的热度")
+    @ApiOperation("获取单个syntaxErrors对应的热度")
     @GetMapping("/bug-show/syntax/{syntaxErrors}")  // "compile error"
     public Map<String, List<Object>> getSyntaxErrorsPopularity(@PathVariable List<String> syntaxErrors){
         Map<String, List<Object>> resultMap = new HashMap<>();
