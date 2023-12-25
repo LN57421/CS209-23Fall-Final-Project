@@ -44,17 +44,17 @@ public class BugPopularityController {
 
         result.add(Map.of(
                 "name", "exceptions",
-                "children", getAllFatalErrorsPopularity()
+                "children", getAllFatalErrorsPopularityDetail()
         ));
 
         result.add(Map.of(
                 "name", "syntaxError",
-                "children", getAllSyntaxErrorsPopularity()
+                "children", getAllSyntaxErrorsPopularityDetail()
         ));
 
         result.add(Map.of(
                 "name", "fatalError",
-                "children", getAllFatalErrorsPopularity()
+                "children", getAllFatalErrorsPopularityDetail()
         ));
 
         logger.info("Successfully get three bug popularity detail:  all exceptions, syntax errors, fatal errors");
@@ -175,6 +175,36 @@ public class BugPopularityController {
         return resultMap;
     }
 
+    public Map<String, List<Object>> getAllExceptionPopularityDetail(){
+        Map<String, List<Object>> resultMap = new HashMap<>();
+        List<Object> result = new ArrayList<>();
+        List<Exceptions> exceptions = exceptionsMapper.findAllExceptions();
+        Set<String>  exceptionNames  = new HashSet<>();
+        for (Exceptions e: exceptions) {
+            exceptionNames.add(e.name);
+        }
+        for (String exceptionName: exceptionNames) {
+            List<QuestionsWithError> questionsWithErrorList = questionsMapper.findQuestionsWithExceptionByName(exceptionName);
+            double avgViewCount = getViewCountFrequency(questionsWithErrorList);
+            // 直接构造 JSON 对象
+            result.add(Map.of(
+                    "name", exceptionName,
+                    "value", avgViewCount
+            ));
+
+            logger.info("Successfully get bug popularity: all exceptions");
+        }
+        // 按 averageViewCount 从小到大排序
+        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
+
+        // 封装到最外层的 Map
+        resultMap.put("exceptionFrequency", result);
+
+        // 返回整体的 Map
+        return resultMap;
+    }
+
+
 
 
     @ApiOperation("获取某个exceptionName对应的热度")
@@ -223,6 +253,38 @@ public class BugPopularityController {
             result.add(Map.of(
                     "exceptionName", syntaxError,
                     "averageViewCount", avgViewCount
+            ));
+        }
+
+        logger.info("Successfully get bug popularity: all syntax errors");
+
+        // 按 averageViewCount 从小到大排序
+        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
+
+        // 封装到最外层的 Map
+        resultMap.put("syntaxErrorFrequency", result);
+
+        // 返回整体的 Map
+        return resultMap;
+    }
+
+    public Map<String, List<Object>> getAllSyntaxErrorsPopularityDetail(){
+
+        Map<String, List<Object>> resultMap = new HashMap<>();
+        List<Object> result = new ArrayList<>();
+
+        List<SyntaxErrors> syntaxErrors_ = syntaxErrorsMapper.findAllSyntaxErrors();
+        Set<String> syntaxErrors = new HashSet<>();
+        for (SyntaxErrors s: syntaxErrors_) {
+            syntaxErrors.add(s.name);
+        }
+        for (String syntaxError: syntaxErrors) {
+            List<QuestionsWithError> questionsWithErrorList = questionsMapper.findQuestionsWithSyntaxErrorByName(syntaxError);
+            double avgViewCount = getViewCountFrequency(questionsWithErrorList);
+            // 直接构造 JSON 对象
+            result.add(Map.of(
+                    "name", syntaxError,
+                    "value", avgViewCount
             ));
         }
 
@@ -300,6 +362,38 @@ public class BugPopularityController {
         return resultMap;
     }
 
+
+    public Map<String, List<Object>> getAllFatalErrorsPopularityDetail(){
+        Map<String, List<Object>> resultMap = new HashMap<>();
+        List<Object> result = new ArrayList<>();
+
+        List<FatalErrors> fatalErrorsList = fatalErrorsMapper.findAllFatalErrors();
+        Set<String> fatalErrors = new HashSet<>();
+        for (FatalErrors f: fatalErrorsList) {
+            fatalErrors.add(f.name);
+        }
+
+        for (String fatalError: fatalErrors) {
+            List<QuestionsWithError> questionsWithErrorList = questionsMapper.findQuestionsWithFatalErrorByName(fatalError);
+            double avgViewCount = getViewCountFrequency(questionsWithErrorList);
+            // 直接构造 JSON 对象
+            result.add(Map.of(
+                    "name", fatalError,
+                    "value", avgViewCount
+            ));
+        }
+        logger.info("Successfully get bug popularity: all fatal errors");
+
+        // 按 averageViewCount 从小到大排序
+        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
+
+        // 封装到最外层的 Map
+        resultMap.put("fatalErrorFrequency", result);
+
+        // 返回整体的 Map
+        return resultMap;
+    }
+
     @ApiOperation("获取某个fatalErrors对应的热度")
     @GetMapping("/bug-show/fatal/{fatalErrors}")  // "compile error"
     public Map<String, List<Object>> getFatalErrorsPopularity(@PathVariable List<String> fatalErrors){
@@ -329,7 +423,7 @@ public class BugPopularityController {
     private double getViewCountFrequency(List<QuestionsWithError> questionsWithErrorList) {
         double count = 0;
         for (QuestionsWithError question: questionsWithErrorList) {
-            System.out.println(question);
+            //System.out.println(question);
             count += question.view_count;
         }
         return count / questionsMapper.findAllQuestions().size();
