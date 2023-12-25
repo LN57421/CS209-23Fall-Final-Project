@@ -9,7 +9,7 @@
       <p>
         <i>
           -the metrics are
-          <strong data-tippy-content="Average Score per Question (Sum of scores divided by the number of questions)" class="tooltip-trigger">averageViewCount</strong>
+          <strong data-tippy-content="For a bug, find all the threads that contain the bug as a tag and divide the number of threads that contain the bug in the issue by the number of all threads" class="tooltip-trigger">averageViewCount</strong>
 
         </i>
       </p>

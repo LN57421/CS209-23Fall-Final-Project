@@ -8,7 +8,8 @@
       <p>
         <i>
           -the metrics are
-          <strong data-tippy-content="Average Score per Question (Sum of scores divided by the number of questions)" class="tooltip-trigger">averageRelatedCount</strong>
+          <strong data-tippy-content="For a phase, iterate through all words Find all containing words as tags and threads that contain that phase in the question comment or answer (if any) Calculate the average frequency of occurrence of each tag in these related questions (number of occurrences/number of threads)
+" class="tooltip-trigger">averageRelatedCount</strong>
         </i>
       </p>
 
