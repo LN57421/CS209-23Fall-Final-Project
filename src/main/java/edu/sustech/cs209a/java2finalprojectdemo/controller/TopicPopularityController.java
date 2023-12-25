@@ -24,9 +24,9 @@ public class TopicPopularityController {
 
     private static final Logger logger = LoggerFactory.getLogger(TopicPopularityController.class);
 
-    @ApiOperation("获取主题热度")
-    @GetMapping("/topic-popularity/{topics}")
-    public Map<String, List<Object>> getTopicPopularity(@PathVariable List<String> topics) {
+    @ApiOperation("获取主题热度通过averageViewCount排序")
+    @GetMapping("/topic-popularity/sortByAverageViewCount/{topics}")
+    public Map<String, List<Object>> getTopicPopularitySortByAverageViewCount(@PathVariable List<String> topics) {
         Map<String, List<Object>> resultMap = new HashMap<>();
 
         List<Object> result = new ArrayList<>();
@@ -50,6 +50,74 @@ public class TopicPopularityController {
         }
         // 按 averageViewCount 从小到大排序
         result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
+
+        // 封装到最外层的 Map
+        resultMap.put("topics", result);
+
+        // 返回整体的 Map
+        return resultMap;
+    }
+
+    @ApiOperation("获取主题热度通过avgScore排序")
+    @GetMapping("/topic-popularity/sortByAverageScore/{topics}")
+    public Map<String, List<Object>> getTopicPopularitySortByAverageScore(@PathVariable List<String> topics) {
+        Map<String, List<Object>> resultMap = new HashMap<>();
+
+        List<Object> result = new ArrayList<>();
+        for (String keyword : topics) {
+            List<Questions> questions = questionsMapper.findQuestionsByTags(keyword);
+            List<Answers> valuableAnswers = answersMapper.findValuableAnswersByTags(keyword);
+
+            double avgViewCount = calculateAverageViewCount(questions);
+            double avgScore = calculateAverageScore(questions);
+            double avgValuableAnswerScore = calculateAverageValuableAnswerScore(valuableAnswers);
+
+            // 直接构造 JSON 对象
+            result.add(Map.of(
+                    "keyword", keyword,
+                    "averageViewCount", avgViewCount,
+                    "averageScore", avgScore,
+                    "averageValuableAnswerScore", avgValuableAnswerScore
+            ));
+
+            logger.info("Successfully get topic popularity: " + keyword);
+        }
+        // 按 avgScore 从小到大排序
+        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageScore")));
+
+        // 封装到最外层的 Map
+        resultMap.put("topics", result);
+
+        // 返回整体的 Map
+        return resultMap;
+    }
+
+    @ApiOperation("获取主题热度通过avgValuableAnswerScore排序")
+    @GetMapping("/topic-popularity/sortByAverageValuableAnswerScore/{topics}")
+    public Map<String, List<Object>> getTopicPopularitySortByAverageValuableAnswerScore(@PathVariable List<String> topics) {
+        Map<String, List<Object>> resultMap = new HashMap<>();
+
+        List<Object> result = new ArrayList<>();
+        for (String keyword : topics) {
+            List<Questions> questions = questionsMapper.findQuestionsByTags(keyword);
+            List<Answers> valuableAnswers = answersMapper.findValuableAnswersByTags(keyword);
+
+            double avgViewCount = calculateAverageViewCount(questions);
+            double avgScore = calculateAverageScore(questions);
+            double avgValuableAnswerScore = calculateAverageValuableAnswerScore(valuableAnswers);
+
+            // 直接构造 JSON 对象
+            result.add(Map.of(
+                    "keyword", keyword,
+                    "averageViewCount", avgViewCount,
+                    "averageScore", avgScore,
+                    "averageValuableAnswerScore", avgValuableAnswerScore
+            ));
+
+            logger.info("Successfully get topic popularity: " + keyword);
+        }
+        // 按 avgScore 从小到大排序
+        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageValuableAnswerScore")));
 
         // 封装到最外层的 Map
         resultMap.put("topics", result);

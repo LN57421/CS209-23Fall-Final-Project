@@ -433,7 +433,7 @@ export default {
     },
     fetchTopicPopularityData() {
       const topics = ["android", "hibernate", "jpa", "junit", "gradle", "maven", "spring", "spring-boot", "javafx", "spring-data-jpa"]
-      axios.get(`http://localhost:8090/topic-popularity/${topics}`)
+      axios.get(`http://localhost:8090/topic-popularity/sortByAverageViewCount/${topics}`)
           .then(response => {
             console.log(response.data)
             this.topicsData = response.data.topics;
