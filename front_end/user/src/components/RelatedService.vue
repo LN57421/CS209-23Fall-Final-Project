@@ -2,8 +2,15 @@
   <div class="related-topic">
     <div class="head">
       <h2>
-        The visualization of related-service
+        The visualization of related-topic
       </h2>
+
+      <p>
+        <i>
+          -the metrics are
+          <strong data-tippy-content="Average Score per Question (Sum of scores divided by the number of questions)" class="tooltip-trigger">averageRelatedCount</strong>
+        </i>
+      </p>
 
       <div class="input">
         <el-input
@@ -62,6 +69,7 @@ export default {
   name: "RelatedService",
   mounted() {
     this.fetchRelatedData()
+    this.addIntroToolTipTrigger()
   },
   data() {
     return {
@@ -196,6 +204,14 @@ export default {
           .call(g => g.select(".domain").remove());
 
 
+      svg.append("text")
+          .attr("x", 340) // 调整名称的水平位置
+          .attr("y", 20)  // 调整名称的垂直位置
+          .attr("text-anchor", "middle") // 文本锚点居中对齐
+          .text(`The average related count of related topic`) // 添加名称文本
+          .style("font-size", "15px")
+          .style("font-style", "Times New Roman");
+
       const zoom = d3.zoom()
           .scaleExtent([1, 80])
           .translateExtent(extent)
@@ -271,6 +287,13 @@ export default {
 
 
       const svg = d3.select(this.$refs.wordCloud).append("svg");
+      svg.append("text")
+          .attr("x", 340) // 调整名称的水平位置
+          .attr("y", 20)  // 调整名称的垂直位置
+          .attr("text-anchor", "middle") // 文本锚点居中对齐
+          .text(`The words cloud of ${this.phase}`) // 添加名称文本
+          .style("font-size", "15px")
+          .style("font-style", "Times New Roman");
 
       // 创建词云
       var layout = cloud()
@@ -386,6 +409,16 @@ export default {
             console.log(error)
           })
     },
+
+    addIntroToolTipTrigger() {
+      const tooltipTriggers = this.$el.querySelectorAll('.tooltip-trigger');
+      tooltipTriggers.forEach(element => {
+        tippy(element, {
+          content: element.getAttribute('data-tippy-content'),
+          arrow: true,
+        });
+      });
+    }
   }
 }
 
@@ -399,7 +432,7 @@ export default {
 .head {
   display: grid;
   place-items: center;
-  height: 200px;
+  height: 250px;
 }
 
 .chart {

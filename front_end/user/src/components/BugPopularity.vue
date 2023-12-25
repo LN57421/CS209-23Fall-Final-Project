@@ -3,8 +3,16 @@
 
     <div class="head">
       <h2>
-        The visualization of bug/exception popularity
+        The visualization of bugs popularity
       </h2>
+
+      <p>
+        <i>
+          -the metrics are
+          <strong data-tippy-content="Average Score per Question (Sum of scores divided by the number of questions)" class="tooltip-trigger">averageViewCount</strong>
+
+        </i>
+      </p>
     </div>
 
     <div class="chart">
@@ -74,6 +82,7 @@ export default {
   },
   mounted() {
     this.fetchData()
+    this.addIntroToolTipTrigger()
   },
 
   methods: {
@@ -344,19 +353,23 @@ export default {
           .attr("style", "max-width: 100%; height: auto;");
 
 
+      let head = ''
       let colorScale = ''
       switch (color) {
         case 'yellow':
+          head = 'Fatal Error'
           colorScale = d3.scaleLinear()
               .domain([0, d3.max(data, d => d.averageViewCount)])
               .range(["#fad888", "#ff9933"]); // 调整颜色范围
               break;
         case 'green':
+          head = 'Exceptions'
           colorScale = d3.scaleLinear()
               .domain([0, d3.max(data, d => d.averageViewCount)])
               .range(["#66ff33", "#06a266"]); // 调整颜色范围
           break;
         case 'purple':
+          head = 'Syntax Error'
           colorScale = d3.scaleLinear()
               .domain([0, d3.max(data, d => d.averageViewCount)])
               .range(["#9a7ffc", "#750de5"]); // 调整颜色范围
@@ -444,6 +457,14 @@ export default {
           .on('mouseleave', function () {
             tippy(this).hide();
           })
+
+      svg.append("text")
+          .attr("x", 340) // 调整名称的水平位置
+          .attr("y", 20)  // 调整名称的垂直位置
+          .attr("text-anchor", "middle") // 文本锚点居中对齐
+          .text(`The averageViewCount of ${head}`) // 添加名称文本
+          .style("font-size", "15px")
+          .style("font-style", "Times New Roman");
 
       const extent = [
         [marginLeft, marginTop],
@@ -592,6 +613,14 @@ export default {
             tippy(this).hide();
           })
 
+      svg.append("text")
+          .attr("x", 340) // 调整名称的水平位置
+          .attr("y", 20)  // 调整名称的垂直位置
+          .attr("text-anchor", "middle") // 文本锚点居中对齐
+          .text("The averageViewCount of bugs") // 添加名称文本
+          .style("font-size", "15px")
+          .style("font-style", "Times New Roman");
+
     },
     fetchData() {
       this.fetchAllBugsPopularity()
@@ -623,6 +652,16 @@ export default {
       }
 
     },
+
+    addIntroToolTipTrigger() {
+      const tooltipTriggers = this.$el.querySelectorAll('.tooltip-trigger');
+      tooltipTriggers.forEach(element => {
+        tippy(element, {
+          content: element.getAttribute('data-tippy-content'),
+          arrow: true,
+        });
+      });
+    }
   }
 }
 </script>
@@ -635,7 +674,7 @@ export default {
 .head {
   display: grid;
   place-items: center;
-  height: 100px;
+  height: 110px;
 }
 
 
