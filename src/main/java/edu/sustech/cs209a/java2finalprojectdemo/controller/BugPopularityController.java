@@ -35,7 +35,7 @@ public class BugPopularityController {
     private static final Logger logger = LoggerFactory.getLogger(BugPopularityController.class);
 
     @ApiOperation("获取三个bug大类中各个小类对应的热度")
-    @GetMapping("/bug-show/allDetail")
+    @GetMapping("/bug-show/all/Detail")
     public Map<String, List<Object>> getAllThreePopularityDetail(){
         Map<String, List<Object>> resultMap = new HashMap<>();
         List<Object> result = new ArrayList<>();
@@ -175,7 +175,7 @@ public class BugPopularityController {
         return resultMap;
     }
 
-    public Map<String, List<Object>> getAllExceptionPopularityDetail(){
+    public List<Object> getAllExceptionPopularityDetail(){
         Map<String, List<Object>> resultMap = new HashMap<>();
         List<Object> result = new ArrayList<>();
         List<Exceptions> exceptions = exceptionsMapper.findAllExceptions();
@@ -195,13 +195,13 @@ public class BugPopularityController {
             logger.info("Successfully get bug popularity: all exceptions");
         }
         // 按 averageViewCount 从小到大排序
-        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
+        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("value")));
 
         // 封装到最外层的 Map
         resultMap.put("exceptionFrequency", result);
 
         // 返回整体的 Map
-        return resultMap;
+        return result;
     }
 
 
@@ -268,7 +268,7 @@ public class BugPopularityController {
         return resultMap;
     }
 
-    public Map<String, List<Object>> getAllSyntaxErrorsPopularityDetail(){
+    public List<Object> getAllSyntaxErrorsPopularityDetail(){
 
         Map<String, List<Object>> resultMap = new HashMap<>();
         List<Object> result = new ArrayList<>();
@@ -291,13 +291,13 @@ public class BugPopularityController {
         logger.info("Successfully get bug popularity: all syntax errors");
 
         // 按 averageViewCount 从小到大排序
-        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
+        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("value")));
 
         // 封装到最外层的 Map
         resultMap.put("syntaxErrorFrequency", result);
 
         // 返回整体的 Map
-        return resultMap;
+        return result;
     }
 
     @ApiOperation("获取单个syntaxErrors对应的热度")
@@ -363,7 +363,7 @@ public class BugPopularityController {
     }
 
 
-    public Map<String, List<Object>> getAllFatalErrorsPopularityDetail(){
+    public List<Object> getAllFatalErrorsPopularityDetail(){
         Map<String, List<Object>> resultMap = new HashMap<>();
         List<Object> result = new ArrayList<>();
 
@@ -385,13 +385,10 @@ public class BugPopularityController {
         logger.info("Successfully get bug popularity: all fatal errors");
 
         // 按 averageViewCount 从小到大排序
-        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("averageViewCount")));
-
-        // 封装到最外层的 Map
-        resultMap.put("fatalErrorFrequency", result);
+        result.sort(Comparator.comparingDouble(obj -> (double) ((Map<String, Object>) obj).get("value")));
 
         // 返回整体的 Map
-        return resultMap;
+        return result;
     }
 
     @ApiOperation("获取某个fatalErrors对应的热度")

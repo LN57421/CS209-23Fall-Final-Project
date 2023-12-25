@@ -189,7 +189,7 @@ export default {
 
     fetchAllPopularity(vm) {
       // 获取某个fatalError对应的热度
-      axios.get('http://localhost:8090/bug-show/allDetail')
+      axios.get('http://localhost:8090/bug-show/all/Detail')
           .then(response => {
             this.testData = response.data.bugPopularityDetails[0]
             this.drawCircleChart(vm)
