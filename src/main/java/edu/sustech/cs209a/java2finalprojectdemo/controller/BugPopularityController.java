@@ -60,7 +60,7 @@ public class BugPopularityController {
         logger.info("Successfully get three bug popularity detail:  all exceptions, syntax errors, fatal errors");
 
         details.add(Map.of(
-                "name", "syntaxError",
+                "name", "bugs",
                  "children", result
         ));
 

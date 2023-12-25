@@ -47,32 +47,33 @@ export default {
           {name: 'fatalError', children: []},
         ]
       },
-      testData: {
-        name: "bugs", children: [
-          {name: "exceptions", children: [
-              {name: "numberformatexception", value: "0.04"},
-              {name: "unsupportedoperationexception", value: "0.046"},
-              {name: "nullpointerexception", value: "4.244"},
-              {name: "classcastexception", value: "10.05"},
-              {name: "sqlexception", value: "25.946"},
-              {name: "ioexception", value: "46.756"},
-              {name: "illegalargumentexception", value: "80.854"},
-              {name: "filenotfoundexception", value: "443.326"},
-              {name: "illegalstateexception", value: "1175.128"}
-            ]
-          },
-          {name: "syntaxError", children: [
-              {name: "syntaxerror", value: "0.112"},
-              {name: "complieerror", value: "3187.256"}
-            ]
-          },
-          {name: "fatalError", children: [
-              {name: "unexceptederror", value: "0.098"},
-              {name: "fatalerror", value: "0.352"},
-              {name: "criticalerror", value: "48.42"}
-            ]}
-        ]
-      },
+      testData: '',
+    // {
+    //   name: "bugs", children: [
+    //   {name: "exceptions", children: [
+    //       {name: "numberformatexception", value: "0.04"},
+    //       {name: "unsupportedoperationexception", value: "0.046"},
+    //       {name: "nullpointerexception", value: "4.244"},
+    //       {name: "classcastexception", value: "10.05"},
+    //       {name: "sqlexception", value: "25.946"},
+    //       {name: "ioexception", value: "46.756"},
+    //       {name: "illegalargumentexception", value: "80.854"},
+    //       {name: "filenotfoundexception", value: "443.326"},
+    //       {name: "illegalstateexception", value: "1175.128"}
+    //     ]
+    //   },
+    //   {name: "syntaxError", children: [
+    //       {name: "syntaxerror", value: "0.112"},
+    //       {name: "complieerror", value: "3187.256"}
+    //     ]
+    //   },
+    //   {name: "fatalError", children: [
+    //       {name: "unexceptederror", value: "0.098"},
+    //       {name: "fatalerror", value: "0.352"},
+    //       {name: "criticalerror", value: "48.42"}
+    //     ]}
+    // ]
+    // }
       exceptionsData: '',
       fatalErrorsData: '',
       syntaxErrorsData: '',
@@ -185,6 +186,19 @@ export default {
             console.log(error)
           })
     },
+
+    fetchAllPopularity(vm) {
+      // 获取某个fatalError对应的热度
+      axios.get('http://localhost:8090/bug-show/allDetail')
+          .then(response => {
+            this.testData = response.data.bugPopularityDetails[0]
+            this.drawCircleChart(vm)
+          })
+          .catch(error => {
+            console.log(error)
+          })
+    },
+
 
     drawCircleChart(vm) {
       const data = this.testData
@@ -628,8 +642,7 @@ export default {
       this.fetchAllFatalErrorPopularity()
       this.fetchAllSyntaxErrorPopularity()
       const vm = this
-      this.drawCircleChart(vm)
-
+      this.fetchAllPopularity(vm)
     },
 
     changeBarChart(tag) {
@@ -650,7 +663,6 @@ export default {
         color = 'green'
         this.drawBarChart(color)
       }
-
     },
 
     addIntroToolTipTrigger() {
