@@ -34,6 +34,44 @@ public class BugPopularityController {
 
     private static final Logger logger = LoggerFactory.getLogger(BugPopularityController.class);
 
+    @ApiOperation("获取三个bug大类中各个小类对应的热度")
+    @GetMapping("/bug-show/allDetail")
+    public Map<String, List<Object>> getAllThreePopularityDetail(){
+        Map<String, List<Object>> resultMap = new HashMap<>();
+        List<Object> result = new ArrayList<>();
+        List<Object> details = new ArrayList<>();
+
+
+        result.add(Map.of(
+                "name", "exceptions",
+                "children", getAllFatalErrorsPopularity()
+        ));
+
+        result.add(Map.of(
+                "name", "syntaxError",
+                "children", getAllSyntaxErrorsPopularity()
+        ));
+
+        result.add(Map.of(
+                "name", "fatalError",
+                "children", getAllFatalErrorsPopularity()
+        ));
+
+        logger.info("Successfully get three bug popularity detail:  all exceptions, syntax errors, fatal errors");
+
+        details.add(Map.of(
+                "name", "syntaxError",
+                 "children", result
+        ));
+
+        // 封装到最外层的 Map
+        resultMap.put("bugPopularityDetails", details);
+
+        // 返回整体的 Map
+        return resultMap;
+
+    }
+
     @ApiOperation("获取三个bug大类对应的热度")
     @GetMapping("/bug-show/all")
     public Map<String, List<Object>> getAllThreePopularity(){
