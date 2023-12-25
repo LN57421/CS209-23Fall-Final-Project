@@ -365,6 +365,44 @@ export default {
           break;
       }
 
+      const legend = svg.append("g")
+          .attr("class", "legend")
+          .attr("transform", `translate(${width - marginRight - 100},${marginTop})`);
+
+      const legendGradient = legend.append("linearGradient")
+          .attr("id", "legend-gradient")
+          .attr("x1", "0%")
+          .attr("y1", "0%")
+          .attr("x2", "100%")
+          .attr("y2", "0%");
+
+      legendGradient.append("stop")
+          .attr("offset", "0%")
+          .style("stop-color", colorScale.range()[0]);
+
+      legendGradient.append("stop")
+          .attr("offset", "100%")
+          .style("stop-color", colorScale.range()[1]);
+
+      legend.append("rect")
+          .attr("width", 120)
+          .attr("height", 5)
+          .style("fill", "url(#legend-gradient)");
+
+      legend.append("text")
+          .attr("x", 40)
+          .attr("y", -5)
+          .attr("text-anchor", "middle")
+          .style("font-size", "10px")
+          .text("Average View Count");
+
+      legend.append("text")
+          .attr("x", 40)
+          .attr("y", 10)
+          .attr("text-anchor", "middle")
+          .style("font-size", "10px")
+          .text(`0 —— ${parseInt(d3.max(data, d => d.averageViewCount)) + 1}`);
+
       // Append the bars.
       svg.append("g")
           .attr("class", "bars")
@@ -474,6 +512,44 @@ export default {
       const colorScale = d3.scaleLinear()
           .domain([0, d3.max(data, d => d.averageViewCountSum)])
           .range(["#facfcf", "#f60505"]); // 调整颜色范围
+
+      const legend = svg.append("g")
+          .attr("class", "legend")
+          .attr("transform", `translate(${width - marginRight - 100},${marginTop})`);
+
+      const legendGradient = legend.append("linearGradient")
+          .attr("id", "legend-gradient")
+          .attr("x1", "0%")
+          .attr("y1", "0%")
+          .attr("x2", "100%")
+          .attr("y2", "0%");
+
+      legendGradient.append("stop")
+          .attr("offset", "0%")
+          .style("stop-color", colorScale.range()[0]);
+
+      legendGradient.append("stop")
+          .attr("offset", "100%")
+          .style("stop-color", colorScale.range()[1]);
+
+      legend.append("rect")
+          .attr("width", 120)
+          .attr("height", 5)
+          .style("fill", "url(#legend-gradient)");
+
+      legend.append("text")
+          .attr("x", 40)
+          .attr("y", -5)
+          .attr("text-anchor", "middle")
+          .style("font-size", "10px")
+          .text("Average View Count");
+
+      legend.append("text")
+          .attr("x", 40)
+          .attr("y", 10)
+          .attr("text-anchor", "middle")
+          .style("font-size", "10px")
+          .text(`0 —— ${parseInt(d3.max(data, d => d.averageViewCountSum)) + 1}`);
       // Append the bars.
       svg.append("g")
           .attr("class", "bars")

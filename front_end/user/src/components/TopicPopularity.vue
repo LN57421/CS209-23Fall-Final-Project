@@ -182,6 +182,40 @@ export default {
           .attr("transform", `translate(${marginLeft},0)`)
           .call(yAxis);
 
+
+      // Append the legends
+      const legendOffset = 10;
+
+      // Legend for Average Score
+      const averageScoreLegend = svg.append("g")
+          .attr("class", "legend")
+          .attr("transform", `translate(${width - marginRight - 100 -25}, ${marginTop})`);
+
+      averageScoreLegend.append("rect")
+          .attr("width", 20)
+          .attr("height", 20)
+          .style("fill", skyBlue);
+
+      averageScoreLegend.append("text")
+          .attr("x", 20)
+          .attr("y", 15)
+          .text("Average Score");
+
+      // Legend for Average Valuable Answer Score
+      const averageValuableAnswerScoreLegend = svg.append("g")
+          .attr("class", "legend")
+          .attr("transform", `translate(${width - marginRight - 100 - 25}, ${marginTop + legendOffset + 25})`);
+
+      averageValuableAnswerScoreLegend.append("rect")
+          .attr("width", 20)
+          .attr("height", 20)
+          .style("fill", "steelblue");
+
+      averageValuableAnswerScoreLegend.append("text")
+          .attr("x", 20)
+          .attr("y", 15)
+          .text("Average Valuable Answer Score");
+
       return Object.assign(svg.node(), {
         update(order) {
           console.log(data)
@@ -253,6 +287,46 @@ export default {
       const colorScale = d3.scaleLinear()
           .domain([0, d3.max(data, d => d.averageViewCount)])
           .range(["#f4facf", "#71f605"]);
+
+
+      const legend = svg.append("g")
+          .attr("class", "legend")
+          .attr("transform", `translate(${width - marginRight - 100},${marginTop})`);
+
+      const legendGradient = legend.append("linearGradient")
+          .attr("id", "legend-gradient")
+          .attr("x1", "0%")
+          .attr("y1", "0%")
+          .attr("x2", "100%")
+          .attr("y2", "0%");
+
+      legendGradient.append("stop")
+          .attr("offset", "0%")
+          .style("stop-color", colorScale.range()[0]);
+
+      legendGradient.append("stop")
+          .attr("offset", "100%")
+          .style("stop-color", colorScale.range()[1]);
+
+      legend.append("rect")
+          .attr("width", 120)
+          .attr("height", 5)
+          .style("fill", "url(#legend-gradient)");
+
+      legend.append("text")
+          .attr("x", 40)
+          .attr("y", -5)
+          .attr("text-anchor", "middle")
+          .style("font-size", "10px")
+          .text("Average View Count");
+
+      legend.append("text")
+          .attr("x", 40)
+          .attr("y", 10)
+          .attr("text-anchor", "middle")
+          .style("font-size", "10px")
+          .text("0——26000");
+
       // Append the bars.
       const bars = svg.append("g")
           .attr("class", "bars")
