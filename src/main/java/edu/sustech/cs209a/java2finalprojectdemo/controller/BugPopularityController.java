@@ -44,7 +44,7 @@ public class BugPopularityController {
 
         result.add(Map.of(
                 "name", "exceptions",
-                "children", getAllFatalErrorsPopularityDetail()
+                "children", getAllExceptionPopularityDetail()
         ));
 
         result.add(Map.of(
