@@ -1,7 +1,7 @@
 <template>
   <div class="related-topic">
     <el-dialog title="Tips" :visible.sync="detailVisible" width="35%">
-      Find Nothing
+      {{tip}}
     </el-dialog>
     <div class="head">
       <h2>
@@ -72,12 +72,13 @@ import tippy from "tippy.js";
 export default {
   name: "RelatedService",
   mounted() {
-    this.fetchRelatedData()
+    // this.fetchRelatedData()
     this.addIntroToolTipTrigger()
   },
   data() {
     return {
-      phase: 'spring',
+      tip: '',
+      phase: '',
       relatedData: [],
       allBarChartInfo: {
         marginLeft: '',
@@ -402,11 +403,15 @@ export default {
       this.cloudChart.zoomToCloud(tagName)
     },
     fetchRelatedData() {
-      if (this.phase === '') return;
+      if (this.phase === '') {
+        this.tip = "Nothing input"
+        this.detailVisible = true
+      }
       axios.get(`http://localhost:8090/related-topic/${this.phase}`)
           .then(response => {
             this.relatedData = response.data.relatedPopularity;
             if (this.relatedData.length === 0) {
+              this.tip = "Find nothing"
               this.detailVisible = true
               return
             }
