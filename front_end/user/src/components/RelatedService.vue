@@ -1,5 +1,8 @@
 <template>
   <div class="related-topic">
+    <el-dialog title="Tips" :visible.sync="detailVisible" width="35%">
+      Find Nothing
+    </el-dialog>
     <div class="head">
       <h2>
         The visualization of related-topic
@@ -86,6 +89,7 @@ export default {
       allBarChart: '',
       cloudChart: '',
       updateValue: '',
+      detailVisible: false,
     }
   },
   methods: {
@@ -402,6 +406,10 @@ export default {
       axios.get(`http://localhost:8090/related-topic/${this.phase}`)
           .then(response => {
             this.relatedData = response.data.relatedPopularity;
+            if (this.relatedData.length === 0) {
+              this.detailVisible = true
+              return
+            }
             this.allBarChart = this.drawAllBarChart()
             this.cloudChart = this.drawWordCloud()
             console.log(response.data.relatedPopularity)

@@ -64,6 +64,9 @@ public class BugPopularityController {
                  "children", result
         ));
 
+        logger.info("Successfully get three bug detail popularity: all exceptions, syntax errors, fatal errors");
+
+
         // 封装到最外层的 Map
         resultMap.put("bugPopularityDetails", details);
 

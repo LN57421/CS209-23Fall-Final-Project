@@ -546,7 +546,7 @@ export default {
 
       const colorScale = d3.scaleLinear()
           .domain([0, d3.max(data, d => d.averageViewCountSum)])
-          .range(["#facfcf", "#f60505"]); // 调整颜色范围
+          .range(["#f88080", "#f60505"]); // 调整颜色范围
 
       const legend = svg.append("g")
           .attr("class", "legend")
